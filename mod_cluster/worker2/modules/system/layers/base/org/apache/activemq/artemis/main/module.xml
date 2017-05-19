@@ -24,16 +24,16 @@
 
 <module xmlns="urn:jboss:module:1.5" name="org.apache.activemq.artemis">
     <resources>
-        <resource-root path="artemis-core-client-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-selector-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-server-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-cli-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-dto-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-hqclient-protocol-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-jdbc-store-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-jms-client-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-jms-server-1.5.4.jbossorg-003.jar"/>
-        <resource-root path="artemis-service-extensions-1.5.4.jbossorg-003.jar"/>
+        <resource-root path="artemis-core-client-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-selector-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-server-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-cli-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-dto-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-hqclient-protocol-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-jdbc-store-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-jms-client-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-jms-server-1.5.4.jbossorg-004.jar"/>
+        <resource-root path="artemis-service-extensions-1.5.4.jbossorg-004.jar"/>
     </resources>
 
     <dependencies>

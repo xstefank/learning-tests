@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <server xmlns="urn:jboss:domain:5.0">
+
     <extensions>
         <extension module="org.jboss.as.clustering.infinispan"/>
         <extension module="org.jboss.as.connector"/>
@@ -31,6 +32,8 @@
         <extension module="org.wildfly.extension.security.manager"/>
         <extension module="org.wildfly.extension.undertow"/>
     </extensions>
+
+
     <management>
         <security-realms>
             <security-realm name="ManagementRealm">
@@ -71,7 +74,7 @@
             </logger>
         </audit-log>
         <management-interfaces>
-            <http-interface security-realm="ManagementRealm">
+            <http-interface security-realm="ManagementRealm" allowed-origins="http://127.0.0.1:8888">
                 <http-upgrade enabled="true"/>
                 <socket-binding http="management-http"/>
             </http-interface>
@@ -86,6 +89,7 @@
             </role-mapping>
         </access-control>
     </management>
+
     <profile>
         <subsystem xmlns="urn:jboss:domain:logging:3.0">
             <console-handler name="CONSOLE">
@@ -148,6 +152,19 @@
                         <password>sa</password>
                     </security>
                 </datasource>
+                <xa-datasource jndi-name="java:/H2XADS" pool-name="H2XADS" enabled="true" use-ccm="true">
+                    <xa-datasource-property name="URL">
+                        jdbc:h2:mem:test
+                    </xa-datasource-property>
+                    <driver>h2</driver>
+                    <security>
+                        <user-name>sa</user-name>
+                        <password>sa</password>
+                    </security>
+                    <validation>
+                        <background-validation>false</background-validation>
+                    </validation>
+                </xa-datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
@@ -324,12 +341,12 @@
         </subsystem>
         <subsystem xmlns="urn:wildfly:elytron:1.0" final-providers="combined-providers">
             <providers>
-                <provider-loader name="elytron" module="org.wildfly.security.elytron"/>
-                <provider-loader name="openssl" module="org.wildfly.openssl"/>
                 <aggregate-providers name="combined-providers">
                     <providers name="elytron"/>
                     <providers name="openssl"/>
                 </aggregate-providers>
+                <provider-loader name="elytron" module="org.wildfly.security.elytron"/>
+                <provider-loader name="openssl" module="org.wildfly.openssl"/>
             </providers>
             <audit-logging>
                 <file-audit-log name="local-audit" path="audit.log" relative-to="jboss.server.log.dir" format="JSON"/>
@@ -409,25 +426,17 @@
                         </mechanism>
                     </mechanism-configuration>
                 </sasl-authentication-factory>
-                <provider-sasl-server-factory name="global"/>
+                <configurable-sasl-server-factory name="configured" sasl-server-factory="elytron">
+                    <properties>
+                        <property name="wildfly.sasl.local-user.default-user" value="$local"/>
+                    </properties>
+                </configurable-sasl-server-factory>
                 <mechanism-provider-filtering-sasl-server-factory name="elytron" sasl-server-factory="global">
                     <filters>
                         <filter provider-name="WildFlyElytron"/>
                     </filters>
                 </mechanism-provider-filtering-sasl-server-factory>
-                <configurable-sasl-server-factory name="configured" sasl-server-factory="elytron">
-                    <filters>
-                        <filter>
-                            <pattern-filter value="JBOSS-LOCAL-USER"/>
-                        </filter>
-                        <filter>
-                            <pattern-filter value="DIGEST-MD5"/>
-                        </filter>
-                    </filters>
-                    <properties>
-                        <property name="wildfly.sasl.local-user.default-user" value="$local"/>
-                    </properties>
-                </configurable-sasl-server-factory>
+                <provider-sasl-server-factory name="global"/>
             </sasl>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:security:3.0">
@@ -506,6 +515,7 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:weld:4.0"/>
     </profile>
+
     <interfaces>
         <interface name="management">
             <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
@@ -514,6 +524,7 @@
             <inet-address value="${jboss.bind.address:127.0.0.1}"/>
         </interface>
     </interfaces>
+
     <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
         <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9990}"/>
         <socket-binding name="management-https" interface="management" port="${jboss.management.https.port:9993}"/>

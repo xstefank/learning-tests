@@ -24,7 +24,7 @@
 
 <module xmlns="urn:jboss:module:1.5" name="org.jboss.marshalling">
     <resources>
-        <resource-root path="jboss-marshalling-2.0.0.Beta6.jar"/>
+        <resource-root path="jboss-marshalling-2.0.0.Beta7.jar"/>
     </resources>
 
     <dependencies>

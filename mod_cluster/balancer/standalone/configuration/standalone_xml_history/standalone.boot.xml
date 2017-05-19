@@ -74,7 +74,7 @@
             </logger>
         </audit-log>
         <management-interfaces>
-            <http-interface security-realm="ManagementRealm">
+            <http-interface security-realm="ManagementRealm" allowed-origins="http://127.0.0.1:8888">
                 <http-upgrade enabled="true"/>
                 <socket-binding http="management-http"/>
             </http-interface>
@@ -152,6 +152,19 @@
                         <password>sa</password>
                     </security>
                 </datasource>
+                <xa-datasource jndi-name="java:/H2XADS" pool-name="H2XADS" enabled="true" use-ccm="true">
+                    <xa-datasource-property name="URL">
+                        jdbc:h2:mem:test
+                    </xa-datasource-property>
+                    <driver>h2</driver>
+                    <security>
+                        <user-name>sa</user-name>
+                        <password>sa</password>
+                    </security>
+                    <validation>
+                        <background-validation>false</background-validation>
+                    </validation>
+                </xa-datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
@@ -417,14 +430,6 @@
                     <properties>
                         <property name="wildfly.sasl.local-user.default-user" value="$local"/>
                     </properties>
-                    <filters>
-                        <filter>
-                            <pattern-filter value="JBOSS-LOCAL-USER"/>
-                        </filter>
-                        <filter>
-                            <pattern-filter value="DIGEST-MD5"/>
-                        </filter>
-                    </filters>
                 </configurable-sasl-server-factory>
                 <mechanism-provider-filtering-sasl-server-factory name="elytron" sasl-server-factory="global">
                     <filters>
@@ -530,7 +535,7 @@
         <socket-binding name="https" port="${jboss.https.port:8443}"/>
         <socket-binding name="txn-recovery-environment" port="4712"/>
         <socket-binding name="txn-status-manager" port="4713"/>
-        <socket-binding name="mod-cluster-adv" interface="public" multicast-address="224.0.0.1" multicast-port="23364"/>
+        <socket-binding name="mod-cluster-adv" interface="public" multicast-address="224.0.1.105" multicast-port="23364"/>
         <outbound-socket-binding name="mail-smtp">
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>

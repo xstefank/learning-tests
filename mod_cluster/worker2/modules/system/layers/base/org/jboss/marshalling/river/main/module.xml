@@ -28,7 +28,7 @@
     </properties>
 
     <resources>
-        <resource-root path="jboss-marshalling-river-2.0.0.Beta6.jar"/>
+        <resource-root path="jboss-marshalling-river-2.0.0.Beta7.jar"/>
     </resources>
 
     <dependencies>

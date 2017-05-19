@@ -24,7 +24,7 @@
 
 <module xmlns="urn:jboss:module:1.5" name="io.undertow.servlet">
     <resources>
-        <resource-root path="undertow-servlet-1.4.13.Final.jar"/>
+        <resource-root path="undertow-servlet-1.4.14.Final.jar"/>
     </resources>
 
     <dependencies>

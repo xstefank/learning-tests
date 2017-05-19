@@ -24,7 +24,7 @@
 
 <module xmlns="urn:jboss:module:1.5" name="org.apache.activemq.artemis.protocol.stomp">
     <resources>
-        <resource-root path="artemis-stomp-protocol-1.5.4.jbossorg-003.jar"/>
+        <resource-root path="artemis-stomp-protocol-1.5.4.jbossorg-004.jar"/>
     </resources>
 
     <dependencies>

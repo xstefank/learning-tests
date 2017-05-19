@@ -31,6 +31,6 @@
     </dependencies>
 
     <resources>
-        <resource-root path="jboss-jaxws-api_2.2_spec-2.0.3.Final.jar"/>
+        <resource-root path="jboss-jaxws-api_2.2_spec-2.0.4.Final.jar"/>
     </resources>
 </module>

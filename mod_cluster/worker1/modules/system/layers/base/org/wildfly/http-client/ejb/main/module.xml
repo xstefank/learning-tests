@@ -25,7 +25,7 @@
 <module xmlns="urn:jboss:module:1.5" name="org.wildfly.http-client.ejb">
 
     <resources>
-        <resource-root path="wildfly-http-ejb-client-1.0.0.CR2.jar"/>
+        <resource-root path="wildfly-http-ejb-client-1.0.0.CR3.jar"/>
     </resources>
 
     <dependencies>

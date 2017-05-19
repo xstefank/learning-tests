@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<server xmlns="urn:jboss:domain:5.0">
+<server name="slave1" xmlns="urn:jboss:domain:5.0">
 
     <extensions>
         <extension module="org.jboss.as.clustering.infinispan"/>
@@ -43,6 +43,9 @@
     <management>
         <security-realms>
             <security-realm name="ManagementRealm">
+                <server-identities>
+                    <secret value="Zm9v"/>
+                </server-identities>
                 <authentication>
                     <local default-user="$local" skip-group-loading="true"/>
                     <properties path="mgmt-users.properties" relative-to="jboss.server.config.dir"/>
@@ -152,14 +155,6 @@
             <datasources>
                 <datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true">
                     <connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
-                    <driver>h2</driver>
-                    <security>
-                        <user-name>sa</user-name>
-                        <password>sa</password>
-                    </security>
-                </datasource>
-                <datasource jndi-name="java:jboss/datasources/pv243DS" pool-name="pv243DS" enabled="true">
-                    <connection-url>jdbc:h2:~/test;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE</connection-url>
                     <driver>h2</driver>
                     <security>
                         <user-name>sa</user-name>
@@ -511,14 +506,6 @@
                     <properties>
                         <property name="wildfly.sasl.local-user.default-user" value="$local"/>
                     </properties>
-                    <filters>
-                        <filter>
-                            <pattern-filter value="JBOSS-LOCAL-USER"/>
-                        </filter>
-                        <filter>
-                            <pattern-filter value="DIGEST-MD5"/>
-                        </filter>
-                    </filters>
                 </configurable-sasl-server-factory>
                 <mechanism-provider-filtering-sasl-server-factory name="elytron" sasl-server-factory="global">
                     <filters>
@@ -615,16 +602,16 @@
 
     <interfaces>
         <interface name="management">
-            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
+            <inet-address value="10.202.10.175"/>
         </interface>
         <interface name="public">
-            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
+            <inet-address value="10.202.10.175"/>
         </interface>
         <interface name="private">
             <inet-address value="${jboss.bind.address.private:127.0.0.1}"/>
         </interface>
         <interface name="unsecure">
-            <inet-address value="${jboss.bind.address.unsecure:127.0.0.1}"/>
+            <inet-address value="10.202.10.175"/>
         </interface>
     </interfaces>
 
@@ -646,4 +633,10 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
     </socket-binding-group>
+
+    <deployments>
+        <deployment name="music-library-web-1.0-SNAPSHOT.war" runtime-name="music-library-web-1.0-SNAPSHOT.war">
+            <content sha1="043e1c545fd9ca3267f82457f4b9f2f310fe9b0b"/>
+        </deployment>
+    </deployments>
 </server>

@@ -24,7 +24,7 @@
 
 <module xmlns="urn:jboss:module:1.5" name="org.jboss.xnio">
     <resources>
-        <resource-root path="xnio-api-3.5.0.Beta5.jar"/>
+        <resource-root path="xnio-api-3.5.0.Beta6.jar"/>
     </resources>
 
     <dependencies>

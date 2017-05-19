@@ -28,7 +28,7 @@
     </exports>
 
     <resources>
-        <resource-root path="wildfly-transaction-client-1.0.0.Beta21.jar"/>
+        <resource-root path="wildfly-transaction-client-1.0.0.Beta22.jar"/>
     </resources>
 
     <dependencies>

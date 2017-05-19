@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <server xmlns="urn:jboss:domain:5.0">
-
     <extensions>
         <extension module="org.jboss.as.clustering.infinispan"/>
         <extension module="org.jboss.as.clustering.jgroups"/>
@@ -35,8 +34,6 @@
         <extension module="org.wildfly.extension.security.manager"/>
         <extension module="org.wildfly.extension.undertow"/>
     </extensions>
-
-
     <management>
         <security-realms>
             <security-realm name="ManagementRealm">
@@ -92,7 +89,6 @@
             </role-mapping>
         </access-control>
     </management>
-
     <profile>
         <subsystem xmlns="urn:jboss:domain:logging:3.0">
             <console-handler name="CONSOLE">
@@ -368,12 +364,12 @@
         </subsystem>
         <subsystem xmlns="urn:wildfly:elytron:1.0" final-providers="combined-providers">
             <providers>
+                <provider-loader name="elytron" module="org.wildfly.security.elytron"/>
+                <provider-loader name="openssl" module="org.wildfly.openssl"/>
                 <aggregate-providers name="combined-providers">
                     <providers name="elytron"/>
                     <providers name="openssl"/>
                 </aggregate-providers>
-                <provider-loader name="elytron" module="org.wildfly.security.elytron"/>
-                <provider-loader name="openssl" module="org.wildfly.openssl"/>
             </providers>
             <audit-logging>
                 <file-audit-log name="local-audit" path="audit.log" relative-to="jboss.server.log.dir" format="JSON"/>
@@ -453,25 +449,17 @@
                         </mechanism>
                     </mechanism-configuration>
                 </sasl-authentication-factory>
-                <configurable-sasl-server-factory name="configured" sasl-server-factory="elytron">
-                    <properties>
-                        <property name="wildfly.sasl.local-user.default-user" value="$local"/>
-                    </properties>
-                    <filters>
-                        <filter>
-                            <pattern-filter value="JBOSS-LOCAL-USER"/>
-                        </filter>
-                        <filter>
-                            <pattern-filter value="DIGEST-MD5"/>
-                        </filter>
-                    </filters>
-                </configurable-sasl-server-factory>
+                <provider-sasl-server-factory name="global"/>
                 <mechanism-provider-filtering-sasl-server-factory name="elytron" sasl-server-factory="global">
                     <filters>
                         <filter provider-name="WildFlyElytron"/>
                     </filters>
                 </mechanism-provider-filtering-sasl-server-factory>
-                <provider-sasl-server-factory name="global"/>
+                <configurable-sasl-server-factory name="configured" sasl-server-factory="elytron">
+                    <properties>
+                        <property name="wildfly.sasl.local-user.default-user" value="$local"/>
+                    </properties>
+                </configurable-sasl-server-factory>
             </sasl>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:security:3.0">
@@ -558,7 +546,6 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:weld:4.0"/>
     </profile>
-
     <interfaces>
         <interface name="management">
             <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
@@ -570,7 +557,6 @@
             <inet-address value="${jboss.bind.address.private:127.0.0.1}"/>
         </interface>
     </interfaces>
-
     <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
         <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9990}"/>
         <socket-binding name="management-https" interface="management" port="${jboss.management.https.port:9993}"/>
@@ -587,10 +573,4 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
     </socket-binding-group>
-
-    <deployments>
-        <deployment name="clusterbench-ee7.ear" runtime-name="clusterbench-ee7.ear">
-            <content sha1="650da824735818f899303e19dc69a7cda479cf93"/>
-        </deployment>
-    </deployments>
 </server>

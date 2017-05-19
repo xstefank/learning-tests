@@ -25,10 +25,10 @@
 <!-- Represents the Hibernate 5.0.x module-->
 <module xmlns="urn:jboss:module:1.5" name="org.hibernate">
     <resources>
-        <resource-root path="hibernate-core-5.1.5.Final.jar"/>
-        <resource-root path="hibernate-envers-5.1.5.Final.jar"/>
-        <resource-root path="hibernate-entitymanager-5.1.5.Final.jar"/>
-        <resource-root path="hibernate-java8-5.1.5.Final.jar"/>
+        <resource-root path="hibernate-core-5.1.6.Final.jar"/>
+        <resource-root path="hibernate-envers-5.1.6.Final.jar"/>
+        <resource-root path="hibernate-entitymanager-5.1.6.Final.jar"/>
+        <resource-root path="hibernate-java8-5.1.6.Final.jar"/>
     </resources>
 
     <dependencies>

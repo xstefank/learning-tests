@@ -28,7 +28,7 @@
     </properties>
 
     <resources>
-        <resource-root path="jboss-metadata-web-10.0.0.Final.jar"/>
+        <resource-root path="jboss-metadata-web-10.0.2.Final.jar"/>
     </resources>
 
     <dependencies>

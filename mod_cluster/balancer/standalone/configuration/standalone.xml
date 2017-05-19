@@ -74,7 +74,7 @@
             </logger>
         </audit-log>
         <management-interfaces>
-            <http-interface security-realm="ManagementRealm">
+            <http-interface security-realm="ManagementRealm" allowed-origins="http://127.0.0.1:8888">
                 <http-upgrade enabled="true"/>
                 <socket-binding http="management-http"/>
             </http-interface>
@@ -152,6 +152,19 @@
                         <password>sa</password>
                     </security>
                 </datasource>
+                <xa-datasource jndi-name="java:/H2XADS" pool-name="H2XADS" enabled="true" use-ccm="true">
+                    <xa-datasource-property name="URL">
+                        jdbc:h2:mem:test
+                    </xa-datasource-property>
+                    <driver>h2</driver>
+                    <security>
+                        <user-name>sa</user-name>
+                        <password>sa</password>
+                    </security>
+                    <validation>
+                        <background-validation>false</background-validation>
+                    </validation>
+                </xa-datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
@@ -417,14 +430,6 @@
                     <properties>
                         <property name="wildfly.sasl.local-user.default-user" value="$local"/>
                     </properties>
-                    <filters>
-                        <filter>
-                            <pattern-filter value="JBOSS-LOCAL-USER"/>
-                        </filter>
-                        <filter>
-                            <pattern-filter value="DIGEST-MD5"/>
-                        </filter>
-                    </filters>
                 </configurable-sasl-server-factory>
                 <mechanism-provider-filtering-sasl-server-factory name="elytron" sasl-server-factory="global">
                     <filters>
@@ -482,7 +487,6 @@
                 <https-listener name="https" socket-binding="https" security-realm="ApplicationRealm" enable-http2="true"/>
                 <host name="default-host" alias="localhost">
                     <location name="/" handler="welcome-content"/>
-                    <location name="/music" handler="my-handler"/>
                     <filter-ref name="server-header"/>
                     <filter-ref name="x-powered-by-header"/>
                     <filter-ref name="modcluster"/>
@@ -494,10 +498,6 @@
             </servlet-container>
             <handlers>
                 <file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>
-                <reverse-proxy name="my-handler">
-                    <host name="host1" outbound-socket-binding="remote-host1" scheme="ajp" path="/test" instance-id="myroute"/>
-                    <host name="host2" outbound-socket-binding="remote-host2" scheme="ajp" path="/test" instance-id="myroute"/>
-                </reverse-proxy>
             </handlers>
             <filters>
                 <response-header name="server-header" header-name="Server" header-value="WildFly/10"/>
@@ -535,15 +535,9 @@
         <socket-binding name="https" port="${jboss.https.port:8443}"/>
         <socket-binding name="txn-recovery-environment" port="4712"/>
         <socket-binding name="txn-status-manager" port="4713"/>
-        <socket-binding name="mod-cluster-adv" interface="public" multicast-address="224.0.0.1" multicast-port="23364"/>
+        <socket-binding name="mod-cluster-adv" interface="public" multicast-address="224.0.1.105" multicast-port="23364"/>
         <outbound-socket-binding name="mail-smtp">
             <remote-destination host="localhost" port="25"/>
-        </outbound-socket-binding>
-        <outbound-socket-binding name="remote-host1">
-            <remote-destination host="master" port="8009"/>
-        </outbound-socket-binding>
-        <outbound-socket-binding name="remote-host2">
-            <remote-destination host="master" port="8009"/>
         </outbound-socket-binding>
     </socket-binding-group>
 </server>

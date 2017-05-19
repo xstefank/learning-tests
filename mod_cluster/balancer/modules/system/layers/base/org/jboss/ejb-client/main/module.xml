@@ -23,7 +23,7 @@
 <module xmlns="urn:jboss:module:1.5" name="org.jboss.ejb-client">
 
     <resources>
-        <resource-root path="jboss-ejb-client-4.0.0.Beta25.jar"/>
+        <resource-root path="jboss-ejb-client-4.0.0.Beta27.jar"/>
     </resources>
 
     <dependencies>
