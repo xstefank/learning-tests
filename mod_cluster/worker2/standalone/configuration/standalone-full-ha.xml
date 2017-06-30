@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<server name="slave2" xmlns="urn:jboss:domain:5.0">
-
+<server xmlns="urn:jboss:domain:5.0">
     <extensions>
         <extension module="org.jboss.as.clustering.infinispan"/>
         <extension module="org.jboss.as.clustering.jgroups"/>
@@ -38,14 +37,9 @@
         <extension module="org.wildfly.extension.undertow"/>
         <extension module="org.wildfly.iiop-openjdk"/>
     </extensions>
-
-
     <management>
         <security-realms>
             <security-realm name="ManagementRealm">
-                <server-identities>
-                    <secret value="Zm9v"/>
-                </server-identities>
                 <authentication>
                     <local default-user="$local" skip-group-loading="true"/>
                     <properties path="mgmt-users.properties" relative-to="jboss.server.config.dir"/>
@@ -98,7 +92,6 @@
             </role-mapping>
         </access-control>
     </management>
-
     <profile>
         <subsystem xmlns="urn:jboss:domain:logging:3.0">
             <console-handler name="CONSOLE">
@@ -417,12 +410,12 @@
         </subsystem>
         <subsystem xmlns="urn:wildfly:elytron:1.0" final-providers="combined-providers">
             <providers>
+                <provider-loader name="elytron" module="org.wildfly.security.elytron"/>
+                <provider-loader name="openssl" module="org.wildfly.openssl"/>
                 <aggregate-providers name="combined-providers">
                     <providers name="elytron"/>
                     <providers name="openssl"/>
                 </aggregate-providers>
-                <provider-loader name="elytron" module="org.wildfly.security.elytron"/>
-                <provider-loader name="openssl" module="org.wildfly.openssl"/>
             </providers>
             <audit-logging>
                 <file-audit-log name="local-audit" path="audit.log" relative-to="jboss.server.log.dir" format="JSON"/>
@@ -502,17 +495,17 @@
                         </mechanism>
                     </mechanism-configuration>
                 </sasl-authentication-factory>
-                <configurable-sasl-server-factory name="configured" sasl-server-factory="elytron">
-                    <properties>
-                        <property name="wildfly.sasl.local-user.default-user" value="$local"/>
-                    </properties>
-                </configurable-sasl-server-factory>
+                <provider-sasl-server-factory name="global"/>
                 <mechanism-provider-filtering-sasl-server-factory name="elytron" sasl-server-factory="global">
                     <filters>
                         <filter provider-name="WildFlyElytron"/>
                     </filters>
                 </mechanism-provider-filtering-sasl-server-factory>
-                <provider-sasl-server-factory name="global"/>
+                <configurable-sasl-server-factory name="configured" sasl-server-factory="elytron">
+                    <properties>
+                        <property name="wildfly.sasl.local-user.default-user" value="$local"/>
+                    </properties>
+                </configurable-sasl-server-factory>
             </sasl>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:security:3.0">
@@ -599,22 +592,20 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:weld:4.0"/>
     </profile>
-
     <interfaces>
         <interface name="management">
-            <inet-address value="10.202.10.175"/>
+            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
         </interface>
         <interface name="public">
-            <inet-address value="10.202.10.175"/>
+            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
         </interface>
         <interface name="private">
             <inet-address value="${jboss.bind.address.private:127.0.0.1}"/>
         </interface>
         <interface name="unsecure">
-            <inet-address value="10.202.10.175"/>
+            <inet-address value="${jboss.bind.address.unsecure:127.0.0.1}"/>
         </interface>
     </interfaces>
-
     <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
         <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9990}"/>
         <socket-binding name="management-https" interface="management" port="${jboss.management.https.port:9993}"/>
@@ -633,10 +624,4 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
     </socket-binding-group>
-
-    <deployments>
-        <deployment name="music-library-web-1.0-SNAPSHOT.war" runtime-name="music-library-web-1.0-SNAPSHOT.war">
-            <content sha1="043e1c545fd9ca3267f82457f4b9f2f310fe9b0b"/>
-        </deployment>
-    </deployments>
 </server>

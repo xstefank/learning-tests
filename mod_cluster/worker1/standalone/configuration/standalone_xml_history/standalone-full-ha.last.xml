@@ -602,16 +602,16 @@
 
     <interfaces>
         <interface name="management">
-            <inet-address value="10.202.10.175"/>
+            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
         </interface>
         <interface name="public">
-            <inet-address value="10.202.10.175"/>
+            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
         </interface>
         <interface name="private">
             <inet-address value="${jboss.bind.address.private:127.0.0.1}"/>
         </interface>
         <interface name="unsecure">
-            <inet-address value="10.202.10.175"/>
+            <inet-address value="${jboss.bind.address.unsecure:127.0.0.1}"/>
         </interface>
     </interfaces>
 
@@ -636,7 +636,7 @@
 
     <deployments>
         <deployment name="music-library-web-1.0-SNAPSHOT.war" runtime-name="music-library-web-1.0-SNAPSHOT.war">
-            <content sha1="043e1c545fd9ca3267f82457f4b9f2f310fe9b0b"/>
+            <content sha1="4f983d916130ac0d636ce776a22b2580f289a019"/>
         </deployment>
     </deployments>
 </server>
