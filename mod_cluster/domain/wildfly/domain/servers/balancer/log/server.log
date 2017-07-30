@@ -1,0 +1,178 @@
+2017-05-25 10:41:34,676 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-25 10:41:34,988 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-25 10:41:35,114 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-25 10:41:35,116 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Server:balancer] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.domain.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain
+	jboss.domain.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/configuration
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = master:balancer
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/log
+	jboss.server.name = balancer
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/configuration/default-server-logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/modules org.jboss.as.server
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-25 10:41:35,117 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Server:balancer] -Xms64m -Xmx256m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly -Djboss.modules.system.pkgs=org.jboss.byteman -Djboss.server.log.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/log -Djboss.server.temp.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/tmp -Djboss.server.data.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/data -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/servers/balancer/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/configuration/default-server-logging.properties 
+2017-05-25 10:41:35,187 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.5.0.Beta6
+2017-05-25 10:41:35,193 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-25 10:41:35,225 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 5.0.0.Beta22
+2017-05-25 10:41:35,582 INFO  [org.wildfly.security] (ServerService Thread Pool -- 2) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-25 10:41:36,840 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([("interface" => "public")]) - failure description: "WFLYCTL0149: No interface criteria was provided"
+2017-05-25 10:41:36,862 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 5) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2017-05-25 10:41:36,873 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.4.14.Final starting
+2017-05-25 10:41:36,954 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2017-05-25 10:41:36,956 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+2017-05-25 10:41:37,068 INFO  [org.jboss.as.patching] (MSC service thread 1-3) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2017-05-25 10:41:37,088 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/domain/wildfly/domain/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2017-05-25 10:41:37,144 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([("socket-binding-group" => "load-balancer-sockets")]) - failure description: {
+    "WFLYCTL0412: Required services that are not installed:" => ["jboss.network.public"],
+    "WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.socket-binding-manager is missing [jboss.network.public]"]
+}
+2017-05-25 10:41:37,147 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("socket-binding-group" => "load-balancer-sockets"),
+    ("socket-binding" => "http")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.network.socket-binding.http"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,149 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("socket-binding-group" => "load-balancer-sockets"),
+    ("socket-binding" => "https")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.network.socket-binding.https"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,150 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("socket-binding-group" => "load-balancer-sockets"),
+    ("socket-binding" => "mcmp-management")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.network.socket-binding.mcmp-management"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,151 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("socket-binding-group" => "load-balancer-sockets"),
+    ("socket-binding" => "modcluster")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.network.socket-binding.modcluster"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,152 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("configuration" => "filter"),
+    ("mod-cluster" => "load-balancer")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.undertow.mod_cluster-filter.load-balancer"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,153 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("http-listener" => "default")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.undertow.listener.default"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,154 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("http-listener" => "management")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["org.wildfly.undertow.listener.management"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,155 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("host" => "default-host"),
+    ("filter-ref" => "load-balancer")
+]) - failure description: {"WFLYCTL0288: One or more services were unable to start due to one or more indirect dependencies not being available." => {
+    "Services that were unable to start:" => ["jboss.undertow.server.default-server.default-host.filter-ref.load-balancer"],
+    "Services that may be the cause:" => ["jboss.network.public"]
+}}
+2017-05-25 10:41:37,168 INFO  [org.jboss.as.controller] (Controller Boot Thread) WFLYCTL0183: Service status report
+WFLYCTL0184:    New missing/unsatisfied dependencies:
+      service jboss.network.public (missing) dependents: [service jboss.socket-binding-manager] 
+
+2017-05-25 10:41:37,247 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2017-05-25 10:41:37,250 ERROR [org.jboss.as] (Controller Boot Thread) WFLYSRV0026: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) started (with errors) in 3001ms - Started 58 of 86 services (9 services failed or missing dependencies, 37 services are lazy, passive or on-demand)
+2017-05-25 10:46:16,943 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2017-05-25 10:46:16,955 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0019: Host default-host stopping
+2017-05-25 10:46:16,956 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0004: Undertow 1.4.14.Final stopping
+2017-05-25 10:46:16,981 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) stopped in 30ms

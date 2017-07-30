@@ -1,0 +1,678 @@
+2017-05-19 17:10:22,269 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 17:10:22,654 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 17:10:22,789 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 17:10:22,791 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1 -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone -c standalone-full-ha.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 17:10:22,791 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration/logging.properties 
+2017-05-19 17:10:24,406 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:10:24,451 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:10:24,456 INFO  [org.wildfly.security] (ServerService Thread Pool -- 17) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 17:10:24,669 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 17:10:24,689 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.5.0.Beta6
+2017-05-19 17:10:24,697 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-19 17:15:32,844 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 17:15:33,082 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 17:15:33,187 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 17:15:33,188 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = 10.202.10.175
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1 -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone -b 10.202.10.175 -c standalone-full-ha.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 17:15:33,188 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration/logging.properties 
+2017-05-19 17:15:34,783 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:15:34,808 INFO  [org.wildfly.security] (ServerService Thread Pool -- 13) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 17:15:34,810 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 25) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:15:35,030 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 17:15:35,053 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.5.0.Beta6
+2017-05-19 17:15:35,062 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-19 17:15:42,624 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 17:15:42,855 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 17:15:42,964 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 17:15:42,966 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = 10.202.10.175
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1 -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone -b 10.202.10.175 -c standalone-full-ha.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 17:15:42,966 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker1/standalone/configuration/logging.properties 
+2017-05-19 17:15:44,483 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:15:44,517 INFO  [org.wildfly.security] (ServerService Thread Pool -- 3) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 17:15:44,529 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 16) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:15:44,725 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 17:15:44,743 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.5.0.Beta6
+2017-05-19 17:15:44,750 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-19 17:22:55,897 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 17:22:56,187 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 17:22:56,315 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 17:22:56,316 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = 10.202.10.175
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2 -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone -b 10.202.10.175 -c standalone-full-ha.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 17:22:56,317 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/worker2/standalone/configuration/logging.properties 
+2017-05-19 17:22:57,941 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:22:57,972 INFO  [org.wildfly.security] (ServerService Thread Pool -- 17) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 17:22:58,012 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:22:58,209 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 17:22:58,229 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.5.0.Beta6
+2017-05-19 17:22:58,237 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-19 17:26:12,346 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 17:26:12,636 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 17:26:12,762 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 17:26:12,763 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = 10.202.10.175
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone -b 10.202.10.175 -c standalone.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 17:26:12,764 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/mod_cluster/balancer/standalone/configuration/logging.properties 
+2017-05-19 17:26:14,196 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:26:14,228 INFO  [org.wildfly.security] (ServerService Thread Pool -- 18) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 17:26:14,231 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 29) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 17:26:14,319 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 17:26:14,337 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.5.0.Beta6
+2017-05-19 17:26:14,346 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-19 23:14:45,689 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 23:14:45,918 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 23:14:46,025 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 23:14:46,026 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = 192.168.0.103
+	jboss.home.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1 -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone -b 192.168.0.103 -c standalone-full-ha.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 23:14:46,026 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/configuration/logging.properties 
+2017-05-19 23:14:47,517 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 23:14:47,578 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 23:14:47,584 INFO  [org.wildfly.security] (ServerService Thread Pool -- 32) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 23:14:47,751 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 23:14:47,780 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.5.0.Beta6
+2017-05-19 23:14:47,794 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.5.0.Beta6
+2017-05-19 23:23:27,917 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-19 23:23:28,154 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1
+2017-05-19 23:23:28,261 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Full 11.0.0.Beta1-SNAPSHOT (WildFly Core 3.0.0.Beta21) starting
+2017-05-19 23:23:28,263 DEBUG [org.jboss.as.config] (MSC service thread 1-8) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_131-b12
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_131
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.131-b12
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = 192.168.0.103
+	jboss.home.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.10.14-200.fc25.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.131-1.b12.fc25.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1 -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone -b 192.168.0.103 -c standalone-full-ha.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2017-05-19 23:23:28,264 DEBUG [org.jboss.as.config] (MSC service thread 1-8) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/pv243-music-library/config/modcluster/worker1/standalone/configuration/logging.properties 
+2017-05-19 23:23:29,774 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 23:23:29,811 INFO  [org.wildfly.security] (ServerService Thread Pool -- 32) ELY00001: WildFly Elytron version 1.1.0.Beta42
+2017-05-19 23:23:29,825 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2017-05-19 23:23:30,014 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-05-19 23:23:30,033 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.5.0.Beta6
+2017-05-19 23:23:30,042 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.5.0.Beta6

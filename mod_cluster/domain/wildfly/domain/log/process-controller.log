@@ -1,0 +1,9 @@
+2017-05-25 10:40:29,400 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Beta8
+2017-05-25 10:40:29,589 INFO  [org.jboss.as.process.Host Controller.status] (main) WFLYPC0018: Starting process 'Host Controller'
+2017-05-25 10:41:34,139 INFO  [org.jboss.as.process.Server:balancer.status] (ProcessController-threads - 5) WFLYPC0018: Starting process 'Server:balancer'
+2017-05-25 10:46:16,939 INFO  [org.jboss.as.process] (Shutdown thread) WFLYPC0017: Shutting down process controller
+2017-05-25 10:46:16,942 INFO  [org.jboss.as.process.Host Controller.status] (Shutdown thread) WFLYPC0019: Stopping process 'Host Controller'
+2017-05-25 10:46:16,969 INFO  [org.jboss.as.process.Server:balancer.status] (ProcessController-threads - 6) WFLYPC0019: Stopping process 'Server:balancer'
+2017-05-25 10:46:16,996 INFO  [org.jboss.as.process.Server:balancer.status] (reaper for Server:balancer) WFLYPC0011: Process 'Server:balancer' finished with an exit status of 130
+2017-05-25 10:46:17,130 INFO  [org.jboss.as.process.Host Controller.status] (reaper for Host Controller) WFLYPC0011: Process 'Host Controller' finished with an exit status of 130
+2017-05-25 10:46:17,130 INFO  [org.jboss.as.process] (Shutdown thread) WFLYPC0016: All processes finished; exiting
