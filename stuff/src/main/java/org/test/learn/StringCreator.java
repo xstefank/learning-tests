@@ -9,4 +9,8 @@ public class StringCreator {
 
         return String.format("%0" + length + "d", 0).replace('0', ' ');
     }
+
+    public String removeTrailingSpaces(String string) {
+        return string.replaceFirst("\\s++$", "");
+    }
 }
