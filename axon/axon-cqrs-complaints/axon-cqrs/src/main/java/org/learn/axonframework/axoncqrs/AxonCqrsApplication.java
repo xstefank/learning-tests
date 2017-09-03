@@ -41,7 +41,7 @@ public class AxonCqrsApplication {
 
 
 	@RestController
-	public static class ComplaintAPI {
+	private static class ComplaintAPI {
 
 		private final ComplaintQueryObjectRepository repository;
 		private final CommandGateway commandGateway;
@@ -93,7 +93,7 @@ public class AxonCqrsApplication {
 	}
 
 	@Component
-	public static class ComplaintQueryObjectUpdater {
+	private static class ComplaintQueryObjectUpdater {
 
 		private final ComplaintQueryObjectRepository repository;
 
