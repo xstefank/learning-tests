@@ -1,18 +1,18 @@
-package org.learn.axonframework.axonsaga.command;
+package org.learn.axonframework.axonsaga.event;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class FileOrderCommand {
+public class OrderFiledEvent {
 
-    private String orderId;
+    private String id;
     private String productName;
     private String description;
 
-    public String getOrderId() {
-        return orderId;
+    public String getId() {
+        return id;
     }
 
     public String getProductName() {
