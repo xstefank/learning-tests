@@ -1,15 +1,19 @@
 package org.learn.axonframework.axonsaga.command;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@AllArgsConstructor
 public class FileOrderCommand {
 
     private String orderId;
     private String productName;
     private String description;
+
+    public FileOrderCommand(String orderId, String productName, String description) {
+        this.orderId = orderId;
+        this.productName = productName;
+        this.description = description;
+    }
 
     public String getOrderId() {
         return orderId;

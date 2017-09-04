@@ -1,17 +1,20 @@
 package org.learn.axonframework.axonsaga.domain;
 
-import lombok.Setter;
-import org.axonframework.commandhandling.model.Repository;
+import org.axonframework.eventhandling.EventHandler;
+import org.learn.axonframework.axonsaga.domain.query.OrderQueryObject;
+import org.learn.axonframework.axonsaga.event.OrderFiledEvent;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 
 @Component
 public class OrderCommandHandler {
 
-    @Setter
     @Autowired
-    @Qualifier("userRepository")
-    private Repository<Order> repository;
+    private OrderQueryObjectRepository repository;
+
+    @EventHandler
+    public void on(OrderFiledEvent event) {
+        repository.save(new OrderQueryObject(event.getId(), event.getProductName(), event.getDescription()));
+    }
 }

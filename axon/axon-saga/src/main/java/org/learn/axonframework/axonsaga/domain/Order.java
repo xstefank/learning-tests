@@ -23,6 +23,8 @@ public class Order implements Serializable {
 
     @CommandHandler
     public Order(FileOrderCommand command) {
+        //business checks
+
         apply(new OrderFiledEvent(command.getOrderId(), command.getProductName(), command.getDescription()));
     }
 
