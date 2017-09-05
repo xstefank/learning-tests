@@ -1,7 +1,7 @@
 package org.learn.axonframework.axonsaga.api;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.learn.axonframework.axonsaga.command.FileOrderCommand;
+import org.learn.axonframework.axonsaga.command.model.FileOrderCommand;
 import org.learn.axonframework.axonsaga.domain.OrderQueryObjectRepository;
 import org.learn.axonframework.axonsaga.domain.query.OrderQueryObject;
 import org.springframework.web.bind.annotation.GetMapping;

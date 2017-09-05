@@ -6,7 +6,7 @@ import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.spring.stereotype.Aggregate;
-import org.learn.axonframework.axonsaga.command.FileOrderCommand;
+import org.learn.axonframework.axonsaga.command.model.FileOrderCommand;
 import org.learn.axonframework.axonsaga.event.OrderFiledEvent;
 
 import java.io.Serializable;
@@ -30,7 +30,7 @@ public class Order implements Serializable {
 
     @EventSourcingHandler
     public void on(OrderFiledEvent event) {
-        orderID = event.getId();
+        orderID = event.getOrderId();
     }
 
 }

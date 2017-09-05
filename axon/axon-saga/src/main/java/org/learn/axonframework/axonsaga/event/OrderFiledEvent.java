@@ -1,23 +1,22 @@
 package org.learn.axonframework.axonsaga.event;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class OrderFiledEvent {
 
-    private String id;
+    private String orderId;
     private String productName;
     private String description;
 
-    public OrderFiledEvent(String id, String productName, String description) {
-        this.id = id;
+    public OrderFiledEvent(String orderId, String productName, String description) {
+        this.orderId = orderId;
         this.productName = productName;
         this.description = description;
     }
 
-    public String getId() {
-        return id;
+    public String getOrderId() {
+        return orderId;
     }
 
     public String getProductName() {

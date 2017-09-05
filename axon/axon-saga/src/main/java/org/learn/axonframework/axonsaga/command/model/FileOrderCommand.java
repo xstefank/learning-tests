@@ -1,4 +1,4 @@
-package org.learn.axonframework.axonsaga.command;
+package org.learn.axonframework.axonsaga.command.model;
 
 import lombok.NoArgsConstructor;
 
