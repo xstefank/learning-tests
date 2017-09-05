@@ -11,7 +11,7 @@
 
 ### Post orders
 
-curl -H "Content-Type:application/json" -d '{"productName":"testProduct","description":"testing order"}' localhost:8080
+`curl -H "Content-Type:application/json" -d '{"productName":"testProduct","description":"testing order"}' localhost:8080`
 
 
 
