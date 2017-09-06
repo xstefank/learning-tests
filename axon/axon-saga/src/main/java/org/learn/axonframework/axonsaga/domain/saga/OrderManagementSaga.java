@@ -8,6 +8,7 @@ import org.learn.axonframework.axonsaga.command.model.CompensateShipmentCommand;
 import org.learn.axonframework.axonsaga.command.model.CreateInvoiceCommand;
 import org.learn.axonframework.axonsaga.command.model.PrepareShippingCommand;
 import org.learn.axonframework.axonsaga.event.CompensateOrderSagaEvent;
+import org.learn.axonframework.axonsaga.event.CompensateShipmentEvent;
 import org.learn.axonframework.axonsaga.event.InvoicePaidEvent;
 import org.learn.axonframework.axonsaga.event.OrderFiledEvent;
 import org.learn.axonframework.axonsaga.event.ShipmentArrivedEvent;
@@ -23,8 +24,8 @@ import static org.axonframework.eventhandling.saga.SagaLifecycle.end;
 @Saga
 public class OrderManagementSaga {
 
-    private boolean paid = false;
-    private boolean delivered = false;
+    private OrderProcess orderProcess = new OrderProcess();
+    private OrderCompensation orderCompensation = new OrderCompensation();
 
     private String shipmentId;
     private String invoiceId;
@@ -49,18 +50,18 @@ public class OrderManagementSaga {
 
     @SagaEventHandler(associationProperty = "shipmentId")
     public void handle(ShipmentArrivedEvent event) {
-        delivered = true;
+        orderProcess.setDelivered(true);
         System.out.println(String.format("shippment %s arrived in SAGA, order: %s", event.getShipmentId(), event.getOrderId()));
-        if (paid) {
+        if (orderProcess.isPaid()) {
             finishSaga(event.getOrderId());
         }
     }
 
     @SagaEventHandler(associationProperty = "invoiceId")
     public void handle(InvoicePaidEvent event) {
-        paid = true;
+        orderProcess.setDelivered(true);
         System.out.println(String.format("invoice %s paid in SAGA, order %s", event.getInvoiceId(), event.getOrderId()));
-        if (delivered) {
+        if (orderProcess.isDelivered()) {
             finishSaga(event.getOrderId());
         }
     }
@@ -76,5 +77,83 @@ public class OrderManagementSaga {
         System.out.println(String.format("ending SAGA with order: %s", orderId));
     }
 
+    @SagaEventHandler(associationProperty = "shipmentId")
+    public void on(CompensateShipmentEvent event) {
+        orderCompensation.setShipmentCompensated(true);
+        System.out.println(String.format("shipment %s compensated in SAGA for order [%s] with cause: %s",
+                event.getShipmentId(), event.getOrderId(), event.getCause()));
 
+        if (isCompensated()) {
+            finishCompensation(event.getOrderId());
+        }
+    }
+
+    private void finishCompensation(String orderId) {
+        end();
+        System.out.println(String.format("SAGA with order [%s] fully compensated", orderId));
+    }
+
+    private boolean isCompensated() {
+        boolean isCompensated = false;
+
+        if (orderProcess.isDelivered()) {
+            isCompensated = orderCompensation.isShipmentCompensated();
+        }
+
+        if (orderProcess.isPaid()) {
+            isCompensated = orderCompensation.isInvoiceCompensated();
+        }
+
+        return isCompensated;
+    }
+
+    private static class OrderProcess {
+
+        private boolean delivered;
+        private boolean paid;
+
+        public OrderProcess() {
+        }
+
+        public boolean isDelivered() {
+            return delivered;
+        }
+
+        public void setDelivered(boolean delivered) {
+            this.delivered = delivered;
+        }
+
+        public boolean isPaid() {
+            return paid;
+        }
+
+        public void setPaid(boolean paid) {
+            this.paid = paid;
+        }
+    }
+
+    private static class OrderCompensation {
+
+        private boolean shipmentCompensated;
+        private boolean invoiceCompensated;
+
+        public OrderCompensation() {
+        }
+
+        public boolean isShipmentCompensated() {
+            return shipmentCompensated;
+        }
+
+        public void setShipmentCompensated(boolean shipmentCompensated) {
+            this.shipmentCompensated = shipmentCompensated;
+        }
+
+        public boolean isInvoiceCompensated() {
+            return invoiceCompensated;
+        }
+
+        public void setInvoiceCompensated(boolean invoiceCompensated) {
+            this.invoiceCompensated = invoiceCompensated;
+        }
+    }
 }
