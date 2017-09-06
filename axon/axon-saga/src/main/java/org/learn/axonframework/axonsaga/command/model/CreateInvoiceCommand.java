@@ -7,11 +7,13 @@ public class CreateInvoiceCommand {
 
     private String invoiceId;
     private String orderId;
+    private String productName;
     private String comment;
 
-    public CreateInvoiceCommand(String invoiceId, String orderId, String comment) {
+    public CreateInvoiceCommand(String invoiceId, String orderId, String productName, String comment) {
         this.invoiceId = invoiceId;
         this.orderId = orderId;
+        this.productName = productName;
         this.comment = comment;
     }
 
@@ -21,6 +23,10 @@ public class CreateInvoiceCommand {
 
     public String getOrderId() {
         return orderId;
+    }
+
+    public String getProductName() {
+        return productName;
     }
 
     public String getComment() {

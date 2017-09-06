@@ -1,18 +1,18 @@
 package org.learn.axonframework.axonsaga.event;
 
-public class ShippingArrivedEvent {
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+public class CompensateShipmentEvent {
 
     private String shipmentId;
     private String orderId;
-    private double price;
+    private String cause;
 
-    public ShippingArrivedEvent() {
-    }
-
-    public ShippingArrivedEvent(String shipmentId, String orderId, double price) {
+    public CompensateShipmentEvent(String shipmentId, String orderId, String cause) {
         this.shipmentId = shipmentId;
         this.orderId = orderId;
-        this.price = price;
+        this.cause = cause;
     }
 
     public String getShipmentId() {
@@ -23,7 +23,7 @@ public class ShippingArrivedEvent {
         return orderId;
     }
 
-    public double getPrice() {
-        return price;
+    public String getCause() {
+        return cause;
     }
 }
