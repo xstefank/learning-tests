@@ -13,5 +13,10 @@
 
 `curl -H "Content-Type:application/json" -d '{"productName":"testProduct","description":"testing order"}' localhost:8080`
 
+### Saga compensation example
+
+create an order with product name __compensateSaga__
+
+`curl -H "Content-Type:application/json" -d '{"productName":"compensateSaga","description":"testing order"}' localhost:8080`
 
 
