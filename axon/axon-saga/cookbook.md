@@ -23,7 +23,7 @@ Similar to commands, events have their handlers defined by the `@EventHandler` o
 
 ### Aggregates
 
-TODO
+Aggreagates are groups of entities that together act as a single unit with regards to the data changes. If something changes the aggregate is always in the persistent state. It makes the decisions based on the incoming command and based on what happened in the past on what will happen when the command comes. The aggregate must be annotated with a `@Aggregate` annotation and it must have one mandatory field annotated with `@AggregateIdentifier`.
 
 ### Event sourcing 
 
