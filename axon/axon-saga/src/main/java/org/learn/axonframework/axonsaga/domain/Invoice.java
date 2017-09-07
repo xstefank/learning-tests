@@ -3,6 +3,7 @@ package org.learn.axonframework.axonsaga.domain;
 import lombok.NoArgsConstructor;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
+import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.learn.axonframework.axonsaga.command.model.CreateInvoiceCommand;
@@ -17,7 +18,7 @@ import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 public class Invoice {
 
     @AggregateIdentifier
-    private String invoiceId = "N/A";
+    private String invoiceId;
 
     @CommandHandler
     public Invoice(CreateInvoiceCommand command) throws InterruptedException {
@@ -39,7 +40,7 @@ public class Invoice {
         System.out.println(String.format("invoice %s has been paid", invoiceId));
     }
 
-    @EventSourcingHandler
+    @EventHandler
     public void on(CompensateInvoiceEvent event) {
         System.out.println(String.format("invoice %s compensation with cause: %s", invoiceId, event.getCause()));
     }

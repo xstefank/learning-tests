@@ -7,7 +7,6 @@ import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.learn.axonframework.axonsaga.command.model.CompensateShipmentCommand;
 import org.learn.axonframework.axonsaga.command.model.PrepareShippingCommand;
-import org.learn.axonframework.axonsaga.event.CompensateOrderSagaEvent;
 import org.learn.axonframework.axonsaga.event.CompensateShipmentEvent;
 import org.learn.axonframework.axonsaga.event.ShipmentArrivedEvent;
 
