@@ -25,6 +25,9 @@ public class Invoice {
         //simulate check
 //        Thread.sleep(1000 * (new Random().nextInt(10) + 1));
 
+        //aggregate identifier needs to be initialized to be recognized by DB
+        invoiceId = command.getInvoiceId();
+
         //simulate compensation of saga on error
         if (command.getProductName().equals("compensateSaga")) {
             System.out.println("simulating error for SAGA compensation");
