@@ -1,5 +1,6 @@
 package org.learn.axonframework.axonlt;
 
+import org.axonframework.commandhandling.AsynchronousCommandBus;
 import org.axonframework.config.Configuration;
 import org.axonframework.config.DefaultConfigurer;
 import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine;
@@ -18,6 +19,7 @@ public class Application {
         Configuration config = DefaultConfigurer.defaultConfiguration()
                 .configureAggregate(Account.class)
                 .configureEmbeddedEventStore(c -> new InMemoryEventStorageEngine())
+                .configureCommandBus(c -> new AsynchronousCommandBus())
                 .buildConfiguration();
 
         config.start();

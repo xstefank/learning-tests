@@ -1,9 +1,13 @@
 package org.learn.axonframework.axonsaga.api;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.axonframework.eventhandling.TrackingEventProcessor;
+import org.axonframework.eventhandling.tokenstore.TokenStore;
 import org.learn.axonframework.axonsaga.command.model.FileOrderCommand;
+import org.learn.axonframework.axonsaga.command.model.PrepareShippingCommand;
 import org.learn.axonframework.axonsaga.domain.OrderQueryObjectRepository;
 import org.learn.axonframework.axonsaga.domain.query.OrderQueryObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +24,10 @@ public class OrderAPI {
 
     private final CommandGateway commandGateway;
     private final OrderQueryObjectRepository repository;
+
+    @Autowired
+    private TokenStore tokenStore;
+
 
     public OrderAPI(CommandGateway commandGateway, OrderQueryObjectRepository repository) {
         this.commandGateway = commandGateway;
@@ -41,4 +49,10 @@ public class OrderAPI {
     public OrderQueryObject findOne(@PathVariable String id) {
         return repository.findOne(id);
     }
+
+    @GetMapping("/event")
+    public void fireEvent() {
+        commandGateway.send(new PrepareShippingCommand("testShipmentID", "testOrderID", "testProductName",  1.0));
+    }
+
 }
