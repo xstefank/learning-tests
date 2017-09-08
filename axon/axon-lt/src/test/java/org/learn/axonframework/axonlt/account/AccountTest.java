@@ -1,7 +1,7 @@
 package org.learn.axonframework.axonlt.account;
 
-import org.axonframework.test.FixtureConfiguration;
-import org.axonframework.test.Fixtures;
+import org.axonframework.test.aggregate.FixtureConfiguration;
+import org.axonframework.test.aggregate.AggregateTestFixture;
 import org.junit.Before;
 import org.junit.Test;
 import org.learn.axonframework.axonlt.coreapi.AccountCreatedEvent;
@@ -18,7 +18,7 @@ public class AccountTest {
 
     @Before
     public void setUp() throws Exception {
-        fixture = Fixtures.newGivenWhenThenFixture(Account.class);
+        fixture = new AggregateTestFixture<>(Account.class);
     }
 
     @Test
