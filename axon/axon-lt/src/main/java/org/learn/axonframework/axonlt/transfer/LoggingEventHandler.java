@@ -1,7 +1,9 @@
 package org.learn.axonframework.axonlt.transfer;
 
 import org.axonframework.eventhandling.EventHandler;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LoggingEventHandler {
 
     @EventHandler

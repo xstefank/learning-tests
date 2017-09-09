@@ -22,7 +22,7 @@ public class AxonLtApplication {
 
 		commandGateway.send(new CreateAccountCommand("1234", 500), LoggingCallback.INSTANCE);
 		commandGateway.send(new CreateAccountCommand("4321", 500), LoggingCallback.INSTANCE);
-		commandGateway.send(new RequestMoneyTransferCommand("tf1", "1234", "4321", 100), LoggingCallback.INSTANCE);
+		commandGateway.send(new RequestMoneyTransferCommand("tf1", "1234", "4321", 10000), LoggingCallback.INSTANCE);
 
 
 
