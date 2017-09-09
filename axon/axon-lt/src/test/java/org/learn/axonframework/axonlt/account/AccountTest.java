@@ -1,18 +1,20 @@
 package org.learn.axonframework.axonlt.account;
 
-import org.axonframework.test.aggregate.FixtureConfiguration;
 import org.axonframework.test.aggregate.AggregateTestFixture;
+import org.axonframework.test.aggregate.FixtureConfiguration;
 import org.junit.Before;
 import org.junit.Test;
 import org.learn.axonframework.axonlt.coreapi.AccountCreatedEvent;
 import org.learn.axonframework.axonlt.coreapi.CreateAccountCommand;
 import org.learn.axonframework.axonlt.coreapi.MoneyWithdrawnEvent;
+import org.learn.axonframework.axonlt.coreapi.OverdraftLimitExceededException;
 import org.learn.axonframework.axonlt.coreapi.WithdrawMoneyCommand;
 
 
 public class AccountTest {
 
     private static final String ACCOUNT_ID = "1234";
+    private static final String TRANSACTION_ID = "tx1";
 
     private FixtureConfiguration<Account> fixture;
 
@@ -31,14 +33,14 @@ public class AccountTest {
     @Test
     public void testWithdrawReasonableAmount() {
         fixture.given(new AccountCreatedEvent(ACCOUNT_ID, 1000))
-                .when(new WithdrawMoneyCommand(ACCOUNT_ID, 600))
-                .expectEvents(new MoneyWithdrawnEvent(ACCOUNT_ID, 600, -600));
+                .when(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID, 600))
+                .expectEvents(new MoneyWithdrawnEvent(ACCOUNT_ID, TRANSACTION_ID, 600, -600));
     }
 
     @Test
     public void testWithdrawAbsurdAmount() {
         fixture.given(new AccountCreatedEvent(ACCOUNT_ID, 1000))
-                .when(new WithdrawMoneyCommand(ACCOUNT_ID, 1001))
+                .when(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID, 1001))
                 .expectNoEvents()
                 .expectException(OverdraftLimitExceededException.class);
     }
@@ -46,8 +48,8 @@ public class AccountTest {
     @Test
     public void testWithdrawTwice() {
         fixture.given(new AccountCreatedEvent(ACCOUNT_ID, 1000),
-                new MoneyWithdrawnEvent(ACCOUNT_ID, 999, -999))
-                .when(new WithdrawMoneyCommand(ACCOUNT_ID, 2))
+                new MoneyWithdrawnEvent(ACCOUNT_ID, TRANSACTION_ID, 999, -999))
+                .when(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID, 2))
                 .expectException(OverdraftLimitExceededException.class);
     }
 

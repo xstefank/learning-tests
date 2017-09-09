@@ -13,6 +13,7 @@ import static org.axonframework.commandhandling.GenericCommandMessage.asCommandM
 public class Application {
 
     private static final String ACCOUNT_ID = "4321";
+    private static final String TRANSACTION_ID = "tx1";
 
 
     public static void main(String[] args) {
@@ -24,8 +25,8 @@ public class Application {
 
         config.start();
         config.commandBus().dispatch(asCommandMessage(new CreateAccountCommand(ACCOUNT_ID, 500)));
-        config.commandBus().dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, 250)));
-        config.commandBus().dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, 251)));
+        config.commandBus().dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID, 250)));
+        config.commandBus().dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID, 251)));
     }
 
 }

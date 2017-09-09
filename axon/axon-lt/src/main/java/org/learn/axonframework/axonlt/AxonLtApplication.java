@@ -3,20 +3,16 @@ package org.learn.axonframework.axonlt;
 import org.axonframework.commandhandling.CommandBus;
 import org.axonframework.commandhandling.CommandCallback;
 import org.axonframework.commandhandling.CommandMessage;
-import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.axonframework.commandhandling.gateway.DefaultCommandGateway;
 import org.axonframework.commandhandling.model.GenericJpaRepository;
 import org.axonframework.commandhandling.model.Repository;
 import org.axonframework.common.jpa.ContainerManagedEntityManagerProvider;
 import org.axonframework.common.jpa.EntityManagerProvider;
 import org.axonframework.common.transaction.TransactionManager;
 import org.axonframework.eventhandling.EventBus;
-import org.axonframework.eventhandling.saga.ResourceInjector;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;
 import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine;
 import org.axonframework.spring.config.EnableAxonAutoConfiguration;
 import org.axonframework.spring.messaging.unitofwork.SpringTransactionManager;
-import org.axonframework.spring.saga.SpringResourceInjector;
 import org.learn.axonframework.axonlt.account.Account;
 import org.learn.axonframework.axonlt.coreapi.CreateAccountCommand;
 import org.learn.axonframework.axonlt.coreapi.WithdrawMoneyCommand;
@@ -24,7 +20,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import static org.axonframework.commandhandling.GenericCommandMessage.asCommandMessage;
@@ -34,6 +29,7 @@ import static org.axonframework.commandhandling.GenericCommandMessage.asCommandM
 public class AxonLtApplication {
 
 	private static final String ACCOUNT_ID = "4321";
+	private static final String TRANSACTION_ID = "tx1";
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext config = SpringApplication.run(AxonLtApplication.class, args);
@@ -43,8 +39,8 @@ public class AxonLtApplication {
 			@Override
 			public void onSuccess(CommandMessage<?> commandMessage, Object o) {
 				System.out.println("command completed successfully");
-				commandBus.dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, 250)));
-				commandBus.dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, 251)));
+				commandBus.dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID, 250)));
+				commandBus.dispatch(asCommandMessage(new WithdrawMoneyCommand(ACCOUNT_ID, TRANSACTION_ID,251)));
 			}
 
 			@Override
