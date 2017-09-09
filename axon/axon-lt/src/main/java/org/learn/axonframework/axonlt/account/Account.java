@@ -20,7 +20,7 @@ import javax.persistence.Id;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
-@Aggregate(repository = "jpaAccountRepository")
+@Aggregate
 @NoArgsConstructor
 @Entity
 public class Account {
