@@ -4,10 +4,10 @@ import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.eventhandling.saga.SagaEventHandler;
 import org.axonframework.eventhandling.saga.StartSaga;
 import org.axonframework.spring.stereotype.Saga;
-import org.learn.axonframework.orderservice.coreapi.CreateInvoiceCommand;
-import org.learn.axonframework.orderservice.coreapi.OrderFiledEvent;
-import org.learn.axonframework.orderservice.coreapi.PrepareShipmentCommand;
-import org.learn.axonframework.orderservice.util.LoggingCallback;
+import org.learn.axonframework.coreapi.CreateInvoiceCommand;
+import org.learn.axonframework.coreapi.OrderFiledEvent;
+import org.learn.axonframework.coreapi.PrepareShipmentCommand;
+import org.learn.axonframework.util.LoggingCallback;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Saga

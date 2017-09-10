@@ -3,9 +3,9 @@ package org.learn.axonframework.orderservice.saga;
 import org.axonframework.test.saga.SagaTestFixture;
 import org.junit.Before;
 import org.junit.Test;
-import org.learn.axonframework.orderservice.coreapi.CreateInvoiceCommand;
-import org.learn.axonframework.orderservice.coreapi.OrderFiledEvent;
-import org.learn.axonframework.orderservice.coreapi.PrepareShipmentCommand;
+import org.learn.axonframework.coreapi.CreateInvoiceCommand;
+import org.learn.axonframework.coreapi.OrderFiledEvent;
+import org.learn.axonframework.coreapi.PrepareShipmentCommand;
 
 public class OrderManagementSagaTest {
 

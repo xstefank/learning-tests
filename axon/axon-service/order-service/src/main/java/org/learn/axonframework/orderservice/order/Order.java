@@ -5,8 +5,8 @@ import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.spring.stereotype.Aggregate;
-import org.learn.axonframework.orderservice.coreapi.FileOrderCommand;
-import org.learn.axonframework.orderservice.coreapi.OrderFiledEvent;
+import org.learn.axonframework.coreapi.FileOrderCommand;
+import org.learn.axonframework.coreapi.OrderFiledEvent;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 

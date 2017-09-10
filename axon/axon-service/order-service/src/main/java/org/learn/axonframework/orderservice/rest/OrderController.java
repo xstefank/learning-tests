@@ -1,9 +1,9 @@
 package org.learn.axonframework.orderservice.rest;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.learn.axonframework.orderservice.coreapi.FileOrderCommand;
-import org.learn.axonframework.orderservice.util.LoggingCallback;
-import org.learn.axonframework.orderservice.util.Util;
+import org.learn.axonframework.coreapi.FileOrderCommand;
+import org.learn.axonframework.util.LoggingCallback;
+import org.learn.axonframework.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
