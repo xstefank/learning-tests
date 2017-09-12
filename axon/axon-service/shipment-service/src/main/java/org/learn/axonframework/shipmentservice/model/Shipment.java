@@ -1,14 +1,18 @@
 package org.learn.axonframework.shipmentservice.model;
 
 import lombok.NoArgsConstructor;
+import org.axonframework.commandhandling.model.AggregateIdentifier;
+import org.axonframework.spring.stereotype.Aggregate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+@Aggregate
 @NoArgsConstructor
 @Entity
 public class Shipment {
 
+    @AggregateIdentifier
     @Id
     private String id;
 

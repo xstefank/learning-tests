@@ -20,7 +20,7 @@ public class OrderController {
     @PostMapping
     public String createOrder(@RequestBody Map<String, String> request) {
         String orderId = Util.generateId();
-        commandGateway.send(new FileOrderCommand(orderId, request.get("productName"),
+        commandGateway.send(new FileOrderCommand(orderId, request.get("productId"),
                 request.get("comment"), Integer.valueOf(request.get("price"))), LoggingCallback.INSTANCE);
 
         return "Order posted - " + orderId;

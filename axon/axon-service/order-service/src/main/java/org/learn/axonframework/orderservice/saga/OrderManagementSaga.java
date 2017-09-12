@@ -21,11 +21,11 @@ public class OrderManagementSaga {
     public void on(OrderFiledEvent event) {
 
         //send shipment
-        commandGateway.send(new PrepareShipmentCommand(event.getOrderId(), event.getProductName(),
-                event.getPrice()), LoggingCallback.INSTANCE);
+        commandGateway.send(new PrepareShipmentCommand(event.getOrderId(), event.getProductId()),
+                LoggingCallback.INSTANCE);
 
         //create invoice
-        commandGateway.send(new CreateInvoiceCommand(event.getOrderId(), event.getProductName(),
+        commandGateway.send(new CreateInvoiceCommand(event.getOrderId(), event.getProductId(),
                 event.getComment()), LoggingCallback.INSTANCE);
     }
 }
