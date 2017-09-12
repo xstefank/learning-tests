@@ -8,10 +8,10 @@ import org.learn.axonframework.coreapi.OrderFiledEvent;
 
 public class OrderTest {
 
-    private static final String ACCOUNT1_ID = "1234";
-    private static final String ACCOUNT1_PRODUCT_ID = "testProduct";
-    private static final String ACCOUNT_1_COMMENT = "testComment";
-    private static final int ACCOUNT_1_PRICE = 100;
+    private static final String ORDER1_ID = "1234";
+    private static final String ORDER1_PRODUCT_ID = "testProduct";
+    private static final String ORDER1_COMMENT = "testComment";
+    private static final int ORDER1_PRICE = 100;
 
     private AggregateTestFixture<Order> fixture;
 
@@ -23,8 +23,8 @@ public class OrderTest {
     @Test
     public void testOrderCreatedFiresEvents() {
         fixture.givenNoPriorActivity()
-                .when(new FileOrderCommand(ACCOUNT1_ID, ACCOUNT1_PRODUCT_ID, ACCOUNT_1_COMMENT, ACCOUNT_1_PRICE))
-                .expectEvents(new OrderFiledEvent(ACCOUNT1_ID, ACCOUNT1_PRODUCT_ID, ACCOUNT_1_COMMENT, ACCOUNT_1_PRICE));
+                .when(new FileOrderCommand(ORDER1_ID, ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE))
+                .expectEvents(new OrderFiledEvent(ORDER1_ID, ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE));
     }
 
 }
