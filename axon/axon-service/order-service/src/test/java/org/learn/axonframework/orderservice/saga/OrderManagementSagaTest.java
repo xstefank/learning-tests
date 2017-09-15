@@ -3,9 +3,10 @@ package org.learn.axonframework.orderservice.saga;
 import org.axonframework.test.saga.SagaTestFixture;
 import org.junit.Before;
 import org.junit.Test;
-import org.learn.axonframework.coreapi.CreateInvoiceCommand;
+import org.learn.axonframework.coreapi.FileOrderCommand;
 import org.learn.axonframework.coreapi.OrderFiledEvent;
-import org.learn.axonframework.coreapi.PrepareShipmentCommand;
+import org.learn.axonframework.coreapi.ProductInfo;
+import org.learn.axonframework.coreapi.ShipmentRequestedEvent;
 
 public class OrderManagementSagaTest {
 
@@ -24,10 +25,17 @@ public class OrderManagementSagaTest {
     @Test
     public void testSagaCreated() {
         fixture.givenNoPriorActivity()
-                .whenPublishingA(new OrderFiledEvent(ORDER1_ID, ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE))
+                .whenPublishingA(new OrderFiledEvent(ORDER1_ID, new ProductInfo(ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE)))
                 .expectActiveSagas(1)
-                .expectDispatchedCommands(new PrepareShipmentCommand(ORDER1_ID, ORDER1_PRODUCT_ID),
-                        new CreateInvoiceCommand(ORDER1_ID, ORDER1_PRODUCT_ID, ORDER1_COMMENT));
+                .expectDispatchedCommands(new RequestShipmentCommand(ORDER1_ID, new ProductInfo(ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE)));
+    }
+
+    @Test
+    public void testShipmentRequested() {
+        fixture.givenAPublished(new OrderFiledEvent(ORDER1_ID, new ProductInfo(ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE)))
+                .whenPublishingA(new ShipmentRequestedEvent(ORDER1_ID, new ProductInfo(ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE)))
+                .expectNoScheduledEvents()
+                .expectNoDispatchedCommands();
     }
 
 }

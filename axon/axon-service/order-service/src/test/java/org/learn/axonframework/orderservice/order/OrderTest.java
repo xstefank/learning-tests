@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.learn.axonframework.coreapi.FileOrderCommand;
 import org.learn.axonframework.coreapi.OrderFiledEvent;
+import org.learn.axonframework.coreapi.ProductInfo;
 
 public class OrderTest {
 
@@ -23,8 +24,8 @@ public class OrderTest {
     @Test
     public void testOrderCreatedFiresEvents() {
         fixture.givenNoPriorActivity()
-                .when(new FileOrderCommand(ORDER1_ID, ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE))
-                .expectEvents(new OrderFiledEvent(ORDER1_ID, ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE));
+                .when(new FileOrderCommand(ORDER1_ID, new ProductInfo(ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE)))
+                .expectEvents(new OrderFiledEvent(ORDER1_ID, new ProductInfo(ORDER1_PRODUCT_ID, ORDER1_COMMENT, ORDER1_PRICE)));
     }
 
 }

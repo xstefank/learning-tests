@@ -2,6 +2,7 @@ package org.learn.axonframework.orderservice.rest;
 
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.learn.axonframework.coreapi.FileOrderCommand;
+import org.learn.axonframework.coreapi.ProductInfo;
 import org.learn.axonframework.util.LoggingCallback;
 import org.learn.axonframework.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,10 @@ public class OrderController {
     @PostMapping
     public String createOrder(@RequestBody Map<String, String> request) {
         String orderId = Util.generateId();
-        commandGateway.send(new FileOrderCommand(orderId, request.get("productId"),
-                request.get("comment"), Integer.valueOf(request.get("price"))), LoggingCallback.INSTANCE);
+        ProductInfo productInfo = new ProductInfo(request.get("productId"),
+                request.get("comment"), Integer.valueOf(request.get("price")));
+
+        commandGateway.send(new FileOrderCommand(orderId, productInfo), LoggingCallback.INSTANCE);
 
         return "Order posted - " + orderId;
     }

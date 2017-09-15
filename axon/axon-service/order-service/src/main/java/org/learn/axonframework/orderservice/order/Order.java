@@ -19,8 +19,7 @@ public class Order {
 
     @CommandHandler
     public Order(FileOrderCommand command) {
-        apply(new OrderFiledEvent(command.getOrderId(), command.getProductId(),
-                command.getComment(), command.getPrice()));
+        apply(new OrderFiledEvent(command.getOrderId(), command.getProductInfo()));
     }
 
     @EventSourcingHandler
