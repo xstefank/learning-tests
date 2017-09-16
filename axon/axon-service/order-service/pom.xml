@@ -66,6 +66,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.axonframework</groupId>
+			<artifactId>axon-amqp</artifactId>
+			<version>${version.axon}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.axonframework</groupId>
 			<artifactId>axon-test</artifactId>
 			<version>${version.axon}</version>
 		</dependency>
