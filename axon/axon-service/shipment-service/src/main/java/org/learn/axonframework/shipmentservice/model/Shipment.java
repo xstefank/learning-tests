@@ -1,25 +1,16 @@
 package org.learn.axonframework.shipmentservice.model;
 
 import lombok.NoArgsConstructor;
-import org.axonframework.commandhandling.CommandHandler;
-import org.axonframework.commandhandling.model.AggregateIdentifier;
-import org.axonframework.eventsourcing.EventSourcingHandler;
-import org.axonframework.spring.stereotype.Aggregate;
-import org.learn.axonframework.coreapi.PrepareShipmentCommand;
-import org.learn.axonframework.coreapi.ShipmentPreparedEvent;
-import org.learn.axonframework.util.Util;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
-
-@Aggregate
+//@Aggregate
 @NoArgsConstructor
 @Entity
 public class Shipment {
 
-    @AggregateIdentifier
+//    @AggregateIdentifier
     @Id
     private String id;
 
@@ -36,17 +27,15 @@ public class Shipment {
         this.price = price;
     }
 
-    @CommandHandler
-    public Shipment(PrepareShipmentCommand command) {
-        String id = Util.generateId();
-        apply(new ShipmentPreparedEvent(id, command.getOrderId(), 20));
-    }
+//    @CommandHandler
+//    public Shipment(PrepareShipmentCommand command) {
+//        apply(new ShipmentPreparedEvent(command.getId(), command.getOrderId(), command.getPrice()));
+//    }
 
-    @EventSourcingHandler
-    public void on(ShipmentPreparedEvent event) {
-        this.id = event.getShipmentId();
-
-    }
+//    @EventHandler
+//    public void on(ShipmentPreparedEvent event) {
+//        this.id = event.getShipmentId();
+//    }
 
     public String getId() {
         return id;
