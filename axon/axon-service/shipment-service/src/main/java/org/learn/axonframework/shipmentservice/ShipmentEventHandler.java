@@ -33,9 +33,10 @@ public class ShipmentEventHandler {
 
         //generate price for shipping
 
+//        commandGateway.send(new PrepareShipmentCommand(id, event.getOrderId(), 20), LoggingCallback.INSTANCE);
+
         ProductInfo info = event.getProductInfo();
         repository.save(new Shipment(id, event.getOrderId(), info.getProductId(), info.getPrice()));
-//        commandGateway.send(new PrepareShipmentCommand(id, event.getOrderId(), 20), LoggingCallback.INSTANCE);
     }
 
 }

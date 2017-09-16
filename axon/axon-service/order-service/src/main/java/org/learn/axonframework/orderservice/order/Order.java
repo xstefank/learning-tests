@@ -7,6 +7,8 @@ import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.learn.axonframework.coreapi.FileOrderCommand;
 import org.learn.axonframework.coreapi.OrderFiledEvent;
+import org.learn.axonframework.coreapi.ShipmentRequestedEvent;
+import org.learn.axonframework.orderservice.saga.RequestShipmentCommand;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 
@@ -25,6 +27,11 @@ public class Order {
     @EventSourcingHandler
     public void on(OrderFiledEvent event) {
         orderId = event.getOrderId();
+    }
+
+    @CommandHandler
+    public void handle(RequestShipmentCommand command) {
+        apply(new ShipmentRequestedEvent(command.getOrderId(), command.getProductInfo()));
     }
 
 }

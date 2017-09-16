@@ -1,10 +1,11 @@
 package org.learn.axonframework.orderservice.saga;
 
+import org.axonframework.commandhandling.TargetAggregateIdentifier;
 import org.learn.axonframework.coreapi.ProductInfo;
 
 public class RequestShipmentCommand {
 
-
+    @TargetAggregateIdentifier
     private final String orderId;
     private final ProductInfo productInfo;
 

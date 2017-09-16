@@ -5,12 +5,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//@Aggregate
 @NoArgsConstructor
 @Entity
 public class Shipment {
 
-//    @AggregateIdentifier
     @Id
     private String id;
 
@@ -26,16 +24,6 @@ public class Shipment {
         this.productName = productName;
         this.price = price;
     }
-
-//    @CommandHandler
-//    public Shipment(PrepareShipmentCommand command) {
-//        apply(new ShipmentPreparedEvent(command.getId(), command.getOrderId(), command.getPrice()));
-//    }
-
-//    @EventHandler
-//    public void on(ShipmentPreparedEvent event) {
-//        this.id = event.getShipmentId();
-//    }
 
     public String getId() {
         return id;
