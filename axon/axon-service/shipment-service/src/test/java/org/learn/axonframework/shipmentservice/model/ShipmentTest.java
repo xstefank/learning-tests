@@ -14,10 +14,10 @@ public class ShipmentTest {
         fixture = new AggregateTestFixture<>(Shipment.class);
     }
 
-    @Test
-    public void testShipmentCreated() throws Exception {
-        fixture.givenNoPriorActivity()
-                .when(new PrepareShipmentCommand("1111", "2222", 100))
-                .expectEvents(new ShipmentPreparedEvent("1111", "2222", 100));
-    }
+//    @Test
+//    public void testShipmentCreated() throws Exception {
+//        fixture.givenNoPriorActivity()
+//                .when(new PrepareShipmentCommand("1111", "2222", 100))
+//                .expectEvents(new ShipmentPreparedEvent("1111", "2222", 100));
+//    }
 }
