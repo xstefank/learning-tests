@@ -5,6 +5,7 @@ import org.axonframework.eventhandling.saga.SagaEventHandler;
 import org.axonframework.eventhandling.saga.StartSaga;
 import org.axonframework.spring.stereotype.Saga;
 import org.learn.axonframework.coreapi.OrderFiledEvent;
+import org.learn.axonframework.coreapi.ShipmentPreparedEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +24,17 @@ public class OrderManagementSaga {
 
         //request shipment
         log.info("sending RequestShipmentCommand");
+        log.info("orderId - " + event.getOrderId());
         commandGateway.send(new RequestShipmentCommand(event.getOrderId(), event.getProductInfo()));
 
         //create invoice
 //        commandGateway.send(new CreateInvoiceCommand(event.getOrderId(), event.getProductId(),
 //                event.getComment()), LoggingCallback.INSTANCE);
     }
+
+    @SagaEventHandler(associationProperty = "orderId")
+    public void on(ShipmentPreparedEvent event) {
+        log.info("on ShipmentPreparedEvent");
+    }
+
 }

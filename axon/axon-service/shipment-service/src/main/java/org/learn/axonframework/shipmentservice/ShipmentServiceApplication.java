@@ -4,6 +4,7 @@ import com.rabbitmq.client.Channel;
 import org.axonframework.amqp.eventhandling.DefaultAMQPMessageConverter;
 import org.axonframework.amqp.eventhandling.spring.SpringAMQPMessageSource;
 import org.axonframework.serialization.Serializer;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -54,6 +55,7 @@ public class ShipmentServiceApplication {
 			@RabbitListener(queues = "ShipmentEvents")
 			@Override
 			public void onMessage(Message message, Channel channel) throws Exception {
+				LoggerFactory.getLogger("AMQP").info("received message " + message);
 				super.onMessage(message, channel);
 			}
 		};
