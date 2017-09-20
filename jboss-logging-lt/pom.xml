@@ -10,6 +10,17 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.jboss.spec.javax.annotation</groupId>
+            <artifactId>jboss-annotations-api_1.2_spec</artifactId>
+            <version>1.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging</artifactId>
             <version>3.3.1.Final</version>
@@ -30,7 +41,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>org.learn.jboss.Main</mainClass>
+                    <mainClass>org.learn.jboss.LogBean</mainClass>
                     <executable>maven</executable>
                     <!-- optional -->
                     <workingDirectory>/tmp</workingDirectory>

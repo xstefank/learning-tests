@@ -2,11 +2,17 @@ package org.learn.jboss;
 
 import org.jboss.logging.Logger;
 
-public class Main {
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
 
-    public static void main(String[] args) {
-        System.out.println("main-");
-        Logger log = Logger.getLogger(Main.class);
+@Startup
+@Singleton
+public class LogBean {
+
+    @PostConstruct
+    public static void postConstruct() {
+        Logger log = Logger.getLogger(LogBean.class);
 
         log.info("Test info message");
         log.infof("Test infof message: %d", 42);
