@@ -1,0 +1,26 @@
+
+task copy(type: Copy) {
+   description 'Copies the resource directory to the target directory.'
+   from 'resources'
+   into 'target'
+   include('**/*.txt', '**/*.xml', '**/*.properties')
+   println("description applied")
+}
+
+task eclipse << {
+   println 'Hello Eclipse'
+}
+
+// #1st approach - closure returning true, if the task should be executed, false if not.
+eclipse.onlyIf {
+   project.hasProperty('usingEclipse')
+}
+
+// #2nd approach - alternatively throw an StopExecutionException() like this
+//eclipse.doFirst {
+  // if(!usingEclipse) {
+    //  throw new StopExecutionException()
+  // }
+//}
+
+

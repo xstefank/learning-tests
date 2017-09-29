@@ -1,0 +1,39 @@
+
+task taskX << {
+   println 'taskX'
+}
+task taskY(dependsOn: 'taskX') << {
+   println "taskY"
+}
+
+//------------
+
+task taskYY << {
+   println 'taskYY'
+}
+task taskXX << {
+   println 'taskXX'
+}
+taskYY.dependsOn taskXX
+
+//------------
+
+task taskXXX << {
+   println 'taskXXX'
+}
+taskXXX.dependsOn {
+   tasks.findAll { 
+      task -> task.name.startsWith('lib') 
+   }
+}
+task lib1 << {
+   println 'lib1'
+}
+task lib2 << {
+   println 'lib2'
+}
+task notALib << {
+   println 'notALib'
+}
+
+

@@ -2,3 +2,33 @@ task hello << {
     println 'hello world!'
 }
 
+task upper << {
+   String expString = 'HELLO world'
+   println "Original: " + expString
+   println "Upper case: " + expString.toUpperCase()}
+
+task count << {
+   4.times { 
+      print "$it " 
+   }
+}
+
+task groovyJDK << {
+   String myName = "xstefank";
+   myName.each() { 
+      println "${it}" 
+   };
+}
+
+task getSet << {
+    // Using a getter method
+    println project.buildDir
+    println getProject().getBuildDir()
+
+    // Using a setter method
+    project.buildDir = 'target'
+    getProject().setBuildDir('target')
+}
+
+
+
