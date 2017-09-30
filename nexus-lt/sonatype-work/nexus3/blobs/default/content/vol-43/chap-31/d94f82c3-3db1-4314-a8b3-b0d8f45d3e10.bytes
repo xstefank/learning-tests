@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.javaee7.sample</groupId>
+  <artifactId>javaee7-simple-sample</artifactId>
+  <versioning>
+    <versions>
+      <version>1.11-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170930080559</lastUpdated>
+  </versioning>
+</metadata>

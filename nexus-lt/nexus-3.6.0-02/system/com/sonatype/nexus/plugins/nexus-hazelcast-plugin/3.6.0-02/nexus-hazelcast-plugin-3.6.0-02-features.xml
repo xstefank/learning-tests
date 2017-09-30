@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="nexus-hazelcast-plugin">
+    <feature name="nexus-hazelcast-plugin" description="com.sonatype.nexus.plugins:nexus-hazelcast-plugin" version="3.6.0.02">
+        <details>com.sonatype.nexus.plugins:nexus-hazelcast-plugin</details>
+        <bundle start-level="1000000">mvn:com.hazelcast/hazelcast/3.7.8</bundle>
+        <bundle>mvn:com.sonatype.nexus.plugins/nexus-hazelcast-plugin/3.6.0-02</bundle>
+        <bundle>mvn:com.orientechnologies/orientdb-distributed/2.2.27</bundle>
+        <bundle>mvn:com.orientechnologies/orientdb-tools/2.2.27</bundle>
+        <bundle>mvn:com.hazelcast/hazelcast-aws/2.0.1</bundle>
+        <bundle>mvn:javax.transaction/javax.transaction-api/1.2</bundle>
+        <bundle>mvn:javax.interceptor/javax.interceptor-api/1.2</bundle>
+    </feature>
+</features>

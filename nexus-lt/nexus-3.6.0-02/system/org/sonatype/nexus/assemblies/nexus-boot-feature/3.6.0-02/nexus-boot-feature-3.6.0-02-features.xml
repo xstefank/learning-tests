@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="nexus-boot-feature">
+    <feature name="nexus-boot-feature" description="org.sonatype.nexus.assemblies:nexus-boot-feature" version="3.6.0.02">
+        <details>org.sonatype.nexus.assemblies:nexus-boot-feature</details>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:org.sonatype.nexus/nexus-bootstrap/3.6.0-02</bundle>
+        <bundle>wrap:mvn:uk.org.lidalia/sysout-over-slf4j/1.0.2</bundle>
+        <bundle>mvn:org.codehaus.plexus/plexus-interpolation/1.24</bundle>
+    </feature>
+</features>

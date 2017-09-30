@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="nexus-pro-edition">
+    <feature name="nexus-pro-edition" description="com.sonatype.nexus:nexus-pro-edition" version="3.6.0.02">
+        <details>com.sonatype.nexus:nexus-pro-edition</details>
+        <feature prerequisite="false" dependency="false">nexus-base-feature</feature>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:com.sonatype.nexus/nexus-pro-edition/3.6.0-02</bundle>
+        <bundle>mvn:com.sonatype.nexus/nexus-licensing-extension/3.6.0-02</bundle>
+        <bundle>wrap:mvn:com.sonatype.licensing/license-bundle/1.4.3</bundle>
+        <bundle>mvn:commons-codec/commons-codec/1.10</bundle>
+        <bundle>mvn:com.thoughtworks.xstream/xstream/1.4.10</bundle>
+        <bundle>wrap:mvn:org.codehaus.plexus/plexus-utils/3.0.22</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.xpp3/1.1.4c_7</bundle>
+    </feature>
+</features>

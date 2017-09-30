@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="nexus-core-feature">
+    <feature name="nexus-core-feature" description="org.sonatype.nexus.assemblies:nexus-core-feature" version="3.6.0.02">
+        <details>org.sonatype.nexus.assemblies:nexus-core-feature</details>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-audit-plugin</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-blobstore-tasks</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-ssl-plugin</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-coreui-plugin</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-repository-httpbridge</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-repository-maven</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-repository-raw</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-script-plugin</feature>
+        <feature version="3.6.0.02" prerequisite="false" dependency="false">nexus-task-log-cleanup</feature>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:org.sonatype.nexus/nexus-core/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-supportzip-api/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-email/3.6.0-02</bundle>
+        <bundle>mvn:org.apache.commons/commons-email/1.5</bundle>
+        <bundle>mvn:com.sun.mail/javax.mail/1.5.6</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-repository/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-capability/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-mime/3.6.0-02</bundle>
+        <bundle>mvn:org.apache.tika/tika-core/1.14</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-blobstore/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-blobstore-api/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-blobstore-file/3.6.0-02</bundle>
+        <bundle>wrap:mvn:com.squareup/tape/1.2.3</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-httpclient/3.6.0-02</bundle>
+        <bundle>mvn:commons-codec/commons-codec/1.10</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-elasticsearch/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus.bundles/org.sonatype.nexus.bundles.elasticsearch/3.6.0-02</bundle>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.8.9</bundle>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-smile/2.8.9</bundle>
+        <bundle>mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.8.9</bundle>
+        <bundle>mvn:org.yaml/snakeyaml/1.17</bundle>
+        <bundle>mvn:org.hdrhistogram/HdrHistogram/2.1.6</bundle>
+        <bundle>wrap:mvn:com.vividsolutions/jts/1.13</bundle>
+        <bundle>mvn:com.ning/compress-lzf/1.0.2</bundle>
+        <bundle>mvn:io.netty/netty/3.10.6.Final</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-selector/3.6.0-02</bundle>
+        <bundle>mvn:org.apache.commons/commons-jexl3/3.0</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-script/3.6.0-02</bundle>
+        <bundle>mvn:org.apache.ivy/ivy/2.3.0</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-ssl/3.6.0-02</bundle>
+        <bundle>wrap:mvn:org.apache.geronimo.framework/geronimo-crypto/2.2.1</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-webhooks/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-quartz/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-scheduling/3.6.0-02</bundle>
+        <bundle>mvn:org.jboss.spec.javax.ws.rs/jboss-jaxrs-api_2.0_spec/1.0.1.Beta1</bundle>
+        <bundle>wrap:mvn:org.jboss.resteasy/resteasy-jaxrs-services/3.1.3.Final</bundle>
+        <bundle>mvn:org.jboss.spec.javax.annotation/jboss-annotations-api_1.2_spec/1.0.0.Final</bundle>
+        <bundle>wrap:mvn:net.jcip/jcip-annotations/1.0</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-thread/3.6.0-02</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.8.9</bundle>
+        <bundle>mvn:org.quartz-scheduler/quartz/2.2.2</bundle>
+        <bundle>wrap:mvn:c3p0/c3p0/0.9.1.1</bundle>
+    </feature>
+    <feature name="nexus-audit-plugin" description="org.sonatype.nexus.plugins:nexus-audit-plugin" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-audit-plugin</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-audit-plugin/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-audit/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-webhooks/3.6.0-02</bundle>
+    </feature>
+    <feature name="nexus-blobstore-tasks" description="org.sonatype.nexus.plugins:nexus-blobstore-tasks" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-blobstore-tasks</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-blobstore-tasks/3.6.0-02</bundle>
+    </feature>
+    <feature name="nexus-ssl-plugin" description="org.sonatype.nexus.plugins:nexus-ssl-plugin" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-ssl-plugin</details>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-ssl-plugin/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-ssl/3.6.0-02</bundle>
+        <bundle>mvn:org.sonatype.nexus/nexus-crypto/3.6.0-02</bundle>
+        <bundle>wrap:mvn:org.apache.geronimo.framework/geronimo-crypto/2.2.1</bundle>
+    </feature>
+    <feature name="nexus-coreui-plugin" description="org.sonatype.nexus.plugins:nexus-coreui-plugin" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-coreui-plugin</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-coreui-plugin/3.6.0-02</bundle>
+    </feature>
+    <feature name="nexus-repository-httpbridge" description="org.sonatype.nexus.plugins:nexus-repository-httpbridge" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-repository-httpbridge</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-httpbridge/3.6.0-02</bundle>
+        <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle>mvn:commons-fileupload/commons-fileupload/1.3.2</bundle>
+        <bundle>mvn:commons-io/commons-io/2.4</bundle>
+    </feature>
+    <feature name="nexus-repository-maven" description="org.sonatype.nexus.plugins:nexus-repository-maven" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-repository-maven</details>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-maven/3.6.0-02</bundle>
+        <bundle>wrap:mvn:org.apache.maven/maven-model/3.3.3</bundle>
+        <bundle>wrap:mvn:org.codehaus.plexus/plexus-utils/3.0.22</bundle>
+        <bundle>wrap:mvn:org.apache.maven/maven-repository-metadata/3.3.3</bundle>
+        <bundle>mvn:org.eclipse.aether/aether-api/1.0.2.v20150114</bundle>
+        <bundle>mvn:org.eclipse.aether/aether-util/1.0.2.v20150114</bundle>
+        <bundle>mvn:org.eclipse.aether/aether-spi/1.0.2.v20150114</bundle>
+        <bundle>mvn:org.apache.maven.indexer/indexer-reader/5.1.2-816025a</bundle>
+        <bundle>wrap:mvn:org.apache.maven.archetype/archetype-catalog/2.4</bundle>
+    </feature>
+    <feature name="nexus-repository-raw" description="org.sonatype.nexus.plugins:nexus-repository-raw" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-repository-raw</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-repository-raw/3.6.0-02</bundle>
+    </feature>
+    <feature name="nexus-script-plugin" description="org.sonatype.nexus.plugins:nexus-script-plugin" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-script-plugin</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-script-plugin/3.6.0-02</bundle>
+    </feature>
+    <feature name="nexus-task-log-cleanup" description="org.sonatype.nexus.plugins:nexus-task-log-cleanup" version="3.6.0.02">
+        <details>org.sonatype.nexus.plugins:nexus-task-log-cleanup</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-task-log-cleanup/3.6.0-02</bundle>
+        <bundle>mvn:commons-io/commons-io/2.4</bundle>
+    </feature>
+</features>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="nexus-startup-feature">
+    <feature name="nexus-startup-feature" description="org.sonatype.nexus.assemblies:nexus-startup-feature" version="3.6.0.02">
+        <details>org.sonatype.nexus.assemblies:nexus-startup-feature</details>
+        <bundle start-level="8">mvn:org.sonatype.nexus/nexus-pax-logging/3.6.0-02</bundle>
+        <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-api/1.10.0</bundle>
+        <bundle start-level="8">mvn:org.sonatype.nexus/nexus-task-logging/3.6.0-02</bundle>
+        <bundle start-level="8">mvn:com.google.guava/guava/21.0</bundle>
+        <bundle start-level="8">mvn:commons-io/commons-io/2.4</bundle>
+        <bundle start-level="8">mvn:com.codahale.metrics/metrics-logback/3.0.2</bundle>
+        <bundle start-level="8">mvn:com.codahale.metrics/metrics-core/3.0.2</bundle>
+        <bundle start-level="8">mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-webapp/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-continuation/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-servlet/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-security/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-server/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-deploy/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-util/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-util-ajax/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-servlets/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-proxy/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-client/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-http/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-io/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-xml/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-jmx/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-rewrite/9.3.20.v20170531</bundle>
+        <bundle start-level="8">mvn:com.codahale.metrics/metrics-jetty9/3.0.2</bundle>
+        <bundle start-level="8">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/1_2</bundle>
+        <bundle start-level="8">mvn:net.java.dev.jna/jna/4.1.0</bundle>
+    </feature>
+</features>

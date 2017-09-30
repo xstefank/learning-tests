@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="nexus-oss-edition">
+    <feature name="nexus-oss-edition" description="org.sonatype.nexus:nexus-oss-edition" version="3.6.0.02">
+        <details>org.sonatype.nexus:nexus-oss-edition</details>
+        <feature prerequisite="false" dependency="false">nexus-base-feature</feature>
+        <bundle>mvn:org.sonatype.nexus/nexus-oss-edition/3.6.0-02</bundle>
+    </feature>
+</features>
