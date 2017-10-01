@@ -1,0 +1,17 @@
+
+task task1 << {
+   println 'compiling source'
+}
+
+task task2(dependsOn: task1) << {
+   println 'compiling unit tests'
+}
+
+task task3(dependsOn: [task1, task2]) << {
+   println 'running unit tests'
+}
+
+task task4(dependsOn: [task1, task3]) << {
+   println 'building the distribution'
+}
+
