@@ -1,0 +1,3 @@
+[submodule "nexus-lt/javaee7-simple-sample"]
+	path = nexus-lt/javaee7-simple-sample
+	url = https://github.com/xstefank/javaee7-simple-sample.git
