@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.learn.gradle.CatagoryBTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-10-05T20:16:10" hostname="Set-FI" time="0.005">
+  <properties/>
+  <testcase name="testB" classname="org.learn.gradle.CatagoryBTest" time="0.005"/>
+  <system-out><![CDATA[CategoryB test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
