@@ -17,7 +17,7 @@ public class Main {
         Object[] objectArray = new Object[10];
 
         System.out.println(Arrays.toString(objectArray));
-        
+
 
     }
 }
