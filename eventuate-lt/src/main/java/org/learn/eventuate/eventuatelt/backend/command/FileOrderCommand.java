@@ -2,7 +2,7 @@ package org.learn.eventuate.eventuatelt.backend.command;
 
 import org.learn.eventuate.eventuatelt.model.OrderInfo;
 
-public class FileOrderCommand extends OrderCommand {
+public class FileOrderCommand implements OrderCommand {
 
     private OrderInfo order;
 
