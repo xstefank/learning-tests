@@ -24,6 +24,11 @@ public class OrderViewController {
         return new CompletableFuture<>().supplyAsync(() -> toResource(new Order("random-uuid", Collections.singletonList("testProduct"), 20)));
     }
 
+    @RequestMapping(method = GET)
+    public String getOrders() {
+        return "SAFADASF, sadfasdf, aaaaaaa";
+    }
+
     protected ResourceWithUrl toResource(Order order) {
         ResourceWithUrl<Order> result = new ResourceWithUrl<>(order);
         if (order != null) {
