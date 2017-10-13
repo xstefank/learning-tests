@@ -19,8 +19,13 @@ public class OrderAggregate extends ReflectiveMutableCommandProcessingAggregate<
     private OrderInfo order;
 
     public List<Event> process(FileOrderCommand command) {
-        log.info("on FileOrderCommand");
+        log.info("received FileOrderCommand");
         return EventUtil.events(new OrderCreatedEvent(command.getOrder()));
+    }
+
+    public void apply(OrderCreatedEvent event) {
+        log.info("on OrderCreatedEvent");
+        order = event.getOrder();
     }
 
     public OrderInfo getOrder() {

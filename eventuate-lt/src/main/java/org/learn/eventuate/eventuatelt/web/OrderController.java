@@ -26,7 +26,7 @@ public class OrderController extends BaseController {
 
     @RequestMapping(method = POST)
     public CompletableFuture<ResourceWithUrl> saveOrder(@RequestBody OrderInfo order, HttpServletRequest request) {
-        Assert.isTrue(order.getProducts().size() >= 1, "Order must contain at least one product");
+        Assert.notNull(order.getProduct(), "Order must contain at least one product");
         return orderService.save(order).thenApply(e -> withRequestAttributeContext(request, () -> toResource(e.getAggregate().getOrder(), e.getEntityId())));
     }
 

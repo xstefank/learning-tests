@@ -21,7 +21,7 @@ public class OrderViewController {
     @RequestMapping(value = "/{order-id}", method = GET)
     public CompletableFuture<ResourceWithUrl> getOrder(@PathVariable("order-id") String id) {
         //TODO implement query order service
-        return new CompletableFuture<>().supplyAsync(() -> toResource(new Order("random-uuid", Collections.singletonList("testProduct"), 20)));
+        return new CompletableFuture<>().supplyAsync(() -> toResource(new Order("random-uuid", "testProduct", 20)));
     }
 
     @RequestMapping(method = GET)

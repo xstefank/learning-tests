@@ -8,6 +8,7 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 public class Order {
@@ -15,8 +16,8 @@ public class Order {
     @Id
     private String id;
 
-    @ElementCollection
-    private List<String> products;
+    @Column
+    private String product;
 
     @Column
     private int price;
@@ -25,14 +26,14 @@ public class Order {
     }
 
     public Order(OrderInfo orderInfo) {
-        this.id = orderInfo.getId();
-        this.products = orderInfo.getProducts();
-        this.price = orderInfo.getPrice();
+        id = UUID.randomUUID().toString();
+        product = orderInfo.getProduct();
+        price = orderInfo.getPrice();
     }
 
-    public Order(String id, List<String> products, int price) {
+    public Order(String id, String product, int price) {
         this.id = id;
-        this.products = products;
+        this.product = product;
         this.price = price;
     }
 
@@ -44,12 +45,12 @@ public class Order {
         this.id = id;
     }
 
-    public List<String> getProducts() {
-        return ImmutableList.copyOf(products);
+    public String getProduct() {
+        return product;
     }
 
-    public void setProducts(List<String> products) {
-        this.products = products;
+    public void setProducts(String product) {
+        this.product = product;
     }
 
     public int getPrice() {

@@ -6,6 +6,7 @@ import org.learn.eventuate.eventuatelt.backend.command.FileOrderCommand;
 import org.learn.eventuate.eventuatelt.backend.command.OrderCommand;
 import org.learn.eventuate.eventuatelt.backend.domain.OrderAggregate;
 import org.learn.eventuate.eventuatelt.model.OrderInfo;
+import org.slf4j.LoggerFactory;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -20,9 +21,7 @@ public class OrderService {
     }
 
     public CompletableFuture<EntityWithIdAndVersion<OrderAggregate>> save(OrderInfo order) {
-        //generate id
-        order.setId(UUID.randomUUID().toString());
-
+        LoggerFactory.getLogger(OrderService.class).info("send FileOrderCommand");
         return aggregateRepository.save(new FileOrderCommand(order));
     }
 }

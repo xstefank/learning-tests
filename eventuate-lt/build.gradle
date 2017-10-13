@@ -36,6 +36,7 @@ dependencies {
 	compile "org.springframework.hateoas:spring-hateoas:$springHateoasVersion"
 
 
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile "org.springframework.boot:spring-boot-starter-test"
 	testCompile "io.eventuate.client.java:eventuate-client-java-jdbc:$eventuateClientVersion"
+	testCompile "junit:junit:4.12"
 }

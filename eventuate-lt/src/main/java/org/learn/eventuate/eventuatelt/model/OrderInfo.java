@@ -1,37 +1,24 @@
 package org.learn.eventuate.eventuatelt.model;
 
-import java.util.List;
-
 public class OrderInfo {
 
-    private String id;
-
-    private List<String> products;
+    private String product;
     private int price;
 
     public OrderInfo() {
     }
 
-    public OrderInfo(String id, List<String> products, int price) {
-        this.id = id;
-        this.products = products;
+    public OrderInfo(String product, int price) {
+        this.product = product;
         this.price = price;
     }
 
-    public String getId() {
-        return id;
+    public String getProduct() {
+        return product;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public List<String> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<String> products) {
-        this.products = products;
+    public void setProduct(String product) {
+        this.product = product;
     }
 
     public int getPrice() {
