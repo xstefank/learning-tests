@@ -1,16 +1,15 @@
 package org.learn.eventuate.eventuatelt.backend;
 
-import com.google.common.collect.ImmutableList;
 import org.learn.eventuate.eventuatelt.model.OrderInfo;
 
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.List;
+import javax.persistence.Table;
 import java.util.UUID;
 
 @Entity
+@Table(name = "order_query_object")
 public class Order {
 
     @Id
