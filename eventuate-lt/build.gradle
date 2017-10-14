@@ -35,6 +35,9 @@ dependencies {
 	compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
 	compile "org.springframework.hateoas:spring-hateoas:$springHateoasVersion"
 
+	compile "io.springfox:springfox-swagger2:2.2.2"
+	compile 'io.springfox:springfox-swagger-ui:2.2.2'
+
 
 	testCompile "org.springframework.boot:spring-boot-starter-test"
 	testCompile "io.eventuate.client.java:eventuate-client-java-jdbc:$eventuateClientVersion"
