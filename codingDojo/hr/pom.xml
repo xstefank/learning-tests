@@ -19,6 +19,7 @@
         <module>simpleArraySum</module>
         <module>compareTriplets</module>
         <module>dynamicArray</module>
+        <module>veryBigSum</module>
     </modules>
 
 
