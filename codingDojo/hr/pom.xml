@@ -17,6 +17,8 @@
     <modules>
         <module>_2darrayds</module>
         <module>simpleArraySum</module>
+        <module>compareTriplets</module>
+        <module>dynamicArray</module>
     </modules>
 
 
