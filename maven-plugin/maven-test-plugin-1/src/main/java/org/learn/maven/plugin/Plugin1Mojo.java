@@ -1,3 +1,5 @@
+package org.learn.maven.plugin;
+
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -11,6 +13,7 @@ public class Plugin1Mojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException, MojoFailureException {
         System.out.println("maven-test-plugin-1");
+        System.out.println(new Dummy().hello("PLUGIN-1"));
     }
 
 }
