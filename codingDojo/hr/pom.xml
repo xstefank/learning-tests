@@ -20,6 +20,7 @@
         <module>compareTriplets</module>
         <module>dynamicArray</module>
         <module>veryBigSum</module>
+        <module>staircase</module>
     </modules>
 
 
