@@ -21,6 +21,7 @@
         <module>dynamicArray</module>
         <module>veryBigSum</module>
         <module>staircase</module>
+        <module>linkedList</module>
     </modules>
 
 
