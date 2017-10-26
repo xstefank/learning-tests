@@ -69,6 +69,29 @@ public class Solution {
         return head;
     }
 
+    public Node delete(Node head, int position) {
+        Node current = head;
+
+        if (current == null) {
+            return null;
+        }
+
+        if (position == 0) {
+            return head.next;
+        }
+
+        int i = 0;
+        while (i < position - 1 && current.next != null) {
+            current = current.next;
+            i++;
+        }
+
+        Node deleted = current.next;
+        current.next = deleted != null ? deleted.next : null;
+
+        return head;
+    }
+
     private class Node {
 
         //testing purposes
