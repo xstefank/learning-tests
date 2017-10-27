@@ -92,6 +92,35 @@ public class Solution {
         return head;
     }
 
+    public void ReversePrint(Node head) {
+        if (head == null) {
+            return;
+        }
+
+        if (head.next == null) {
+            System.out.println(head.data);
+            return;
+        }
+
+        Node prevElem = head;
+        Node current = head.next;
+        prevElem.next = null;
+
+
+        while (current != null) {
+            Node nextElem = current.next;
+            current.next = prevElem;
+            prevElem = current;
+            current = nextElem;
+        }
+
+        current = prevElem;
+        while (current != null) {
+            System.out.println(current.data);
+            current = current.next;
+        }
+    }
+
     private class Node {
 
         //testing purposes
