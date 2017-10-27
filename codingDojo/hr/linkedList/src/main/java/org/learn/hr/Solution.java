@@ -121,6 +121,30 @@ public class Solution {
         }
     }
 
+    public Node reverse(Node head) {
+
+        if (head == null) {
+            return null;
+        }
+
+        if (head.next == null) {
+            return head;
+        }
+
+        Node prevElem = head;
+        Node current = head.next;
+        prevElem.next = null;
+
+        while (current != null) {
+            Node nextElem = current.next;
+            current.next = prevElem;
+            prevElem = current;
+            current = nextElem;
+        }
+
+        return prevElem;
+    }
+
     private class Node {
 
         //testing purposes
