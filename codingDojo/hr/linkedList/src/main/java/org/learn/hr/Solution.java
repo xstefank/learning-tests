@@ -173,6 +173,50 @@ public class Solution {
         return 1;
     }
 
+    public Node mergeLists(Node headA, Node headB) {
+        if (headA == null) {
+            return headB;
+        }
+
+        if (headB == null) {
+            return headA;
+        }
+        Node currentA = headA;
+        Node currentB = headB;
+        Node retHead = null;
+        if (headA.data < headB.data) {
+            retHead = headA;
+            currentA = headA.next;
+        } else {
+            retHead = headB;
+            currentB = headB.next;
+        }
+
+        Node currentRet = retHead;
+
+        while (currentA != null || currentB != null) {
+            if (currentA != null && currentB != null) {
+                if (currentA.data < currentB.data){
+                    currentRet.next = currentA;
+                    currentA = currentA.next;
+                } else {
+                    currentRet.next = currentB;
+                    currentB = currentB.next;
+                }
+            } else if (currentA == null) {
+                currentRet.next = currentB;
+                currentB = currentB.next;
+            } else {
+                currentRet.next = currentA;
+                currentA = currentA.next;
+            }
+
+            currentRet = currentRet.next;
+        }
+
+        return retHead;
+    }
+
     private class Node {
 
         //testing purposes
