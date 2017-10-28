@@ -145,6 +145,34 @@ public class Solution {
         return prevElem;
     }
 
+    public int compareLists(Node headA, Node headB) {
+        Node currentA = headA;
+        Node currentB = headB;
+
+        if (currentA == null || currentB == null) {
+            return (currentA == null && currentB == null) ? 1 : 0;
+        }
+
+        while (currentA != null) {
+            if (currentB == null) {
+                return 0;
+            }
+
+            if (currentA.data != currentB.data) {
+                return 0;
+            }
+
+            currentA = currentA.next;
+            currentB = currentB.next;
+        }
+
+        if (currentB != null) {
+            return 0;
+        }
+
+        return 1;
+    }
+
     private class Node {
 
         //testing purposes
