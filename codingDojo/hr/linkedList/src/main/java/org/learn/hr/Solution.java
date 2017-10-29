@@ -217,7 +217,51 @@ public class Solution {
         return retHead;
     }
 
-    private class Node {
+    public static int getNode(Node head, int positionFromTail) {
+        int length = getLength(head);
+        int positionFromHead = length - positionFromTail - 1;
+        Node current = head;
+
+        if (current == null) {
+            //no elements
+            return -1;
+        }
+
+        for (int i = 0; i < positionFromHead; i++) {
+            current = current.next;
+        }
+
+        return current.data;
+    }
+
+    private static int getLength(Node head) {
+        int length = 0;
+        Node current = head;
+
+        while (current != null) {
+            length++;
+            current = current.next;
+        }
+
+        return length;
+    }
+
+//    public static void main(String[] args) {
+//        Node head = new Node();
+//        head.data = 1;
+//        head.next = new Node();
+//        head.next.data = 2;
+//        head.next.next = new Node();
+//        head.next.next.data = 3;
+//        head.next.next.next = new Node();
+//        head.next.next.next.data = 4;
+//
+//        System.out.println(getNode(head, 3));
+//
+//    }
+
+
+    private static class Node {
 
         //testing purposes
         //adding getters and setters would be redundant
