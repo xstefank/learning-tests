@@ -246,6 +246,26 @@ public class Solution {
         return length;
     }
 
+    public Node removeDuplicates(Node head) {
+        Node current = head;
+
+        if (current == null) {
+            return null;
+        }
+
+        while (current.next != null) {
+            Node nextNode = current.next;
+            while (nextNode.next != null && nextNode.data == nextNode.next.data) {
+                nextNode = nextNode.next;
+            }
+
+            current.next = nextNode;
+            current = current.next;
+        }
+
+        return head;
+    }
+
 //    public static void main(String[] args) {
 //        Node head = new Node();
 //        head.data = 1;
