@@ -266,6 +266,29 @@ public class Solution {
         return head;
     }
 
+    public static boolean hasCycle(Node head) {
+        if (head == null) {
+            return false;
+        }
+
+        Node current = head;
+
+        while (current != null) {
+            Node temp = head;
+
+            while (temp != current) {
+                if (current.next == temp) {
+                    return true;
+                }
+                temp = temp.next;
+            }
+
+            current = current.next;
+        }
+
+        return false;
+    }
+
 //    public static void main(String[] args) {
 //        Node head = new Node();
 //        head.data = 1;
@@ -273,10 +296,9 @@ public class Solution {
 //        head.next.data = 2;
 //        head.next.next = new Node();
 //        head.next.next.data = 3;
-//        head.next.next.next = new Node();
-//        head.next.next.next.data = 4;
+//        head.next.next.next = head.next;
 //
-//        System.out.println(getNode(head, 3));
+//        System.out.println(hasCycle(head));
 //
 //    }
 
