@@ -289,6 +289,27 @@ public class Solution {
         return false;
     }
 
+    public int findMergeNode(Node headA, Node headB) {
+        Node currentA = headA;
+
+        while (currentA != null) {
+            Node currentB = headB;
+
+            while (currentB != null) {
+                if (currentA == currentB) {
+                    return currentA.data;
+                }
+
+                currentB = currentB.next;
+            }
+
+            currentA = currentA.next;
+        }
+
+
+        return 0;
+    }
+
 //    public static void main(String[] args) {
 //        Node head = new Node();
 //        head.data = 1;
