@@ -23,6 +23,7 @@
         <module>staircase</module>
         <module>linkedList</module>
         <module>arrayLeftRotation</module>
+        <module>diagonalDifference</module>
     </modules>
 
 
