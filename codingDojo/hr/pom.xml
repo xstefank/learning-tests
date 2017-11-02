@@ -22,6 +22,7 @@
         <module>veryBigSum</module>
         <module>staircase</module>
         <module>linkedList</module>
+        <module>arrayLeftRotation</module>
     </modules>
 
 
