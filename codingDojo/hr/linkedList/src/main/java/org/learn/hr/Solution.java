@@ -3,11 +3,11 @@ package org.learn.hr;
 public class Solution {
 
     //print each element on the new line
-    public void printElemnts(Node head, int data) {
+    public static void printElements(Node head, int data) {
         Node current = head;
 
         while (current != null) {
-            System.out.println(current);
+            System.out.println(current.data);
             current = current.next;
         }
     }
@@ -37,7 +37,7 @@ public class Solution {
         Node newHead = new Node();
         newHead.data = x;
         newHead.next = head;
-        return  newHead;
+        return newHead;
 
     }
 
@@ -56,7 +56,7 @@ public class Solution {
         }
 
         int i = 0;
-        while (i < position - 1&& current.next != null) {
+        while (i < position - 1 && current.next != null) {
             current = current.next;
             i++;
         }
@@ -196,7 +196,7 @@ public class Solution {
 
         while (currentA != null || currentB != null) {
             if (currentA != null && currentB != null) {
-                if (currentA.data < currentB.data){
+                if (currentA.data < currentB.data) {
                     currentRet.next = currentA;
                     currentA = currentA.next;
                 } else {
@@ -310,18 +310,49 @@ public class Solution {
         return 0;
     }
 
-//    public static void main(String[] args) {
-//        Node head = new Node();
-//        head.data = 1;
-//        head.next = new Node();
-//        head.next.data = 2;
-//        head.next.next = new Node();
-//        head.next.next.data = 3;
-//        head.next.next.next = head.next;
-//
-//        System.out.println(hasCycle(head));
-//
-//    }
+    public static Node sortedInsert(Node head, int data) {
+        Node insertNode = new Node();
+        insertNode.data = data;
+
+        Node current = head;
+
+        if (current == null) {
+            //empty list
+            return insertNode;
+        }
+
+        while (current.next != null && current.next.data < data) {
+            current = current.next;
+        }
+
+        if (current.next == null) {
+            //insert to the end
+            current.next = insertNode;
+            insertNode.prev = current;
+            return head;
+        }
+
+        current.next.prev = insertNode;
+        insertNode.next = current.next;
+        current.next = insertNode;
+        insertNode.prev = current;
+
+        return head;
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node();
+        head.data = 1;
+        head.next = new Node();
+        head.next.data = 2;
+        head.next.prev = head;
+        head.next.next = new Node();
+        head.next.next.data = 4;
+        head.next.next.prev = head.next;
+
+        printElements(sortedInsert(head, 3), 0);
+
+    }
 
 
     private static class Node {
@@ -329,6 +360,7 @@ public class Solution {
         //testing purposes
         //adding getters and setters would be redundant
         public Node next;
+        public Node prev;
         public int data;
 
 
