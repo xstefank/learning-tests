@@ -340,6 +340,30 @@ public class Solution {
         return head;
     }
 
+    public static Node reverseDoublyLinked(Node head) {
+        if (head == null) {
+            return null;
+        }
+
+        Node current = head;
+        Node newHead = current;
+
+
+        while (current != null) {
+            Node nextNode = current.next;
+            Node prevNode = current.prev;
+
+            current.next = prevNode;
+            current.prev = nextNode;
+
+            newHead = current;
+            current = nextNode;
+        }
+
+        return newHead;
+
+    }
+
     public static void main(String[] args) {
         Node head = new Node();
         head.data = 1;
@@ -350,7 +374,7 @@ public class Solution {
         head.next.next.data = 4;
         head.next.next.prev = head.next;
 
-        printElements(sortedInsert(head, 3), 0);
+        printElements(reverseDoublyLinked(head), 0);
 
     }
 
