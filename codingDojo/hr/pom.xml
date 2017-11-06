@@ -24,6 +24,7 @@
         <module>linkedList</module>
         <module>arrayLeftRotation</module>
         <module>diagonalDifference</module>
+        <module>sparse-array</module>
     </modules>
 
 
