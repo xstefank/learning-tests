@@ -25,6 +25,7 @@
         <module>arrayLeftRotation</module>
         <module>diagonalDifference</module>
         <module>sparse-array</module>
+        <module>plus-minus</module>
     </modules>
 
 
