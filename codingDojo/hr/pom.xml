@@ -26,6 +26,7 @@
         <module>diagonalDifference</module>
         <module>sparse-array</module>
         <module>plus-minus</module>
+        <module>tree</module>
     </modules>
 
 
