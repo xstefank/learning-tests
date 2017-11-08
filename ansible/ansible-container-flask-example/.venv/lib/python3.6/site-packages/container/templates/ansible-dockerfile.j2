@@ -1,0 +1,32 @@
+FROM centos:7
+
+# Install:
+#   docker (to use as client)
+#   ansible + some deps
+RUN yum update -y                 && \
+    yum install -y epel-release   && \
+    yum install -y docker-latest  && \
+    yum install -y "@Development Tools" git python-setuptools python-devel python-pip rsync libffi-devel openssl-devel && \
+    yum clean all
+
+# Ansible requirements
+RUN pip install paramiko PyYAML Jinja2 httplib2 six
+
+# Installing the latest from Ansible to get synchronize module support.
+RUN pip install -q --no-cache-dir -e git+https://github.com/ansible/ansible.git@devel#egg=ansible
+
+# Install ruamel.yaml to support Galaxy role installation 
+RUN pip install -q --no-cache-dir ruamel.yaml
+
+RUN mkdir -p /etc/ansible/roles
+
+ADD builder.sh /usr/local/bin/builder.sh
+ADD ac_galaxy.py /usr/local/bin/ac_galaxy.py
+ADD wait_on_host.py /usr/local/bin/wait_on_host.py
+ADD ansible-container-inventory.py /etc/ansible/ansible-container-inventory.py
+ADD ansible.cfg /etc/ansible/ansible.cfg
+
+# In 9deb3eb we moved to /usr/bin/ansible-playbook
+# Let's ease the transition on people using <9deb3eb code
+# by symlinking to the new place
+RUN ln -s /usr/bin/ansible-playbook /usr/local/bin/ansible-playbook

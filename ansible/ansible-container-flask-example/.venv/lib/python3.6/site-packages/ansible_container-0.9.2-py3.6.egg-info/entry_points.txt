@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-container = container.cli:host_commandline
+

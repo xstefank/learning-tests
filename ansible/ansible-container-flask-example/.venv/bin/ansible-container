@@ -1,0 +1,12 @@
+#!/home/mstefank/GIT/xstefank/learning-tests/ansible/ansible-container-flask-example/.venv/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'ansible-container==0.9.2','console_scripts','ansible-container'
+__requires__ = 'ansible-container==0.9.2'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('ansible-container==0.9.2', 'console_scripts', 'ansible-container')()
+    )
