@@ -27,6 +27,7 @@
         <module>sparse-array</module>
         <module>plus-minus</module>
         <module>tree</module>
+        <module>min-max-sum</module>
     </modules>
 
 
