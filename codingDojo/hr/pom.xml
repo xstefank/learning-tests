@@ -29,6 +29,7 @@
         <module>tree</module>
         <module>min-max-sum</module>
         <module>cake-candles</module>
+        <module>time-conversion</module>
     </modules>
 
 
