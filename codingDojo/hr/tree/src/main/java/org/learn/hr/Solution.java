@@ -2,6 +2,7 @@ package org.learn.hr;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -195,6 +196,12 @@ public class Solution {
 
         computeVerticalDistance(node.left, column - 1, verticalDistances);
         computeVerticalDistance(node.right, column + 1, verticalDistances);
+    }
+
+    static void levelOrder(Node root) {
+        Queue<Node> levelTraversal = computeLevelTraversal(root);
+
+        levelTraversal.forEach(Solution::printNode);
     }
 
     private static class Node {
