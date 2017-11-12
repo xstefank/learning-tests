@@ -30,6 +30,7 @@
         <module>min-max-sum</module>
         <module>cake-candles</module>
         <module>time-conversion</module>
+        <module>binary-search-tree</module>
     </modules>
 
 
