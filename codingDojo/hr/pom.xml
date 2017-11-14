@@ -32,6 +32,7 @@
         <module>time-conversion</module>
         <module>binary-search-tree</module>
         <module>grade-students</module>
+        <module>huffman-encoding</module>
     </modules>
 
 
