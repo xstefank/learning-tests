@@ -2,7 +2,6 @@ package org.learn.hr;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -28,7 +27,7 @@ public class Solution {
 
         postOrder(node.left);
         postOrder(node.right);
-        System.out.print(node.data+ " ");
+        System.out.print(node.data + " ");
     }
 
     static void inOrder(Node node) {
@@ -52,30 +51,30 @@ public class Solution {
         return Math.max(leftHeight, rightHeight) + 1;
     }
 
-    public static void main(String[] args) {
-        Node root = new Node();
-        root.data = 1;
-        root.left = new Node();
-        root.left.data = -1;
-        root.left.right = new Node();
-        root.left.right.data = -2;
-        root.left.right.left = new Node();
-        root.left.right.left.data = -3;
-        root.left.right.left.left = new Node();
-        root.left.right.left.left.data = -4;
-        root.right = new Node();
-        root.right.data = 2;
-        root.right.right = new Node();
-        root.right.right.data = 5;
-        root.right.right.left = new Node();
-        root.right.right.left.data = 3;
-        root.right.right.left.right = new Node();
-        root.right.right.left.right.data = 4;
-        root.right.right.right = new Node();
-        root.right.right.right.data = 6;
-
-        topView(root);
-    }
+//    public static void main(String[] args) {
+//        Node root = new Node();
+//        root.data = 1;
+//        root.left = new Node();
+//        root.left.data = -1;
+//        root.left.right = new Node();
+//        root.left.right.data = -2;
+//        root.left.right.left = new Node();
+//        root.left.right.left.data = -3;
+//        root.left.right.left.left = new Node();
+//        root.left.right.left.left.data = -4;
+//        root.right = new Node();
+//        root.right.data = 2;
+//        root.right.right = new Node();
+//        root.right.right.data = 5;
+//        root.right.right.left = new Node();
+//        root.right.right.left.data = 3;
+//        root.right.right.left.right = new Node();
+//        root.right.right.left.right.data = 4;
+//        root.right.right.right = new Node();
+//        root.right.right.right.data = 6;
+//
+//        topView(root);
+//    }
 
     static void topView(Node root) {
         if (root == null) {
@@ -202,6 +201,62 @@ public class Solution {
         Queue<Node> levelTraversal = computeLevelTraversal(root);
 
         levelTraversal.forEach(Solution::printNode);
+    }
+
+    static Node lca(Node node, int v1, int v2) {
+
+        boolean inLeft = areInSameSubtree(node.left, v1, v2);
+        if (inLeft) {
+            return lca(node.left, v1, v2);
+        }
+
+        boolean inRight = areInSameSubtree(node.right, v1, v2);
+        if (inRight) {
+            return lca(node.right, v1, v2);
+        }
+
+        //one node in left one in right
+        return node;
+
+    }
+
+    private static boolean areInSameSubtree(Node node, int v1, int v2) {
+        return isInSubtree(node, v1) && isInSubtree(node, v2);
+    }
+
+    private static boolean isInSubtree(Node node, int vertexData) {
+        if (node == null) {
+            return false;
+        }
+
+        if (node.data == vertexData) {
+            return true;
+        }
+
+        return isInSubtree(node.left, vertexData) || isInSubtree(node.right, vertexData);
+
+
+    }
+
+    public static void main(String[] args) {
+        Node root = new Node();
+        root.data = 8;
+        root.left = new Node();
+        root.left.data = 4;
+        root.left.right = new Node();
+        root.left.right.data = 6;
+        root.left.right.left = new Node();
+        root.left.right.left.data = 5;
+        root.left.left = new Node();
+        root.left.left.data = 1;
+        root.left.left.right = new Node();
+        root.left.left.right.data = 2;
+        root.left.left.right.right = new Node();
+        root.left.left.right.right.data = 3;
+        root.right = new Node();
+        root.right.data = 9;
+
+        System.out.println(lca(root, 1, 6).data);
     }
 
     private static class Node {
