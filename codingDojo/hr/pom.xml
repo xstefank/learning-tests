@@ -34,6 +34,7 @@
         <module>grade-students</module>
         <module>huffman-encoding</module>
         <module>java-cycle-stream</module>
+        <module>array-manipulation</module>
     </modules>
 
 
