@@ -35,6 +35,8 @@
         <module>huffman-encoding</module>
         <module>java-cycle-stream</module>
         <module>array-manipulation</module>
+        <module>week-code-35</module>
+        <module>apple-orange</module>
     </modules>
 
 
