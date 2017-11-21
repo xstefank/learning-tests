@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Untitled</title>
+<date>2017-11-21</date>
+</info>
+<simpara>This journey begins one late Monday afternoon in Antwerp.
+Our team desperately needs coffee, but none of us dare open the office door.</simpara>
+<simpara>To leave means code dismemberment and certain death.</simpara>
+<itemizedlist>
+<title>My list</title>
+<listitem>
+<simpara>aaa</simpara>
+</listitem>
+<listitem>
+<simpara>bbb</simpara>
+<itemizedlist>
+<listitem>
+<simpara>ccc</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="33.3333*"/>
+<colspec colname="col_2" colwidth="33.3333*"/>
+<colspec colname="col_3" colwidth="33.3334*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Name</entry>
+<entry align="left" valign="top">Group</entry>
+<entry align="left" valign="top">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Firefox</simpara></entry>
+<entry align="left" valign="top"><simpara>Web Browser</simpara></entry>
+<entry align="left" valign="top"><simpara>Mozilla Firefox is an open-source web browser.
+It&#8217;s designed for standards compliance,
+performance, portability.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Ruby</simpara></entry>
+<entry align="left" valign="top"><simpara>Programming Language</simpara></entry>
+<entry align="left" valign="top"><simpara>A programmer&#8217;s best friend.</simpara><simpara>&#8230;&#8203;</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</article>
