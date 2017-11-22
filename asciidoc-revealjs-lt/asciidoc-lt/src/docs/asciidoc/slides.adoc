@@ -1,0 +1,18 @@
+= Testing presentation
+
+== First slide
+
+[%step]
+* first item
+* second item
+* third item
+
+== Speaker Notes
+
+Press the `*s*` key to access speaker notes.
+
+[NOTE.speaker]
+--
+You've unlocked the super secret notes area.
+Neat huh?
+--
