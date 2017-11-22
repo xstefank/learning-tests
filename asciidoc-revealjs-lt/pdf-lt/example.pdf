@@ -1,0 +1,670 @@
+%PDF-1.3
+%ÿÿÿÿ
+1 0 obj
+<< /Title (Document Title)
+/Author (Doc Writer)
+/Creator (Asciidoctor PDF 1.5.0.alpha.16, based on Prawn 2.2.2)
+/Producer (Doc Writer)
+/ModDate (D:20171122094741+01'00')
+/CreationDate (D:20171122094741+01'00')
+>>
+endobj
+2 0 obj
+<< /Type /Catalog
+/Pages 3 0 R
+/Names 12 0 R
+/Outlines 21 0 R
+/PageLabels 24 0 R
+/PageMode /UseOutlines
+/OpenAction [7 0 R /FitH 793.0]
+/ViewerPreferences << /DisplayDocTitle true
+>>
+>>
+endobj
+3 0 obj
+<< /Type /Pages
+/Count 3
+/Kids [7 0 R 10 0 R 16 0 R]
+>>
+endobj
+4 0 obj
+<< /Length 2
+>>
+stream
+q
+
+endstream
+endobj
+5 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [0 0 612.0 792.0]
+/CropBox [0 0 612.0 792.0]
+/BleedBox [0 0 612.0 792.0]
+/TrimBox [0 0 612.0 792.0]
+/ArtBox [0 0 612.0 792.0]
+/Contents 4 0 R
+/Resources << /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+>>
+>>
+endobj
+6 0 obj
+<< /Length 307
+>>
+stream
+q
+/DeviceRGB cs
+0.2 0.2 0.2 scn
+/DeviceRGB CS
+0.2 0.2 0.2 SCN
+
+BT
+249.57 446.418 Td
+/F1.0 18 Tf
+[<446f63756d656e742054> 35 <69746c65>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+278.844 415.424 Td
+/F1.0 12 Tf
+[<446f6320577269746572>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+Q
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [0 0 612.0 792.0]
+/CropBox [0 0 612.0 792.0]
+/BleedBox [0 0 612.0 792.0]
+/TrimBox [0 0 612.0 792.0]
+/ArtBox [0 0 612.0 792.0]
+/Contents 6 0 R
+/Resources << /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font << /F1.0 8 0 R
+>>
+>>
+>>
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Length 435
+>>
+stream
+q
+/DeviceRGB cs
+0.2 0.2 0.2 scn
+/DeviceRGB CS
+0.2 0.2 0.2 SCN
+
+BT
+72.0 723.051 Td
+/F1.0 13.5 Tf
+[<412073696d706c6520>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.0 0.1843 0.6549 scn
+0.0 0.1843 0.6549 SCN
+
+BT
+124.5015 723.051 Td
+/F1.0 13.5 Tf
+[<4173636969446f63>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+175.491 723.051 Td
+/F1.0 13.5 Tf
+[<20646f63756d656e742e>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+Q
+
+endstream
+endobj
+10 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [0 0 612.0 792.0]
+/CropBox [0 0 612.0 792.0]
+/BleedBox [0 0 612.0 792.0]
+/TrimBox [0 0 612.0 792.0]
+/ArtBox [0 0 612.0 792.0]
+/Contents 9 0 R
+/Resources << /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font << /F1.0 8 0 R
+>>
+>>
+/Annots [14 0 R]
+>>
+endobj
+11 0 obj
+[10 0 R /XYZ 0 792.0 null]
+endobj
+12 0 obj
+<< /Type /Names
+/Dests 13 0 R
+>>
+endobj
+13 0 obj
+<< /Names [(__anchor-top) 11 0 R (_introduction) 17 0 R]
+>>
+endobj
+14 0 obj
+<< /Border [0 0 0]
+/A << /Type /Action
+/S /URI
+/URI (http://asciidoc.org)
+>>
+/Subtype /Link
+/Rect [124.5015 720.1215 175.491 732.2715]
+/Type /Annot
+>>
+endobj
+15 0 obj
+<< /Length 4320
+>>
+stream
+q
+/DeviceRGB cs
+0.149 0.149 0.149 scn
+/DeviceRGB CS
+0.149 0.149 0.149 SCN
+
+BT
+72.0 719.352 Td
+/F2.0 18 Tf
+[<496e7472> 18 <6f64756374696f6e>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+72.0 683.358 Td
+/F1.0 12 Tf
+[<412070617261677261706820666f6c6c6f> 25 <77656420627920612073696d706c65206c6973742077697468207371756172652062> 20 <756c6c6574732e>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+
+-0.5 Tc
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+81.5 652.966 Td
+/F1.0 12 Tf
+[<b7>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+
+0.0 Tc
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+90.0 652.966 Td
+/F1.0 12 Tf
+[<6974656d2031>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+
+-0.5 Tc
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+81.5 628.574 Td
+/F1.0 12 Tf
+[<b7>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+
+0.0 Tc
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+90.0 628.574 Td
+/F1.0 12 Tf
+[<6974656d2032>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+72.0 598.182 Td
+/F1.0 12 Tf
+[<4865726592> 55 <7320686f> 25 <7720796f752073617920606048656c6c6f2c2057> 80 <6f726c6421272720696e20507261> 15 <776e3a>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+72.0 567.982 Td
+/F3.0 12 Tf
+[<4c697374696e6720312e204372> 37 <6561746520612062617369632050444620646f63756d656e74207573696e67205072> 15 <61776e>] TJ
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+q
+0.9333 0.9333 0.9333 SCN
+0.5 w
+72.0 558.878 m
+540.0 558.878 l
+540.0 558.878 540.0 558.878 540.0 558.878 c
+540.0 474.9905 l
+540.0 474.9905 540.0 474.9905 540.0 474.9905 c
+72.0 474.9905 l
+72.0 474.9905 72.0 474.9905 72.0 474.9905 c
+72.0 558.878 l
+72.0 558.878 72.0 558.878 72.0 558.878 c
+h
+S
+Q
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+81.0 539.399 Td
+/F4.0 10.5 Tf
+<72657175697265> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+125.1 539.399 Td
+/F4.0 10.5 Tf
+<20> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+131.4 539.399 Td
+/F4.0 10.5 Tf
+<27> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+137.7 539.399 Td
+/F4.0 10.5 Tf
+<707261776e> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+169.2 539.399 Td
+/F4.0 10.5 Tf
+<27> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.4 0.0 scn
+0.2 0.4 0.0 SCN
+
+BT
+81.0 513.044 Td
+/F4.0 10.5 Tf
+<507261776e> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+112.5 513.044 Td
+/F4.0 10.5 Tf
+<3a3a> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.4 0.0 scn
+0.2 0.4 0.0 SCN
+
+BT
+125.1 513.044 Td
+/F4.0 10.5 Tf
+<446f63756d656e74> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+175.5 513.044 Td
+/F4.0 10.5 Tf
+<2e> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+181.8 513.044 Td
+/F4.0 10.5 Tf
+<67656e6572617465> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+232.2 513.044 Td
+/F4.0 10.5 Tf
+<20> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+238.5 513.044 Td
+/F4.0 10.5 Tf
+<27> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+244.8 513.044 Td
+/F4.0 10.5 Tf
+<6578616d706c652e706466> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+314.1 513.044 Td
+/F4.0 10.5 Tf
+<27> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+320.4 513.044 Td
+/F4.0 10.5 Tf
+<20> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.0 0.4 0.6 scn
+0.0 0.4 0.6 SCN
+
+BT
+326.7 513.044 Td
+/F4.0 10.5 Tf
+<646f> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+81.0 499.8665 Td
+/F4.0 10.5 Tf
+<a020> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+93.6 499.8665 Td
+/F4.0 10.5 Tf
+<74657874> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.2 0.2 0.2 scn
+0.2 0.2 0.2 SCN
+
+BT
+118.8 499.8665 Td
+/F4.0 10.5 Tf
+<20> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+125.1 499.8665 Td
+/F4.0 10.5 Tf
+<27> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+131.4 499.8665 Td
+/F4.0 10.5 Tf
+<48656c6c6f2c20576f726c6421> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.8 0.2 0.0 scn
+0.8 0.2 0.0 SCN
+
+BT
+213.3 499.8665 Td
+/F4.0 10.5 Tf
+<27> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+0.0 0.4 0.6 scn
+0.0 0.4 0.6 SCN
+
+BT
+81.0 486.689 Td
+/F4.0 10.5 Tf
+<656e64> Tj
+ET
+
+0.0 0.0 0.0 SCN
+0.0 0.0 0.0 scn
+Q
+
+endstream
+endobj
+16 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [0 0 612.0 792.0]
+/CropBox [0 0 612.0 792.0]
+/BleedBox [0 0 612.0 792.0]
+/TrimBox [0 0 612.0 792.0]
+/ArtBox [0 0 612.0 792.0]
+/Contents 15 0 R
+/Resources << /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font << /F2.0 18 0 R
+/F1.0 8 0 R
+/F3.0 19 0 R
+/F4.0 20 0 R
+>>
+>>
+>>
+endobj
+17 0 obj
+[16 0 R /XYZ 0 792.0 null]
+endobj
+18 0 obj
+<< /Type /Font
+/Subtype /Type1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+19 0 obj
+<< /Type /Font
+/Subtype /Type1
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+>>
+endobj
+20 0 obj
+<< /Type /Font
+/Subtype /Type1
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+>>
+endobj
+21 0 obj
+<< /Type /Outlines
+/Count 2
+/First 22 0 R
+/Last 23 0 R
+>>
+endobj
+22 0 obj
+<< /Title <feff0044006f00630075006d0065006e00740020005400690074006c0065>
+/Parent 21 0 R
+/Count 0
+/Next 23 0 R
+/Dest [7 0 R /XYZ 0 792.0 null]
+>>
+endobj
+23 0 obj
+<< /Title <feff0049006e00740072006f00640075006300740069006f006e>
+/Parent 21 0 R
+/Count 0
+/Prev 22 0 R
+/Dest [16 0 R /XYZ 0 792.0 null]
+>>
+endobj
+24 0 obj
+<< /Nums [0 << /P (i)
+>> 1 << /P (1)
+>> 2 << /P (2)
+>>]
+>>
+endobj
+xref
+0 25
+0000000000 65535 f 
+0000000015 00000 n 
+0000000243 00000 n 
+0000000444 00000 n 
+0000000515 00000 n 
+0000000566 00000 n 
+0000000828 00000 n 
+0000001186 00000 n 
+0000001472 00000 n 
+0000001571 00000 n 
+0000002057 00000 n 
+0000002361 00000 n 
+0000002404 00000 n 
+0000002453 00000 n 
+0000002529 00000 n 
+0000002696 00000 n 
+0000007069 00000 n 
+0000007396 00000 n 
+0000007439 00000 n 
+0000007538 00000 n 
+0000007639 00000 n 
+0000007735 00000 n 
+0000007809 00000 n 
+0000007970 00000 n 
+0000008124 00000 n 
+trailer
+<< /Size 25
+/Root 2 0 R
+/Info 1 0 R
+>>
+startxref
+8199
+%%EOF
