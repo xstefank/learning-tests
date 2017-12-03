@@ -15,5 +15,7 @@ public class App {
         Response response = target.request().get();
         String value = response.readEntity(String.class);
         response.close();
+
+        System.out.println(value);
     }
 }
