@@ -39,6 +39,7 @@
         <module>apple-orange</module>
         <module>kangaroo</module>
         <module>reduced-strings</module>
+        <module>strings</module>
     </modules>
 
 
