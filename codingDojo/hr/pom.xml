@@ -40,6 +40,7 @@
         <module>kangaroo</module>
         <module>reduced-strings</module>
         <module>strings</module>
+        <module>between-2-sets</module>
     </modules>
 
 
