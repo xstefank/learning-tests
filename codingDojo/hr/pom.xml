@@ -42,6 +42,7 @@
         <module>strings</module>
         <module>between-2-sets</module>
         <module>breaking-records</module>
+        <module>birthday-chocolate</module>
     </modules>
 
 
