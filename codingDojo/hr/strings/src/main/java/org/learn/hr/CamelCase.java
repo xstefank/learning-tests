@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CamelCase {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(ClassLoader.getSystemResourceAsStream("input.txt"));
+        Scanner in = new Scanner(ClassLoader.getSystemResourceAsStream("inputCamelCase.txt"));
         String s = in.next();
 
 
