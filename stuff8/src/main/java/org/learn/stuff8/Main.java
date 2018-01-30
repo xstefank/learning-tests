@@ -12,7 +12,17 @@ public class Main {
     public static void main(String[] args) {
 //        arrays();
 //        regex();
-        iterator();
+//        iterator();
+        regex2();
+    }
+
+    private static void regex2() {
+        String s = "foo | bar bar";
+        System.out.println(removeSpacesAfter(s, '|'));
+    }
+
+    private static String removeSpacesAfter(String s, Character character) {
+        return s.replaceAll("\\s+(?=" + character + ")", "");
     }
 
     public static void arrays() {
