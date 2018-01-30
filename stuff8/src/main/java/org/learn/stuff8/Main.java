@@ -22,7 +22,7 @@ public class Main {
     }
 
     private static String removeSpacesAfter(String s, Character character) {
-        return s.replaceAll("\\s+(?=" + character + ")", "");
+        return s.replaceAll("\\|\\s+", "|");
     }
 
     public static void arrays() {
