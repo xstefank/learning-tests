@@ -7,7 +7,7 @@
 i=1
 current=num_$i
 
-while [ ! -z ${!current} ]; do
+while [ ${!current} ]; do
   echo ${!current}
   i=$((i+1))
   current=num_$i
