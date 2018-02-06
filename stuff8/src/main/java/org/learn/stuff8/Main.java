@@ -1,5 +1,6 @@
 package org.learn.stuff8;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -13,7 +14,14 @@ public class Main {
 //        arrays();
 //        regex();
 //        iterator();
-        regex2();
+//        regex2();
+        files();
+    }
+
+    private static void files() {
+        File f = new File("./test.txt");
+        System.out.println(f.isAbsolute());
+        System.out.println(f.getAbsoluteFile().getAbsolutePath());
     }
 
     private static void regex2() {
