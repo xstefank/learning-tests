@@ -3,15 +3,28 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.xstefank.lt</groupId>
   <artifactId>service-loader-lt-app</artifactId>
-  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
   <name>service-loader-lt-app</name>
-  <url>http://maven.apache.org</url>
+
   <dependencies>
+    <dependency>
+      <groupId>org.xstefank.lt</groupId>
+      <artifactId>interface-module</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.xstefank.lt</groupId>
+      <artifactId>override-module</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
