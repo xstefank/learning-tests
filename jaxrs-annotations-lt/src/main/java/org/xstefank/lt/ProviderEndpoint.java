@@ -1,5 +1,7 @@
 package org.xstefank.lt;
 
+import org.xstefank.lt.model.Dummy;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 

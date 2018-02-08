@@ -1,4 +1,4 @@
-package org.xstefank.lt;
+package org.xstefank.lt.model;
 
 public class Dummy {
 

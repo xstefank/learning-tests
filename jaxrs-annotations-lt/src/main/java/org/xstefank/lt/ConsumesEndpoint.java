@@ -1,6 +1,7 @@
 package org.xstefank.lt;
 
 import org.jboss.logging.Logger;
+import org.xstefank.lt.model.DummyJson;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
