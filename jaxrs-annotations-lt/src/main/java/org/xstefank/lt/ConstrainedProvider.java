@@ -25,6 +25,11 @@ public class ConstrainedProvider implements MessageBodyWriter<ConstrainedDummy> 
     }
 
     @Override
+    public long getSize(ConstrainedDummy constrainedDummy, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
+        return 0;
+    }
+
+    @Override
     public void writeTo(ConstrainedDummy constrainedDummy, Class<?> aClass, Type type, Annotation[] annotations, MediaType mediaType, MultivaluedMap<String, Object> multivaluedMap, OutputStream outputStream) throws IOException, WebApplicationException {
         outputStream.write("contrained dummy foo".getBytes());
     }
