@@ -15,7 +15,16 @@ public class Main {
 //        regex();
 //        iterator();
 //        regex2();
-        files();
+//        files();
+        regex3();
+    }
+
+    private static void regex3() {
+        Pattern pattern = Pattern.compile("Dummy\\{name=(.*?),age=(.*?)}");
+        Matcher matcher = pattern.matcher("Dummy{name=Default,age=42}");
+        if (matcher.find()) {
+            System.out.println(matcher.group(1));
+        }
     }
 
     private static void files() {
