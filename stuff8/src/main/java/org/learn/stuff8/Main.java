@@ -16,7 +16,16 @@ public class Main {
 //        iterator();
 //        regex2();
 //        files();
-        regex3();
+//        regex3();
+        retianAllTest();
+    }
+
+    private static void retianAllTest() {
+        List<String> list1 = new ArrayList<>(Arrays.asList("a", "b", "c"));
+        List<String> list2 = Arrays.asList("y", "z", "x");
+
+        list1.retainAll(list2);
+        System.out.println(list1);
     }
 
     private static void regex3() {
