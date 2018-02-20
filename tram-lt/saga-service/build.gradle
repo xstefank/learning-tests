@@ -1,0 +1,34 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'org.xstefank.lt'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    compile "io.eventuate.tram.sagas:eventuate-jpa-sagas-framework:0.3.0.RELEASE"
+    compile "io.eventuate.tram.sagas:eventuate-tram-sagas-simple-dsl:0.3.0.RELEASE"
+    compile "io.eventuate.tram.core:eventuate-tram-jdbc-kafka:0.4.0.RELEASE"
+
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compileOnly('org.projectlombok:lombok')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
