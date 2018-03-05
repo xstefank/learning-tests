@@ -17,7 +17,16 @@ public class Main {
 //        regex2();
 //        files();
 //        regex3();
-        retianAllTest();
+//        retianAllTest();
+        regex4();
+    }
+
+    private static void regex4() {
+        Pattern pattern = Pattern.compile("Upstream issue: (<TICKET>|Upstream not required)");
+        Matcher matcher = pattern.matcher("Upstream issue: Upstream not required");
+
+        System.out.println(matcher.matches());
+
     }
 
     private static void retianAllTest() {
