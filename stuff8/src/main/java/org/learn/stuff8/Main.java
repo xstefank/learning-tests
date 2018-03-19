@@ -19,7 +19,20 @@ public class Main {
 //        regex3();
 //        retianAllTest();
 //        regex4();
-        regex5();
+//        regex5();
+        regex6();
+    }
+
+    private static void regex6() {
+        String s = "Upstream Issue: https://issues.jboss.org/browse/WFLY-42\n" +
+                "Upstream PR: #13\n" +
+                "Issue: https://issues.jboss.org/browse/JBEAP-43";
+
+        Pattern pattern = Pattern.compile("Upstream Issue: (https://issues.jboss.org/browse/WFLY-\\d+|Upstream not required)\n" +
+                "Upstream PR: #\\d+\n" +
+                "Issue: https://issues.jboss.org/browse/JBEAP-\\d+");
+        Matcher matcher = pattern.matcher(s);
+        System.out.println(matcher.matches());
     }
 
     private static void regex5() {
