@@ -1,6 +1,11 @@
 package org.learn.stuff8;
 
+import javax.ws.rs.core.UriBuilder;
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -20,7 +25,25 @@ public class Main {
 //        retianAllTest();
 //        regex4();
 //        regex5();
-        regex6();
+//        regex6();
+        url();
+    }
+
+    private static void url() {
+        try {
+            URL url = new URL("http://localhost:8080/api");
+            System.out.println(url.toString());
+
+            URL path = new URL(url, "/request");
+            System.out.println(path.toString());
+
+            URI path2 = UriBuilder.fromUri(url.toURI())
+                    .path("/request")
+                    .build();
+            System.out.println(path2);
+        } catch (MalformedURLException | URISyntaxException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void regex6() {
