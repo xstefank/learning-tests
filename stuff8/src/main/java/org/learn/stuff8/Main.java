@@ -41,6 +41,9 @@ public class Main {
                     .path("/request")
                     .build();
             System.out.println(path2);
+
+            URI ip = new URL("http://172.19.0.5:8080").toURI();
+            System.out.println(ip);
         } catch (MalformedURLException | URISyntaxException e) {
             e.printStackTrace();
         }
