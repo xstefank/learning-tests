@@ -1,0 +1,17 @@
+\documentclass{IEEEtran}
+\usepackage{hyperref}
+\usepackage{filecontents}
+\begin{filecontents}{\jobname.bib}
+    @article{Example,
+        author = {Author, The},
+        doi = {10.1000/182},
+        journal = {Awesome Journal},
+        title = {{This is the title, click to go to doi}},
+        year = {2016},
+    }
+\end{filecontents}
+\begin{document}
+    \nocite{*}
+    \bibliographystyle{IEEEtranDOI}
+    \bibliography{\jobname}
+\end{document}

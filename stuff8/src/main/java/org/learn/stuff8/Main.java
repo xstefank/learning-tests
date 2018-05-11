@@ -26,7 +26,15 @@ public class Main {
 //        regex4();
 //        regex5();
 //        regex6();
-        url();
+//        url();
+        regex7();
+    }
+
+    private static void regex7() {
+        Pattern pattern = Pattern.compile("\\[WFLY-\\d+\\]\\s+.*|WFLY-\\d+\\s+.*");
+        Matcher matcher = pattern.matcher("WFLY-999999 Testing issue");
+
+        System.out.println(matcher.matches());
     }
 
     private static void url() {
