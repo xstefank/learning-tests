@@ -45,6 +45,7 @@
         <module>birthday-chocolate</module>
         <module>divisible-sum-pairs</module>
         <module>caesar-cipher</module>
+        <module>java-datatypes</module>
     </modules>
 
 
