@@ -1,7 +1,13 @@
 package org.learn.stuff8;
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -10,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,7 +34,19 @@ public class Main {
 //        regex5();
 //        regex6();
 //        url();
-        regex7();
+//        regex7();
+        json();
+    }
+
+    private static void json() {
+        File configFile = new File("src/main/resources/test.json");
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            System.out.println(mapper.readValue(configFile, new TypeReference<Map<String, Object>>() {}).toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void regex7() {
