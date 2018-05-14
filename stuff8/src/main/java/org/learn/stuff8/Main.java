@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
@@ -35,7 +36,19 @@ public class Main {
 //        regex6();
 //        url();
 //        regex7();
-        json();
+//        json();
+        yaml();
+    }
+
+    private static void yaml() {
+        File configFile = new File("src/main/resources/test.yaml");
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+
+        try {
+            System.out.println(mapper.readValue(configFile, new TypeReference<Map<String, Object>>() {}).toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void json() {

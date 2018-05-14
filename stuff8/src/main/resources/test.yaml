@@ -1,0 +1,2 @@
+format:
+  title: "\\[WFLY-\\d+\\]\\s+.*|WFLY-\\d+\\s+.*"
