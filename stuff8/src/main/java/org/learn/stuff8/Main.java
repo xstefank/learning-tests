@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import org.learn.stuff8.model.TestYAML;
 
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
@@ -37,7 +38,23 @@ public class Main {
 //        url();
 //        regex7();
 //        json();
-        yaml();
+//        yaml();
+        yaml2();
+    }
+
+    private static void yaml2() {
+        File configFile = new File("src/main/resources/test.yaml");
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+
+        try {
+            TestYAML pattern = mapper.readValue(configFile, TestYAML.class);
+            System.out.println(pattern);
+            System.out.println(pattern.getPattern().getClass());
+            Matcher matcher = pattern.getPattern().matcher("WFLY-999999 Testing issue");
+            System.out.println(matcher.matches());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void yaml() {
