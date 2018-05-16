@@ -1,24 +1,27 @@
 package org.learn.stuff8;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import org.learn.stuff8.model.TestResource;
 import org.learn.stuff8.model.TestYAML;
 
+import javax.ws.rs.Path;
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
 import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,7 +42,33 @@ public class Main {
 //        regex7();
 //        json();
 //        yaml();
-        yaml2();
+//        yaml2();
+//        regex8();
+        annotationSet();
+    }
+
+    private static void annotationSet() {
+        Annotation[] annotationsArray = new TestResource().getClass().getAnnotations();
+        Set<Annotation> annotations = new HashSet<>();
+
+        for (Annotation a : annotationsArray) {
+            annotations.add(a);
+        }
+
+        for (Annotation a : annotations) {
+            Class<? extends Annotation> aClass = a.annotationType();
+            if (aClass.equals(Path.class)) {
+                System.out.println("sadfasdf");
+            }
+        }
+    }
+
+    private static void regex8() {
+        Pattern pattern = Pattern.compile("WFLY-\\d+");
+        Matcher matcher = pattern.matcher("[WFLY-999999] Subject");
+        if (matcher.find()) {
+            System.out.println(matcher.group());
+        }
     }
 
     private static void yaml2() {
