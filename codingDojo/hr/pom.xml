@@ -46,6 +46,7 @@
         <module>divisible-sum-pairs</module>
         <module>caesar-cipher</module>
         <module>java-datatypes</module>
+        <module>end-of-file</module>
     </modules>
 
 
