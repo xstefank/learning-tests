@@ -44,7 +44,15 @@ public class Main {
 //        yaml();
 //        yaml2();
 //        regex8();
-        annotationSet();
+//        annotationSet();
+        regex9();
+    }
+
+    private static void regex9() {
+        Pattern pattern = Pattern.compile("((.*)?NO JIRA REQUIRED(.*)\\s?)|(([^do not|don't]\\s)?skip.*template.*check(.*)\\s?)|(([^do not|don't]\\s)?bypass.*template.*check(.*)\\s?)");
+        Matcher matcher = pattern.matcher("Don't skip template check");
+
+        System.out.println(matcher.matches());
     }
 
     private static void annotationSet() {
