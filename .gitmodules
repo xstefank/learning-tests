@@ -1,3 +1,6 @@
 [submodule "nexus-lt/javaee7-simple-sample"]
 	path = nexus-lt/javaee7-simple-sample
 	url = https://github.com/xstefank/javaee7-simple-sample.git
+[submodule "microprofile/microprofile1.4-samples"]
+	path = microprofile/microprofile1.4-samples
+	url = git@github.com:javaee-samples/microprofile1.4-samples.git
