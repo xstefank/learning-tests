@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -45,7 +46,15 @@ public class Main {
 //        yaml2();
 //        regex8();
 //        annotationSet();
-        regex9();
+//        regex9();
+        nullForEach();
+    }
+
+    private static void nullForEach() {
+        Collection<String> myCollection = null;
+        for (String s : myCollection) {
+            System.out.println(s);
+        }
     }
 
     private static void regex9() {
