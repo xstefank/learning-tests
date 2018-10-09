@@ -5,8 +5,6 @@ public class Activity {
     private int i;
     private String s;
     
-    public Activity() {}
-    
     public Activity(int i, String s) {
         this.i = i;
         this.s = s;
