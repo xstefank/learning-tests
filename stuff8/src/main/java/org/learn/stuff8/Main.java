@@ -47,7 +47,16 @@ public class Main {
 //        regex8();
 //        annotationSet();
 //        regex9();
-        nullForEach();
+//        nullForEach();
+        arrowOperator();
+    }
+
+    private static void arrowOperator() {
+        int i = 5;
+
+        while (i --> 0) {
+            System.out.println(i);
+        }
     }
 
     private static void nullForEach() {
