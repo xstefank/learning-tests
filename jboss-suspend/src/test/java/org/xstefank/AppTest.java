@@ -22,7 +22,7 @@ public class AppTest {
         suspendController.suspend(1000);
         suspendController.resume();
 
-        String output = new String(Files.readAllBytes(Paths.get("server.log")));
+        String output = new String(Files.readAllBytes(Paths.get("target/server.log")));
 
         Assert.assertTrue("Exception type of the resume failure is not included in the log message",
                 output.contains(RuntimeException.class.getSimpleName()));
