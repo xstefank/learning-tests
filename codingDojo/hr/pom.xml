@@ -48,6 +48,7 @@
         <module>java-datatypes</module>
         <module>end-of-file</module>
         <module>java-simple</module>
+        <module>sock-marchant</module>
     </modules>
 
 
