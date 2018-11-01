@@ -9,11 +9,12 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 @Path("/encoded")
-@Encoded
+//@Encoded
 public class EncodedEndpoint {
 
     @POST
     @Path("/{param}")
+    @Encoded
     public Response postEncoded(@PathParam("param") String param) {
         Logger.getLogger(EncodedEndpoint.class).info("received " + param);
         return Response.ok(param).build();
