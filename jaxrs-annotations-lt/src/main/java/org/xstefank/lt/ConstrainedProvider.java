@@ -15,7 +15,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
 @Provider
-@ConstrainedTo(RuntimeType.SERVER)
+@ConstrainedTo(RuntimeType.CLIENT)
 public class ConstrainedProvider implements MessageBodyWriter<ConstrainedDummy> {
 
 
