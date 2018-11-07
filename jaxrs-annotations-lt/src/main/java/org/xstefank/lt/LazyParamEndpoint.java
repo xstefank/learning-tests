@@ -13,7 +13,7 @@ import javax.ws.rs.ext.ParamConverter;
 public class LazyParamEndpoint {
 
     @GET
-    public String testQueryParam(@DefaultValue("Dummy{name=Default,age=42}") @QueryParam("param") ParamDummy param) {
+    public String testQueryParam(@DefaultValue("INJECTED_ERROR{name=Default,age=42}") @QueryParam("param") ParamDummy param) {
         return "query param value= " + param;
     }
 

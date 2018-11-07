@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Provider
-@ParamConverter.Lazy
+//@ParamConverter.Lazy
 public class DummyParamConverterProvider implements ParamConverterProvider {
 
     private static final Logger log = Logger.getLogger(DummyParamConverterProvider.class);
@@ -31,9 +31,9 @@ public class DummyParamConverterProvider implements ParamConverterProvider {
                         dummy.setName(matcher.group(1));
                         dummy.setAge(Integer.parseInt(matcher.group(2)));
                         return (T) dummy;
+                    } else {
+                        throw new IllegalArgumentException("invalid string " + value);
                     }
-
-                    return null;
                 }
 
                 @Override
