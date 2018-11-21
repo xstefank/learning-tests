@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>org.xstefank</groupId>
+    <artifactId>secmgr-lt</artifactId>
+    <version>0.0.1</version>
+    <packaging>war</packaging>
+    
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <finalName>secmgr-lt</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    
+
+                    <webResources>
+                        <resource>
+                            <!-- this is relative to the pom.xml directory -->
+                            <directory>${project.basedir}/src/main/resources
+                            </directory>
+
+                        </resource>
+                    </webResources>
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
