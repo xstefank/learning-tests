@@ -14,6 +14,6 @@ public class PrintServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println(System.getProperty("java.home"));
         
-        resp.getWriter().write("Successfully written file");
+        resp.getWriter().write("Success");
     }
 }
