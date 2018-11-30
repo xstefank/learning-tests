@@ -1,0 +1,63 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{sagas_publ}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=7b6f78bee4d74fb4edb7a42ad7e3c2ad}{%
+           family={Garcia-Molina},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Hector},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e1b5823e0f6aec918c96da11ace2466a}{%
+           family={Salem},
+           familyi={S\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f1fdd18ece423325c7aaebc91e171ea2}
+      \strng{fullhash}{3491d1a0281cd04f6e1fbc02b6b7782e}
+      \strng{bibnamehash}{3491d1a0281cd04f6e1fbc02b6b7782e}
+      \strng{authorbibnamehash}{3491d1a0281cd04f6e1fbc02b6b7782e}
+      \strng{authornamehash}{f1fdd18ece423325c7aaebc91e171ea2}
+      \strng{authorfullhash}{3491d1a0281cd04f6e1fbc02b6b7782e}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGMOD Record}
+      \field{number}{3}
+      \field{title}{Sagas}
+      \field{volume}{16}
+      \field{year}{1987}
+      \field{pages}{249\bibrangedash 259}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/38714.38742
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

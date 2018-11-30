@@ -1,0 +1,16 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'document.blg'
+[24] biber:313> INFO - === Fri Nov 30, 2018, 22:22:54
+[40] Biber.pm:371> INFO - Reading 'document.bcf'
+[106] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[122] Biber.pm:3976> INFO - Processing section 0
+[130] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[131] bibtex.pm:1500> INFO - LaTeX decoding ...
+[157] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[165] Utils.pm:193> WARN - BibTeX subsystem: /tmp/rKEDEyoLxH/references.bib_9598.utf8, line 29, warning: 1 characters of junk seen at toplevel
+[176] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[176] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[176] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'cs_CZ'
+[178] bbl.pm:617> INFO - Writing 'document.bbl' with encoding 'UTF-8'
+[178] bbl.pm:720> INFO - Output to document.bbl
+[178] Biber.pm:110> INFO - WARNINGS: 1
