@@ -48,7 +48,12 @@ public class Main {
 //        annotationSet();
 //        regex9();
 //        nullForEach();
-        arrowOperator();
+//        arrowOperator();
+        percentage();
+    }
+
+    private static void percentage() {
+        System.out.println(Math.random() < .9);
     }
 
     private static void arrowOperator() {
