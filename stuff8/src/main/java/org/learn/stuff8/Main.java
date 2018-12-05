@@ -10,11 +10,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.lang.annotation.Annotation;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,7 +30,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 //        arrays();
 //        regex();
 //        iterator();
@@ -49,7 +51,15 @@ public class Main {
 //        regex9();
 //        nullForEach();
 //        arrowOperator();
-        percentage();
+//        percentage();
+        regex10();
+    }
+
+    private static void regex10() throws UnsupportedEncodingException {
+        String in = "http://localhost:8080/lra-recovery-coordinator/http%3A%2F%2Flocalhost%3A8080%2Flra-coordinator%2F0_ffffc0a80067_-14c2838e_5c083ed4_4a/0_ffffc0a80067_-14c2838e_5c083ed4_4b";
+        String decode = URLDecoder.decode(in, "UTF-8");
+
+        System.out.println(decode.replaceFirst(".*/([^/?]+)/([^/?]+).*", "$1"));
     }
 
     private static void percentage() {
