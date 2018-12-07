@@ -52,7 +52,14 @@ public class Main {
 //        nullForEach();
 //        arrowOperator();
 //        percentage();
-        regex10();
+//        regex10();
+        url2();
+    }
+
+    private static void url2() throws MalformedURLException {
+        String test = "http://localhost:8080/lra-recovery-coordinator/http%3A%2F%2Flocalhost%3A8080%2Flra-coordinator%2F0_ffff0a280469_5f2f867e_5c0a408f_d/0_ffff0a280469_5f2f867e_5c0a408f_e";
+
+        System.out.println(new URL(test));
     }
 
     private static void regex10() throws UnsupportedEncodingException {
