@@ -8,9 +8,15 @@
     
     <properties>
         <version.junit>4.12</version.junit>
+        <version.dummy>2.0</version.dummy>
     </properties>
     
     <dependencies>
+        <dependency>
+            <groupId>org.xstefank</groupId>
+            <artifactId>dummy-dependency</artifactId>
+            <version>${version.dummy}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -18,4 +24,25 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
+    <profiles>
+        <profile>
+            <id>dummy1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <version.dummy>1.0</version.dummy>
+            </properties>
+        </profile>
+        <profile>
+            <id>dummy2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <version.dummy>2.0</version.dummy>
+            </properties>
+        </profile>
+    </profiles>
 </project>
