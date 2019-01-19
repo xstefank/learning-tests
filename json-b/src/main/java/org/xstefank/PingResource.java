@@ -18,6 +18,9 @@ public class PingResource {
                 .alive(true)
                 .build());
 
+        Avenger ironMan = jsonb.fromJson(json, Avenger.class);
+        System.out.println(ironMan);
+        
         return Response.ok(json).build();
     }
 }

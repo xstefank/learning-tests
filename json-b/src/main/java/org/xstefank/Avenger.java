@@ -42,7 +42,16 @@ public class Avenger {
     public static AvengerBuilder name(String name) {
         return new AvengerBuilder(name);
     }
-    
+
+    @Override
+    public String toString() {
+        return "Avenger{" +
+                "name='" + name + '\'' +
+                ", realName='" + realName + '\'' +
+                ", alive=" + alive +
+                '}';
+    }
+
     public static class AvengerBuilder {
         private String name;
         private String realName;
