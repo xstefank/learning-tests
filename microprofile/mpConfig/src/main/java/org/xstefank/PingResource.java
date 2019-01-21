@@ -20,6 +20,10 @@ public class PingResource {
     @ConfigProperty(name = "avenger")
     private Avenger avenger;
     
+//    @Inject
+//    @ConfigProperty(name = "avengers")
+//    private List<Avenger> avengers;
+    
     @GET
     public Response ping() {
         return Response.ok("Application running successfully - " + avenger).build();
