@@ -7,6 +7,8 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
+import java.util.List;
+import java.util.Optional;
 
 @Path("ping")
 @ApplicationScoped
@@ -18,14 +20,14 @@ public class PingResource {
     
     @Inject
     @ConfigProperty(name = "avenger")
-    private Avenger avenger;
+    private Optional<Avenger> avenger;
     
-//    @Inject
-//    @ConfigProperty(name = "avengers")
-//    private List<Avenger> avengers;
+    @Inject
+    @ConfigProperty(name = "avengers")
+    private List<Avenger> avengers;
     
     @GET
     public Response ping() {
-        return Response.ok("Application running successfully - " + avenger).build();
+        return Response.ok("Application running successfully - " + avengers).build();
     }
 }
