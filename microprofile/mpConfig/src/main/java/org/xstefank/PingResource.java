@@ -16,8 +16,12 @@ public class PingResource {
     @ConfigProperty(name = "test-prop", defaultValue = "none")
     private String testProp;
     
+    @Inject
+    @ConfigProperty(name = "avenger")
+    private Avenger avenger;
+    
     @GET
     public Response ping() {
-        return Response.ok("Application running successfully - " + testProp).build();
+        return Response.ok("Application running successfully - " + avenger).build();
     }
 }
