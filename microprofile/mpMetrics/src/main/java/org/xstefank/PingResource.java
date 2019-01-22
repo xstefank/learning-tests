@@ -1,11 +1,16 @@
 package org.xstefank;
 
 import org.eclipse.microprofile.metrics.Counter;
+import org.eclipse.microprofile.metrics.Histogram;
+import org.eclipse.microprofile.metrics.Metadata;
+import org.eclipse.microprofile.metrics.MetricRegistry;
+import org.eclipse.microprofile.metrics.MetricType;
 import org.eclipse.microprofile.metrics.MetricUnits;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.metrics.annotation.Gauge;
 import org.eclipse.microprofile.metrics.annotation.Metered;
 import org.eclipse.microprofile.metrics.annotation.Metric;
+import org.eclipse.microprofile.metrics.annotation.RegistryType;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -22,6 +27,22 @@ public class PingResource {
     @Metric(name = "metric counter", absolute = true)
     private Counter metricCounter;
     
+    @Inject
+    @RegistryType(type = MetricRegistry.Type.APPLICATION)
+    private MetricRegistry appRegistry;
+    
+    @Inject
+    private Histogram test_histogram;
+
+    @GET
+    @Path("registry")
+    public String registry() {
+        test_histogram = appRegistry.histogram("test histogram");
+        Metadata metadata = new Metadata("test histogram metadata", MetricType.HISTOGRAM);
+        appRegistry.register(metadata, test_histogram);
+
+        return "registered";
+    }
     
     @GET
     @Counted(name = "ping requests", monotonic = true, absolute = true)
@@ -62,6 +83,13 @@ public class PingResource {
     @Path("ping6")
     public Response ping6() {
         metricCounter.inc();
+        return Response.ok("Application running successfully - " + metricCounter.getCount()).build();
+    }
+
+    @GET
+    @Path("ping7")
+    public Response ping7() {
+        test_histogram.update((int) (Math.random() * 10));
         return Response.ok("Application running successfully - " + metricCounter.getCount()).build();
     }
 }
