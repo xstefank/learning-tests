@@ -92,4 +92,12 @@ public class PingResource {
         test_histogram.update((int) (Math.random() * 10));
         return Response.ok("Application running successfully - " + metricCounter.getCount()).build();
     }
+
+    @GET
+    @Path("ping8")
+    @Counted(name = "ping_request_counter", description = "Counter for the ping requests", monotonic = true,
+    absolute = true, displayName = "App ping counter", tags = {"app=ping","deploy=new"})
+    public Response ping8() {
+        return Response.ok("Application running successfully - " + metricCounter.getCount()).build();
+    }
 }
