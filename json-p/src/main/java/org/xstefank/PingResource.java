@@ -15,7 +15,7 @@ public class PingResource {
     public Response ping() {
         JsonObject json = Json.createObjectBuilder()
                 .add("name", "Iron Man")
-                .add("realName", "Tony Start")
+                .add("realName", "Tony Stark")
                 .add("alive", "true")
                 .build();
 
