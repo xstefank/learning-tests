@@ -19,6 +19,8 @@ public class PingResource {
                 .add("alive", "true")
                 .build();
 
+        System.out.println(json.toString());
+
         JsonReader reader = Json.createReader(new StringReader(json.toString()));
         System.out.println(reader.readObject().getString("name"));
 
