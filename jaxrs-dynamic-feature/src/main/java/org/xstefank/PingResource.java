@@ -15,6 +15,7 @@ public class PingResource {
 
     @GET
     @Path("2")
+//    @TestApply
     public Response ping2() {
         return Response.ok("Application running successfully").build();
     }

@@ -9,6 +9,6 @@ import java.io.IOException;
 public class DummyFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        System.out.println("XXXXXXXXXXXXXXXXXx " + containerRequestContext.getMethod());
+        System.out.println("XXXXXXXXXXXXXXXXXx " + containerRequestContext.getUriInfo().getRequestUri());
     }
 }
