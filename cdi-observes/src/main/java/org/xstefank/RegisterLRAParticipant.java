@@ -14,4 +14,6 @@ import java.lang.annotation.Target;
 @Stereotype
 @Dependent
 public @interface RegisterLRAParticipant {
+    
+    String name() default "";
 }
