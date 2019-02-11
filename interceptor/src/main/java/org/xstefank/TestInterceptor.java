@@ -1,13 +1,23 @@
 package org.xstefank;
 
-import javax.interceptor.InterceptorBinding;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.Interceptor;
+import javax.interceptor.InvocationContext;
 
-@InterceptorBindingR
-@Target({ElementType.TYPE, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface TestInterceptor {
+@TestAction
+@Interceptor
+public class TestInterceptor {
+    
+    @AroundInvoke
+    public Object aroundInvoke(InvocationContext context) throws Exception {
+        System.out.println("XXXXXXXXXXXXXXXXXXX around invoke");
+        
+        context.setParameters(new Object[]{"TestLRAId"});
+        
+        Object ret = context.proceed();
+
+        System.out.println("XXXXXXXXXXXXXXXX after invoke" + context);
+        
+        return ret;
+    }
 }
