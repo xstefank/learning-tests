@@ -6,6 +6,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Path("ping")
 public class PingResource {
@@ -26,6 +27,6 @@ public class PingResource {
     @GET
     @Path("client")
     public Response getClient() {
-        return Response.ok(42).build();
+        return Response.ok(new AtomicInteger(0).intValue()).build();
     }
 }
