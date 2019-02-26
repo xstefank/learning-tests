@@ -5,6 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 @Path("ping")
+@RegisterLRAParticipant
 public class PingResource {
     
     @GET

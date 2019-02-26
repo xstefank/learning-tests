@@ -13,21 +13,20 @@ import java.util.List;
 
 public class RegisterLRAParticipantExtension implements Extension {
 
-    public static final List<String> names = new ArrayList<>();
+    public static final List<Class<?>> names = new ArrayList<>();
 
     public void register(@Observes @WithAnnotations(RegisterLRAParticipant.class) ProcessAnnotatedType<?> type) {
         Class<?> javaClass = type.getAnnotatedType().getJavaClass();
         String name = javaClass.getName();
         Logger log = Logger.getLogger("SADFSAFDSADF");
         log.error("XXXXXXXXXXXXXXXXXXXX " + name);
-        log.error("XXXXXXXXXXXXXXXXXXXX " + javaClass.getAnnotation(RegisterLRAParticipant.class).name());
 
         for (Method method : javaClass.getDeclaredMethods()) {
             log.error("XXXXXXXXXXx " + method.getName());    
             log.error("XXXXXXXXXXx " + Arrays.toString(method.getAnnotations()));    
         }
 
-        names.add(name);
+        names.add(javaClass);
         
     }
     
