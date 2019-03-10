@@ -1,0 +1,21 @@
+2019-03-10 08:59:36,497 set-fi getting-started-1.0-SNAPSHOT-runner.jar[28391] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-10 08:59:36,543 set-fi getting-started-1.0-SNAPSHOT-runner.jar[28391] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-10 08:59:36,590 set-fi getting-started-1.0-SNAPSHOT-runner.jar[28391] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-10 08:59:36,642 set-fi getting-started-1.0-SNAPSHOT-runner.jar[28391] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.538s. Listening on: http://127.0.0.1:8080
+2019-03-10 08:59:36,644 set-fi getting-started-1.0-SNAPSHOT-runner.jar[28391] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-10 08:59:42,115 set-fi getting-started-1.0-SNAPSHOT-runner.jar[28391] INFO  [io.quarkus] (main) Quarkus stopped in 0.011s
+2019-03-10 20:16:33,118 set-fi getting-started-1.0-SNAPSHOT-runner[10193] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.004s. Listening on: http://127.0.0.1:8080
+2019-03-10 20:16:33,118 set-fi getting-started-1.0-SNAPSHOT-runner[10193] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-10 20:16:41,933 set-fi getting-started-1.0-SNAPSHOT-runner[10193] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
+2019-03-10 20:16:44,790 set-fi getting-started-1.0-SNAPSHOT-runner[10259] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.006s. Listening on: http://127.0.0.1:8080
+2019-03-10 20:16:44,791 set-fi getting-started-1.0-SNAPSHOT-runner[10259] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-10 20:16:48,079 set-fi getting-started-1.0-SNAPSHOT-runner[10259] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
+2019-03-10 20:16:48,640 set-fi getting-started-1.0-SNAPSHOT-runner[10311] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.005s. Listening on: http://127.0.0.1:8080
+2019-03-10 20:16:48,641 set-fi getting-started-1.0-SNAPSHOT-runner[10311] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-10 20:16:50,257 set-fi getting-started-1.0-SNAPSHOT-runner[10311] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
+2019-03-10 20:16:50,969 set-fi getting-started-1.0-SNAPSHOT-runner[10347] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.003s. Listening on: http://127.0.0.1:8080
+2019-03-10 20:16:50,969 set-fi getting-started-1.0-SNAPSHOT-runner[10347] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-10 20:17:49,033 set-fi getting-started-1.0-SNAPSHOT-runner[10347] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
+2019-03-10 19:56:28,871 set-fi getting-started-1.0-SNAPSHOT-runner[13598] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.006s. Listening on: http://127.0.0.1:8080
+2019-03-10 19:56:28,872 set-fi getting-started-1.0-SNAPSHOT-runner[13598] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-10 20:00:20,363 set-fi getting-started-1.0-SNAPSHOT-runner[13598] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
