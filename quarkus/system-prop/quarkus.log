@@ -1,0 +1,18 @@
+2019-03-14 14:19:04,003 set-fi system-prop-0.0.1-runner.jar[3629] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-14 14:19:04,127 set-fi system-prop-0.0.1-runner.jar[3629] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-14 14:19:04,173 set-fi system-prop-0.0.1-runner.jar[3629] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-14 14:19:04,229 set-fi system-prop-0.0.1-runner.jar[3629] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.641s. Listening on: http://127.0.0.1:8080
+2019-03-14 14:19:04,232 set-fi system-prop-0.0.1-runner.jar[3629] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-14 14:19:08,080 set-fi system-prop-0.0.1-runner.jar[3629] INFO  [io.quarkus] (main) Quarkus stopped in 0.011s
+2019-03-14 14:19:12,933 set-fi system-prop-0.0.1-runner.jar[3741] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-14 14:19:13,044 set-fi system-prop-0.0.1-runner.jar[3741] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-14 14:19:13,090 set-fi system-prop-0.0.1-runner.jar[3741] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-14 14:19:13,145 set-fi system-prop-0.0.1-runner.jar[3741] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.597s. Listening on: http://127.0.0.1:8080
+2019-03-14 14:19:13,148 set-fi system-prop-0.0.1-runner.jar[3741] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-14 14:19:16,199 set-fi system-prop-0.0.1-runner.jar[3741] INFO  [io.quarkus] (main) Quarkus stopped in 0.011s
+2019-03-14 14:19:36,768 set-fi system-prop-0.0.1-runner.jar[3932] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-14 14:19:36,886 set-fi system-prop-0.0.1-runner.jar[3932] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-14 14:19:36,933 set-fi system-prop-0.0.1-runner.jar[3932] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-14 14:19:36,985 set-fi system-prop-0.0.1-runner.jar[3932] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.604s. Listening on: http://127.0.0.1:8080
+2019-03-14 14:19:36,988 set-fi system-prop-0.0.1-runner.jar[3932] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-14 14:19:40,168 set-fi system-prop-0.0.1-runner.jar[3932] INFO  [io.quarkus] (main) Quarkus stopped in 0.011s
