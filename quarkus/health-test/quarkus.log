@@ -1,6 +1,6 @@
-2019-03-14 07:43:47,844 set-fi health-test-1.0-SNAPSHOT-runner[13333] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.006s. Listening on: http://127.0.0.1:8080
-2019-03-14 07:43:47,845 set-fi health-test-1.0-SNAPSHOT-runner[13333] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, smallrye-health]
-2019-03-14 07:43:49,404 set-fi health-test-1.0-SNAPSHOT-runner[13333] ERROR [io.und.request] (XNIO-1 task-1) UT005023: Exception handling request to /health: javax.json.JsonException: Provider org.glassfish.json.JsonProviderImpl could not be instantiated: java.lang.InstantiationException: Type `org.glassfish.json.JsonProviderImpl` can not be instantiated reflectively as it does not have a no-parameter constructor or the no-parameter constructor has not been added explicitly to the native image.
+2019-03-14 10:22:27,067 set-fi health-test-1.0-SNAPSHOT-runner[22172] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.004s. Listening on: http://127.0.0.1:8080
+2019-03-14 10:22:27,067 set-fi health-test-1.0-SNAPSHOT-runner[22172] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, smallrye-health]
+2019-03-14 10:22:29,329 set-fi health-test-1.0-SNAPSHOT-runner[22172] ERROR [io.und.request] (XNIO-1 task-1) UT005023: Exception handling request to /health: javax.json.JsonException: Provider org.glassfish.json.JsonProviderImpl could not be instantiated: java.lang.InstantiationException: Type `org.glassfish.json.JsonProviderImpl` can not be instantiated reflectively as it does not have a no-parameter constructor or the no-parameter constructor has not been added explicitly to the native image.
 	at javax.json.spi.JsonProvider.provider(JsonProvider.java:102)
 	at javax.json.Json.createArrayBuilder(Json.java:262)
 	at io.smallrye.health.SmallRyeHealthReporter.getHealth(SmallRyeHealthReporter.java:48)
@@ -46,4 +46,4 @@ Caused by: java.lang.InstantiationException: Type `org.glassfish.json.JsonProvid
 	at javax.json.spi.JsonProvider.provider(JsonProvider.java:97)
 	... 39 more
 
-2019-03-14 07:43:52,194 set-fi health-test-1.0-SNAPSHOT-runner[13333] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
+2019-03-14 10:22:30,446 set-fi health-test-1.0-SNAPSHOT-runner[22172] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
