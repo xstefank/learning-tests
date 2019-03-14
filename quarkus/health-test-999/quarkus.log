@@ -1,0 +1,6 @@
+2019-03-14 10:18:53,801 set-fi health-test-999-1.0-SNAPSHOT-runner[20754] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.006s. Listening on: http://127.0.0.1:8080
+2019-03-14 10:18:53,802 set-fi health-test-999-1.0-SNAPSHOT-runner[20754] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, smallrye-health]
+2019-03-14 10:18:58,437 set-fi health-test-999-1.0-SNAPSHOT-runner[20754] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
+2019-03-14 10:20:23,151 set-fi health-test-999-1.0-SNAPSHOT-runner[21359] INFO  [io.quarkus] (main) Quarkus 999-SNAPSHOT started in 0.005s. Listening on: http://[::]:8080
+2019-03-14 10:20:23,152 set-fi health-test-999-1.0-SNAPSHOT-runner[21359] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, smallrye-health]
+2019-03-14 10:20:28,286 set-fi health-test-999-1.0-SNAPSHOT-runner[21359] INFO  [io.quarkus] (main) Quarkus stopped in 0.001s
