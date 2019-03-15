@@ -1,0 +1,15 @@
+2019-03-15 07:51:33,555 set-fi json-node-0.0.1-runner.jar[12230] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-15 07:51:33,671 set-fi json-node-0.0.1-runner.jar[12230] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-15 07:51:33,717 set-fi json-node-0.0.1-runner.jar[12230] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-15 07:51:44,076 set-fi json-node-0.0.1-runner.jar[12337] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-15 07:51:44,195 set-fi json-node-0.0.1-runner.jar[12337] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-15 07:51:44,243 set-fi json-node-0.0.1-runner.jar[12337] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-15 07:51:44,299 set-fi json-node-0.0.1-runner.jar[12337] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.664s. Listening on: http://127.0.0.1:8080
+2019-03-15 07:51:44,301 set-fi json-node-0.0.1-runner.jar[12337] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, resteasy-jsonb]
+2019-03-15 08:06:23,224 set-fi json-node-0.0.1-runner.jar[12337] INFO  [io.quarkus] (main) Quarkus stopped in 0.015s
+2019-03-15 08:07:10,102 set-fi json-node-0.0.1-runner.jar[15828] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-15 08:07:10,217 set-fi json-node-0.0.1-runner.jar[15828] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-15 08:07:10,266 set-fi json-node-0.0.1-runner.jar[15828] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-15 08:07:10,321 set-fi json-node-0.0.1-runner.jar[15828] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.694s. Listening on: http://127.0.0.1:8080
+2019-03-15 08:07:10,323 set-fi json-node-0.0.1-runner.jar[15828] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy, resteasy-jsonb]
+2019-03-15 08:07:25,534 set-fi json-node-0.0.1-runner.jar[15828] INFO  [io.quarkus] (main) Quarkus stopped in 0.014s
