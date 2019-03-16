@@ -1,0 +1,8 @@
+2019-03-16 15:13:02,252 set-fi gradle-build-dev.jar[19909] INFO  [io.qua.dep.QuarkusAugmentor] (main) Beginning quarkus augmentation
+2019-03-16 15:13:02,357 set-fi gradle-build-dev.jar[19909] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-16 15:13:02,631 set-fi gradle-build-dev.jar[19909] INFO  [io.qua.dep.QuarkusAugmentor] (main) Quarkus augmentation completed in 379ms
+2019-03-16 15:13:02,774 set-fi gradle-build-dev.jar[19909] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-16 15:13:02,783 set-fi gradle-build-dev.jar[19909] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-16 15:13:02,841 set-fi gradle-build-dev.jar[19909] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.677s. Listening on: http://127.0.0.1:8080
+2019-03-16 15:13:02,841 set-fi gradle-build-dev.jar[19909] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-16 15:13:17,576 set-fi gradle-build-dev.jar[19909] INFO  [io.quarkus] (Quarkus Shutdown Thread) Quarkus stopped in 0.004s

@@ -1,0 +1,32 @@
+group 'io.xstefank'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'io.quarkus.gradle.plugin'
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+        maven {
+            //this is temporary, all dependencies should be in central soon
+            url 'http://repository.jboss.org/nexus/content/groups/public'
+        }
+    }
+    dependencies {
+        classpath 'io.quarkus:quarkus-gradle-plugin:0.11.0'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://repository.jboss.org/nexus/content/groups/public'
+    }
+}
+
+dependencies {
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy', version:'0.11.0'
+    testCompile group: 'io.quarkus', name: 'quarkus-junit5', version:'0.11.0'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
+}
