@@ -1,0 +1,8 @@
+2019-03-17 12:37:41,972 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] DEBUG [org.xnio] (main) XNIO version 3.6.5.Final
+2019-03-17 12:37:42,039 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] DEBUG [org.xni.nio] (main) XNIO NIO Implementation Version 3.6.5.Final
+2019-03-17 12:37:42,094 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] DEBUG [org.jbo.threads] (main) JBoss Threads version 3.0.0.Alpha4
+2019-03-17 12:37:42,152 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] INFO  [ListenerBean] (main) The application is starting...
+2019-03-17 12:37:42,153 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] INFO  [io.quarkus] (main) Quarkus 0.11.0 started in 0.597s. Listening on: http://127.0.0.1:8080
+2019-03-17 12:37:42,155 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] INFO  [io.quarkus] (main) Installed features: [cdi, resteasy]
+2019-03-17 12:37:46,707 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] INFO  [ListenerBean] (main) The application is stopping...
+2019-03-17 12:37:46,720 set-fi application-lifecycle-events-1.0-SNAPSHOT-runner.jar[28198] INFO  [io.quarkus] (main) Quarkus stopped in 0.013s
