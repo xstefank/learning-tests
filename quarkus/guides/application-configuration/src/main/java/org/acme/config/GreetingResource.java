@@ -23,14 +23,10 @@ public class GreetingResource {
     @Inject
     @ConfigProperty(name = "greeting.name")
     private Optional<String> name;
-    
-    @Inject
-    @ConfigProperty(name = "test.prop", defaultValue = "none")
-    private javax.inject.Provider<String> testProp;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return message + " " + name.orElse("world") + suffix + "-" + testProp;
+        return message + " " + name.orElse("world") + suffix;
     }
 }
