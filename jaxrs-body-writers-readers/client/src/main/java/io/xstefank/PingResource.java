@@ -18,7 +18,7 @@ public class PingResource {
     public String hello() {
         Invocation.Builder request = ClientBuilder.newClient()
             .target("http://localhost:8081/ping")
-            .register(DummyMessageBodyTextPlain.class)
+//            .register(DummyMessageBodyTextPlain.class)
             .request("application/useless");
         Response response = request
             .get();
