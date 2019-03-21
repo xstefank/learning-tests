@@ -15,13 +15,14 @@ public class PingResource {
     private UriInfo uriInfo;
     
     @GET
-    @Produces("application/custom")
+//    @Produces("application/custom")
     public String hello() {
-        Response response = ClientBuilder.newClient().target(uriInfo.getBaseUriBuilder().path("inner"))
-            .request().get();
+        Response response = ClientBuilder.newClient().target(uriInfo.getBaseUriBuilder().path("ping/inner"))
+            .request().get(Response.class);
 
+        System.out.println(response.getStatus());
         System.out.println(response.getHeaders());
-        System.out.println(response.getHeaderString("Content-Type"));
+        System.out.println(response.getMediaType());
         
         return "hello";
     }

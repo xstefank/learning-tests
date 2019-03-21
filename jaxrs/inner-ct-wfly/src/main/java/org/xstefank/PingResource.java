@@ -21,7 +21,7 @@ public class PingResource {
             .request().get();
 
         System.out.println(response.getHeaders());
-        System.out.println(response.getHeaderString("Content-Type"));
+        System.out.println(response.getMediaType());
 
         return "hello";
     }
