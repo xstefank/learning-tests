@@ -1,4 +1,4 @@
-package io.xstefank;
+package org.xstefank;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,7 +13,7 @@ public class PingResource {
 
     @Context
     private UriInfo uriInfo;
-    
+
     @GET
     @Produces("application/custom")
     public String hello() {
@@ -22,10 +22,10 @@ public class PingResource {
 
         System.out.println(response.getHeaders());
         System.out.println(response.getHeaderString("Content-Type"));
-        
+
         return "hello";
     }
-    
+
     @GET
     @Path("inner")
     @Produces("application/custom")
