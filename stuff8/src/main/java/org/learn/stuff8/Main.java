@@ -53,7 +53,32 @@ public class Main {
 //        arrowOperator();
 //        percentage();
 //        regex10();
-        url2();
+//        url2();
+//        regex11();
+        regex12();
+    }
+
+    private static void regex12() throws UnsupportedEncodingException {
+        Pattern pattern = Pattern.compile("Upstream PR:\\s+(https://github.com/wildfly/wildfly/pull/\\d+|wildfly/wildfly#\\d+)");
+        canMatch(pattern, "Upstream PR: https://github.com/wildfly/wildfly/pull/12166");
+        canMatch(pattern, "Upstream PR: wildfly/wildfly#12162");
+    }
+    
+    private static void regex11() throws UnsupportedEncodingException {
+        Pattern pattern = Pattern.compile("(\\[JBEAP-\\d+\\]\\s+.*|JBEAP-\\d+\\s+.*)|(((JBEAP|WFLY)-\\d+,\\s+)+(JBEAP|WFLY)-\\d+\\s+.*)|((\\[(JBEAP|WFLY)-\\d+\\])+\\s+.*)");
+        canMatch(pattern, "JBEAP-666 sadf");
+        canMatch(pattern, "[JBEAP-666] sadf");
+        canMatch(pattern, "JBEAP-666, JBEAP-777 sadf");
+        canMatch(pattern, "JBEAP-666, JBEAP-777, JBEAP-888 sadf");
+        canMatch(pattern, "[JBEAP-16570][JBEAP-11862] sadf");
+        canMatch(pattern, "[JBEAP-16570][JBEAP-11862] sadf");
+        canMatch(pattern, "JBEAP-16570, WFLY-11862 asdf");
+    }
+    
+    private static void canMatch(Pattern pattern, String s) {
+        Matcher matcher = pattern.matcher(s);
+
+        System.out.println(s + ": " + matcher.matches());
     }
 
     private static void url2() throws MalformedURLException {
