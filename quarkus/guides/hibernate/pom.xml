@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.xstefank</groupId>
-  <artifactId>resteasy-client</artifactId>
+  <artifactId>hibernate</artifactId>
   <version>0.0.1</version>
   <properties>
     <surefire-plugin.version>2.22.0</surefire-plugin.version>
@@ -25,17 +25,8 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>org.jboss.resteasy</groupId>
-      <artifactId>resteasy-client</artifactId>
-      <version>4.0.0.Beta8</version>
-    </dependency>
-    <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-resteasy-jsonb</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -47,55 +38,20 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
-
+    <!-- Hibernate ORM specific dependencies -->
     <dependency>
-      <groupId>org.jboss.narayana.jts</groupId>
-      <artifactId>narayana-jts-idlj</artifactId>
-      <version>5.9.4.Final-SNAPSHOT</version>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-orm</artifactId>
+      <scope>provided</scope>
     </dependency>
 
+    <!-- JDBC driver dependencies -->
     <dependency>
-      <groupId>org.eclipse.microprofile.lra</groupId>
-      <artifactId>microprofile-lra-api</artifactId>
-      <version>1.0-20190313.061211-301</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.narayana.rts</groupId>
-      <artifactId>lra-service-base</artifactId>
-      <version>5.9.4.Final-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.jboss.shrinkwrap</groupId>
-      <artifactId>shrinkwrap-impl-base</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-
-    <!-- Testing -->
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>arquillian</artifactId>
-      <version>2018.5.0</version>
-      <scope>test</scope>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-postgresql</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
-
-  <repositories>
-    <repository>
-      <id>jboss-public-releases-repository-group</id>
-      <name>JBoss Public Releases Maven Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
-    </repository>
-    <repository>
-      <id>repo.eclipse.org-snapshots</id>
-      <name>Eclipse MicroProfile Repository - Snapshots</name>
-      <url>https://repo.eclipse.org/content/repositories/microprofile-snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  
   <build>
     <plugins>
       <plugin>
