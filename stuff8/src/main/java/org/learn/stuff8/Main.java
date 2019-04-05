@@ -55,7 +55,20 @@ public class Main {
 //        regex10();
 //        url2();
 //        regex11();
-        regex12();
+//        regex12();
+        regex13();
+    }
+
+    private static void regex13() throws UnsupportedEncodingException {
+        Pattern pattern = Pattern.compile("(\\[WFLY-\\d+\\]\\s+.*|WFLY-\\d+\\s+.*)|((WFLY-\\d+,\\s+)+WFLY-\\d+\\s+.*)|((\\[WFLY-\\d+\\])+\\s+.*)|(\\[(WFLY-\\d+,\\s+)+WFLY-\\d+\\]\\s+.*)");
+        canMatch(pattern, "WFLY-666 sadf");
+        canMatch(pattern, "[WFLY-666] sadf");
+        canMatch(pattern, "WFLY-666, WFLY-777 sadf");
+        canMatch(pattern, "WFLY-666, WFLY-777, WFLY-888 sadf");
+        canMatch(pattern, "[WFLY-16570][WFLY-11862] sadf");
+        canMatch(pattern, "[WFLT-16570][WFLY-11862] sadf");
+        canMatch(pattern, "WFLY-16570, WFLY-11862 asdf");
+        canMatch(pattern, "[WFLY-16570, WFLY-11862] asdf");
     }
 
     private static void regex12() throws UnsupportedEncodingException {
