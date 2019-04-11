@@ -11,6 +11,6 @@ public class PingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "hello " + System.getProperty("test.prop");
+        return "hello " + System.getProperty("test-prop");
     }
 }
