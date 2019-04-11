@@ -18,7 +18,7 @@ public class PingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() throws MalformedURLException {
-        URL depImplJar = new File("/home/mstefank/GIT/xstefank/learning-tests/quarkus/service-loader/dep-impl/target/dep-impl-0.0.1.jar").toURI().toURL();
+        URL depImplJar = new File(System.getProperty("additional-cp")).toURI().toURL();
         System.out.println(depImplJar);
 
         URLClassLoader ucl = new URLClassLoader(new URL[]{depImplJar});
