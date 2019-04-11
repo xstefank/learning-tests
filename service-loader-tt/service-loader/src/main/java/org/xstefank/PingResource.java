@@ -10,7 +10,7 @@ public class PingResource {
     
     @GET
     public Response ping() {
-        ServiceLoader<Dummy> serviceLoader = ServiceLoader.load(Dummy.class, ClassLoader.getSystemClassLoader());
+        ServiceLoader<Dummy> serviceLoader = ServiceLoader.load(Dummy.class);
         System.out.println("service loader");
         serviceLoader.iterator().forEachRemaining(x -> System.out.println("class: " + x.getClass().getName() + ", " + x.hello()));
 
