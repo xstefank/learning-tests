@@ -27,6 +27,8 @@ public class RegisterLRAParticipantExtension implements Extension {
         }
 
         names.add(javaClass);
+
+        throw new RuntimeException("DSAFASDF");
         
     }
     
