@@ -17,11 +17,11 @@ public class PingResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello() throws MalformedURLException {
+    public String hello() throws MalformedURLException, ClassNotFoundException {
         URL depImplJar = new File(System.getProperty("additional-cp")).toURI().toURL();
-        System.out.println(depImplJar);
 
         URLClassLoader ucl = new URLClassLoader(new URL[]{depImplJar});
+        System.out.println(ucl.loadClass("io.xstefank.QuarkedDummy"));
         
         
         ServiceLoader<Dummy> serviceLoader = ServiceLoader.load(Dummy.class, ucl);
