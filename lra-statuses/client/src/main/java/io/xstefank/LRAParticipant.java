@@ -11,14 +11,16 @@ import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("lra")
+@Path("/lra")
 @ApplicationScoped
 public class LRAParticipant {
 
     @GET
-    @Path("doInLRA")
+    @Path("/doInLRA")
     @LRA(LRA.Type.REQUIRED)
     public Response doInLRA(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("enlisting and ending LRA " + lraId);
@@ -26,7 +28,7 @@ public class LRAParticipant {
     } 
     
     @PUT
-    @Path("complete")
+    @Path("/complete")
     @Complete
     public Response complete(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Completing " + lraId);
@@ -34,7 +36,8 @@ public class LRAParticipant {
     }
 
     @GET
-    @Path("status")
+    @Path("/status")
+    @Produces(MediaType.TEXT_PLAIN)
     @Status
     public Response status(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Status for " + lraId);
@@ -42,7 +45,7 @@ public class LRAParticipant {
     } 
     
     @PUT
-    @Path("compensate")
+    @Path("/compensate")
     @Compensate
     public Response compensate(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Compensating " + lraId);
