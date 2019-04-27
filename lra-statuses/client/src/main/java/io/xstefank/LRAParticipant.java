@@ -6,6 +6,7 @@ import org.eclipse.microprofile.lra.annotation.ParticipantStatus;
 import org.eclipse.microprofile.lra.annotation.Status;
 import org.eclipse.microprofile.lra.annotation.ws.rs.LRA;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.PUT;
@@ -13,6 +14,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 @Path("lra")
+@ApplicationScoped
 public class LRAParticipant {
 
     @GET
@@ -36,7 +38,7 @@ public class LRAParticipant {
     @Status
     public Response status(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Status for " + lraId);
-        return Response.ok(ParticipantStatus.Compensating).build();
+        return Response.ok(ParticipantStatus.Compensated).build();
     } 
     
     @PUT
