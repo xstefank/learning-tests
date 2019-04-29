@@ -16,6 +16,6 @@ public class PingResource {
 
     @POST
     public String post(JsonObject jsonObject) {
-        return jsonObject.toString();
+        return "json :" + jsonObject.toString();
     }
 }

@@ -67,7 +67,8 @@
 
         <dependency>
             <groupId>io.thorntail</groupId>
-            <artifactId>jsonb</artifactId>
+            <artifactId>jaxrs-jsonp</artifactId>
         </dependency>
+        
     </dependencies>
 </project>
