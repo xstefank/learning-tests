@@ -2,11 +2,13 @@ package io.xstefank;
 
 import org.eclipse.microprofile.lra.annotation.Compensate;
 import org.eclipse.microprofile.lra.annotation.Complete;
+import org.eclipse.microprofile.lra.annotation.Forget;
 import org.eclipse.microprofile.lra.annotation.ParticipantStatus;
 import org.eclipse.microprofile.lra.annotation.Status;
 import org.eclipse.microprofile.lra.annotation.ws.rs.LRA;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.PUT;
@@ -32,7 +34,7 @@ public class LRAParticipant {
     @Complete
     public Response complete(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Completing " + lraId);
-        return Response.accepted().build();
+        return Response.ok(ParticipantStatus.Completing.name()).build();
     }
 
     @GET
@@ -41,8 +43,17 @@ public class LRAParticipant {
     @Status
     public Response status(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Status for " + lraId);
-        return Response.ok(ParticipantStatus.Compensated).build();
-    } 
+        return Response.ok(ParticipantStatus.FailedToComplete.name()).build();
+    }
+
+    @DELETE
+    @Path("/forget")
+    @Produces(MediaType.TEXT_PLAIN)
+    @Forget
+    public Response forget(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
+        System.out.println("Forget for " + lraId);
+        return Response.ok(ParticipantStatus.Completed.name()).build();
+    }
     
     @PUT
     @Path("/compensate")
