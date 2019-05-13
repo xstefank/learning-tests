@@ -16,9 +16,9 @@ public class PingResource {
     public String hello() {
         Optional o = Optional.of("asdfasfd");
         
-        Optional<ParticipantStatus> i = (Optional<ParticipantStatus>) o;
+        Optional i = o;
         try {
-            i.filter(ps -> ps instanceof ParticipantStatus).get();
+            i.filter(ps -> ps instanceof ParticipantStatus).ifPresent(((ParticipantStatus) ps) -> System.out.println(ps.name()));
         } catch (ClassCastException e) {
             System.out.println("Error");
         }
