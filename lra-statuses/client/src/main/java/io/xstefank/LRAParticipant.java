@@ -43,7 +43,7 @@ public class LRAParticipant {
     @Status
     public Response status(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Status for " + lraId);
-        return Response.ok(ParticipantStatus.FailedToComplete.name()).build();
+        return Response.ok(ParticipantStatus.Completed.name()).build();
     }
 
     @DELETE
