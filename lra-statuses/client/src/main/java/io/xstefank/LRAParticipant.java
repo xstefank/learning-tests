@@ -34,7 +34,7 @@ public class LRAParticipant {
     @Complete
     public Response complete(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("Completing " + lraId);
-        return Response.ok(ParticipantStatus.Completing.name()).build();
+        return Response.accepted().build();
     }
 
     @GET
