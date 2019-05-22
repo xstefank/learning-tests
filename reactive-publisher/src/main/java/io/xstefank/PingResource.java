@@ -2,12 +2,14 @@ package io.xstefank;
 
 import io.smallrye.reactive.messaging.annotations.Emitter;
 import io.smallrye.reactive.messaging.annotations.Stream;
-import org.eclipse.microprofile.reactive.messaging.Incoming;
+import org.reactivestreams.Publisher;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Path("/ping")
 public class PingResource {
@@ -16,18 +18,20 @@ public class PingResource {
     @Stream("avengers")
     Emitter<String> avengers;
     
-    
-//    @GET
-//    @Produces(MediaType.SERVER_SENT_EVENTS)
-    @Incoming("avengers")
-    public void publisher(String avenger) {
-        System.out.println("Received avenger - " + avenger);
-    }
+    @Inject
+    @Stream("processed-avengers")
+    Publisher<String> processedAvengers;
 
     @GET
     @Path("/{post}")
     public String post(@PathParam("post") String post) {
         avengers.send(post);
         return post;
+    }
+    
+    @GET
+    @Produces(MediaType.SERVER_SENT_EVENTS)
+    public Publisher<String> stream() {
+        return processedAvengers;
     }
 }
