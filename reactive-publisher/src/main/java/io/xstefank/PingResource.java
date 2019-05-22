@@ -6,6 +6,7 @@ import org.reactivestreams.Publisher;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -22,9 +23,9 @@ public class PingResource {
     @Stream("processed-avengers")
     Publisher<String> processedAvengers;
 
-    @GET
-    @Path("/{post}")
-    public String post(@PathParam("post") String post) {
+    @POST
+    @Path("/add")
+    public String post(String post) {
         avengers.send(post);
         return post;
     }

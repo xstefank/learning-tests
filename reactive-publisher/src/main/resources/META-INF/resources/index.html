@@ -96,12 +96,28 @@
         }
 
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        //Usually, you put script-tags into the head
+        function addAvenger() {
+            //This performs a POST-Request.
+            //Use "$.get();" in order to perform a GET-Request (you have to take a look in the rest-API-documentation, if you're unsure what you need)
+            //The Browser downloads the webpage from the given url, and returns the data.
+            $.post( "http://localhost:8080/ping/add", function( data ) {
+                 //As soon as the browser finished downloading, this function is called.
+                 $('#demo').html(data);
+            });
+        }
+    </script>
 </head>
 <body>
 
 <div class="banner lead">
     Your new Cloud-Native application is ready!
 </div>
+
+<button onclick="addAvenger()">Add FAKE avenger</button>
 
 <div class="container">
     <div class="left-column">
