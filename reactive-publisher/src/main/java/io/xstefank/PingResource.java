@@ -2,15 +2,15 @@ package io.xstefank;
 
 import io.smallrye.reactive.messaging.annotations.Emitter;
 import io.smallrye.reactive.messaging.annotations.Stream;
-import org.reactivestreams.Publisher;
+import org.eclipse.microprofile.reactive.messaging.Acknowledgment;
+import org.eclipse.microprofile.reactive.messaging.Incoming;
+import org.eclipse.microprofile.reactive.messaging.Message;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
 
 @Path("/ping")
 public class PingResource {
@@ -19,9 +19,9 @@ public class PingResource {
     @Stream("avengers")
     Emitter<String> avengers;
     
-    @Inject
-    @Stream("processed-avengers")
-    Publisher<String> processedAvengers;
+//    @Inject
+//    @Stream("processed-avengers")
+//    Publisher<String> processedAvengers;
 
     @POST
     @Path("/add")
@@ -30,9 +30,16 @@ public class PingResource {
         return post;
     }
     
-    @GET
-    @Produces(MediaType.SERVER_SENT_EVENTS)
-    public Publisher<String> stream() {
-        return processedAvengers;
+//    @GET
+//    @Produces(MediaType.SERVER_SENT_EVENTS)
+//    public Publisher<String> stream() {
+//        return processedAvengers;
+//    }
+
+    @Incoming("processed-avengers")
+    @Acknowledgment(Acknowledgment.Strategy.POST_PROCESSING)
+    public CompletionStage<Void> process(Message<Avenger> avenger) {
+        return CompletableFuture.supplyAsync(avenger::getPayload)
+            .thenApply(a -> a.name.toUpperCase()).thenAccept(System.out::println);
     }
 }
