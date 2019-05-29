@@ -10,7 +10,6 @@ import javax.ws.rs.core.MediaType;
 public class PingResource {
 
     @Inject
-    @CustomQualifier
     TestBean testBean;
 
     @GET
