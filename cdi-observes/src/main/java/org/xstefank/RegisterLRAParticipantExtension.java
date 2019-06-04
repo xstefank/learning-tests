@@ -2,17 +2,23 @@ package org.xstefank;
 
 import org.jboss.logging.Logger;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.spi.Extension;
 import javax.enterprise.inject.spi.ProcessAnnotatedType;
 import javax.enterprise.inject.spi.WithAnnotations;
+import javax.inject.Inject;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@ApplicationScoped
 public class RegisterLRAParticipantExtension implements Extension {
 
+    @Inject
+    private TestBean testBean;
+    
     public static final List<Class<?>> names = new ArrayList<>();
 
     public void register(@Observes @WithAnnotations(RegisterLRAParticipant.class) ProcessAnnotatedType<?> type) {
@@ -28,8 +34,8 @@ public class RegisterLRAParticipantExtension implements Extension {
 
         names.add(javaClass);
 
-        throw new RuntimeException("DSAFASDF");
-        
+//        throw new RuntimeException("DSAFASDF");
+        log.error("UUUUUUUUUUUUUUUUUUU " + testBean.getHello());
     }
     
 }
