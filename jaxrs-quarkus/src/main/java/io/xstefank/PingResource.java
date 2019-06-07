@@ -74,4 +74,40 @@ public class PingResource {
         System.out.println("Received " + s);
         return s;
     }
+    
+    @GET
+    @Path("no-annotation")
+    public String noAnnoation() {
+        Client client = ClientBuilder.newClient();
+
+        Response response = client.target(uriInfo.getBaseUriBuilder().path("no-annotation-client").build())
+            .request().get();
+
+        return response.readEntity(String.class);
+    }
+    
+    @GET
+    @Path("abortWith456")
+    public Response abortWith456() {
+        Client client = ClientBuilder.newClient();
+        client.register(DummyDynamicFeature.class);
+
+        Response response = client.target(uriInfo.getBaseUriBuilder().path("abortWith456-client").build())
+            .request().get();
+
+        return Response.status(response.getStatus()).entity(response.hasEntity() ? response.readEntity(String.class) : null).build();
+    }
+    
+    @GET
+    @Path("no-annotation-client")
+    public String noAnnotationClient() {
+        return "everything ok";
+    }
+    
+    @GET
+    @Path("abortWith456-client")
+    @AbortWith456
+    public String abortWith456Client() {
+        return "everything ok";
+    }
 }
