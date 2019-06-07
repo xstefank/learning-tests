@@ -1,5 +1,7 @@
 package io.xstefank;
 
+import javax.ws.rs.ConstrainedTo;
+import javax.ws.rs.RuntimeType;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.ext.Provider;
 import javax.ws.rs.ext.ReaderInterceptor;
@@ -9,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Provider
+@ConstrainedTo(RuntimeType.CLIENT)
 public class DummyReaderInterceptor implements ReaderInterceptor {
     @Override
     public Object aroundReadFrom(ReaderInterceptorContext context) throws IOException, WebApplicationException {

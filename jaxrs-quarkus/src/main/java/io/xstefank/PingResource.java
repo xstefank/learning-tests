@@ -60,7 +60,7 @@ public class PingResource {
     @Path("interceptor")
     public String interceptor() {
         Client client = ClientBuilder.newClient();
-//        client.register();
+        client.register(DummyReaderInterceptor.class);
 
         Response response = client.target(uriInfo.getBaseUriBuilder().path("interceptor-client").build())
             .request().post(Entity.text("test"));
@@ -71,6 +71,7 @@ public class PingResource {
     @POST
     @Path("interceptor-client")
     public String interceptor(String s) {
+        System.out.println("Received " + s);
         return s;
     }
 }
