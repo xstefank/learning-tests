@@ -16,6 +16,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.net.URI;
 
 @Path("/lra")
 @ApplicationScoped
@@ -29,12 +30,10 @@ public class LRAParticipant {
         return Response.ok().build();
     } 
     
-    @PUT
-    @Path("/complete")
     @Complete
-    public Response complete(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
+    public Response complete(URI lraId) {
         System.out.println("Completing " + lraId);
-        return Response.accepted().build();
+        return Response.ok(ParticipantStatus.Completed).build();
     }
 
     @GET
