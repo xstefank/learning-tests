@@ -25,7 +25,7 @@ public class TestResource {
     }
 
     @Inject
-    TestRegistry testRegistry;
+    private TestRegistry testRegistry;
     
     @GET
     @Path("registry")
