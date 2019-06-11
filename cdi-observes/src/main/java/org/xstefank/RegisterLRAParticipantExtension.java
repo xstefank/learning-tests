@@ -1,7 +1,6 @@
 package org.xstefank;
 
 import org.jboss.logging.Logger;
-import org.jboss.resteasy.client.exception.ResteasyRedirectException;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.spi.CreationalContext;
@@ -27,6 +26,10 @@ import java.util.Set;
 public class RegisterLRAParticipantExtension implements Extension {
 
     public static final List<Class<?>> names = new ArrayList<>();
+
+    public void observe(@Observes @WithAnnotations(CustomAnnotation.class) ProcessAnnotatedType<?> type) {
+        Logger.getLogger("AAAAAAAAAAA ").error("AAAAAAAAAAA " + type.getAnnotatedType().getJavaClass());
+    }
 
     public void register(@Observes @WithAnnotations(RegisterLRAParticipant.class) ProcessAnnotatedType<?> type) {
         Class<?> javaClass = type.getAnnotatedType().getJavaClass();
