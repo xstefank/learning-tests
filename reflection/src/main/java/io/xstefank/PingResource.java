@@ -18,8 +18,10 @@ public class PingResource {
         Type returnType = method.getGenericReturnType();
         ParameterizedType ptype  = (ParameterizedType) returnType;
         Type type = ptype.getActualTypeArguments()[0];
+        Class<?> typeClass = (Class<?>) type;
         System.out.printf("Participant#compensate return type name %s%n", returnType.getTypeName());
         System.out.printf("Participant#compensate returns %s%n", type.getTypeName());
+        System.out.printf("Participant#compensate returns %s%n", typeClass);
         
         
         return "hello";
