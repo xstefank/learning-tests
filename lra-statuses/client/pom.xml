@@ -62,6 +62,13 @@
             <artifactId>microprofile-lra-api</artifactId>
             <version>${version.microprofile.lra.api}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.jboss.narayana.rts</groupId>
+            <artifactId>lra-proxy-api</artifactId>
+            <version>5.9.6.Final-SNAPSHOT</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.jboss.narayana.rts</groupId>
             <artifactId>lra-client</artifactId>
