@@ -25,7 +25,7 @@ public class Dummy {
 
         Indexer indexer = new Indexer();
         
-        ClassLoader cl = Thread.currentThread().getContextClassLoader();
+        ClassLoader cl = getClass().getClassLoader();
 
         URL[] urls = ((URLClassLoader)cl).getURLs();
 
@@ -37,7 +37,7 @@ public class Dummy {
                 while ((ze = zip.getNextEntry()) != null) {
                     String entryName = ze.getName();
                     if (entryName.endsWith(".class")) {
-                        indexer.index(cl.getResourceAsStream(entryName));
+                        indexer.index(getClass().getClassLoader().getResourceAsStream(entryName));
                     }
                 }
             }
