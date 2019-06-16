@@ -2,9 +2,12 @@ package io.xstefank;
 
 import rx.Observable;
 import rx.Subscriber;
+import rx.subjects.ReplaySubject;
+import rx.subjects.Subject;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 @Path("aggregate")
@@ -60,6 +63,56 @@ public class AggregationResource {
             .subscribe(new PrintSubscriber("Sum"));
     }
     
+    @GET
+    @Path("scan-dynamic")
+    public void scanDynamic() {
+        Subject<Integer, Integer> values = ReplaySubject.create();
+
+        values
+            .subscribe(new PrintSubscriber("Values"));
+        values
+            .scan((i1,i2) -> (i1<i2) ? i1 : i2)
+            .distinctUntilChanged()
+            .subscribe(new PrintSubscriber("Min"));
+
+        values.onNext(2);
+        values.onNext(3);
+        values.onNext(1);
+        values.onNext(4);
+        values.onCompleted(); 
+    }
+    
+    @GET
+    @Path("collect")
+    public void collect() {
+        Observable<Integer> values = Observable.range(10,5);
+
+        values
+            .collect(
+                () -> new ArrayList<Integer>(),
+                (acc, value) -> acc.add(value))
+            .subscribe(v -> System.out.println(v));
+    }
+
+    @GET
+    @Path("groupBy")
+    public void groupBy() {
+        Observable<String> values = Observable.just(
+            "first",
+            "second",
+            "third",
+            "forth",
+            "fifth",
+            "sixth"
+        );
+
+        values.groupBy(word -> word.charAt(0))
+            .flatMap(group ->
+                group.last().map(v -> group.getKey() + ": " + v)
+            )
+            .subscribe(v -> System.out.println(v));
+    }
+
     private class PrintSubscriber extends Subscriber {
         private final String name;
 
