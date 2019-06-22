@@ -14,14 +14,14 @@ public class PingResource {
     @Path("files")
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        java.nio.file.Path path = java.nio.file.Path.of("test.txt");
-        System.out.println(path.toAbsolutePath().toString());
-
-        try {
-            Files.write(path, "test".getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        java.nio.file.Path path = java.nio.file.Path.of("test.txt");
+//        System.out.println(path.toAbsolutePath().toString());
+//
+//        try {
+//            Files.write(path, "test".getBytes());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         return "hello";
     }
