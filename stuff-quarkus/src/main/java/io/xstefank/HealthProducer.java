@@ -13,6 +13,6 @@ public class HealthProducer {
     @Produces
     @Liveness
     HealthCheck live1() {
-        return () -> HealthCheckResponse.named("asdf").state(true).build();
+        return () -> HealthCheckResponse.named("health-check").up().build();
     }
 }
