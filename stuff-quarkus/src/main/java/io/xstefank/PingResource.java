@@ -4,8 +4,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Path("/")
 public class PingResource {
@@ -24,5 +26,14 @@ public class PingResource {
 //        }
 
         return "hello";
+    }
+
+    private AtomicInteger counter = new AtomicInteger(0);
+    
+    @GET
+    @Path("accept")
+    public Response accept() {
+        return Response.status(Response.Status.CREATED)
+            .header("test", "value" + counter.incrementAndGet()).build();
     }
 }
