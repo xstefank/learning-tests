@@ -19,40 +19,40 @@ import java.util.zip.ZipInputStream;
 @ApplicationScoped
 public class Dummy {
 
-    public void init(@Observes @Initialized(ApplicationScoped.class) Object init) throws IOException {
-        Logger log = Logger.getLogger("ASDFASDF");
-        log.error("ASDFASDFASDF");
-
-        Indexer indexer = new Indexer();
-        
-        ClassLoader cl = getClass().getClassLoader();
-
-        URL[] urls = ((URLClassLoader)cl).getURLs();
-
-        for(URL url: urls){
-            
-            try (ZipInputStream zip = new ZipInputStream(url.openStream())) {
-                ZipEntry ze = null;
-
-                while ((ze = zip.getNextEntry()) != null) {
-                    String entryName = ze.getName();
-                    if (entryName.endsWith(".class")) {
-                        indexer.index(getClass().getClassLoader().getResourceAsStream(entryName));
-                    }
-                }
-            }
-        }
-
-        Index index = indexer.complete();
-
-        List<AnnotationInstance> annotations = index.getAnnotations(DotName.createSimple("javax.ws.rs.Path"));
-
-        for (AnnotationInstance annotation : annotations) {
-            System.out.println(annotation.target().asClass());
-            System.out.println("XXXXXXX");
-        }
-        
-
-    }
+//    public void init(@Observes @Initialized(ApplicationScoped.class) Object init) throws IOException {
+//        Logger log = Logger.getLogger("ASDFASDF");
+//        log.error("ASDFASDFASDF");
+//
+//        Indexer indexer = new Indexer();
+//        
+//        ClassLoader cl = getClass().getClassLoader();
+//
+//        URL[] urls = ((URLClassLoader)cl).getURLs();
+//
+//        for(URL url: urls){
+//            
+//            try (ZipInputStream zip = new ZipInputStream(url.openStream())) {
+//                ZipEntry ze = null;
+//
+//                while ((ze = zip.getNextEntry()) != null) {
+//                    String entryName = ze.getName();
+//                    if (entryName.endsWith(".class")) {
+//                        indexer.index(getClass().getClassLoader().getResourceAsStream(entryName));
+//                    }
+//                }
+//            }
+//        }
+//
+//        Index index = indexer.complete();
+//
+//        List<AnnotationInstance> annotations = index.getAnnotations(DotName.createSimple("javax.ws.rs.Path"));
+//
+//        for (AnnotationInstance annotation : annotations) {
+//            System.out.println(annotation.target().asClass());
+//            System.out.println("XXXXXXX");
+//        }
+//        
+//
+//    }
 
 }
