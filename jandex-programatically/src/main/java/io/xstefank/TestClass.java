@@ -26,7 +26,14 @@ public class TestClass {
     }
     
     @Compensate
+    @GET
     public Response compensate() {
+        return Response.ok().build();
+    }
+
+    @Compensate
+    @GET
+    public Response compensate(String pararm) {
         return Response.ok().build();
     }
 }
