@@ -48,7 +48,8 @@ public class PingResource {
         Method compensate = TestClass.class.getMethod("compensate", String.class);
         System.out.println(compensate);
 
-        System.out.println(testClass.method(compensate.getName(), Type.create(DotName.createSimple("java.lang.String"), Type.Kind.CLASS)));
+        DotName STRING = DotName.createSimple(String.class.getName());
+        System.out.println(Type.create(STRING, Type.Kind.CLASS).equals(Type.create(DotName.createSimple(String.class.getName()), Type.Kind.CLASS)));
 
         return "hello";
     }
