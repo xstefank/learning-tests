@@ -17,6 +17,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.List;
 
 @Path("/ping")
@@ -28,7 +29,6 @@ public class PingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-//        dummy.getHello();
         return "hello";
     }
     
