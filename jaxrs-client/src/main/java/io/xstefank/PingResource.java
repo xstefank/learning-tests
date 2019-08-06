@@ -18,12 +18,12 @@ public class PingResource {
 
         Client client = ClientBuilder.newClient();
 
-        WebTarget target = client.target("http://example.com");
+        WebTarget target = client.target("https://jsonplaceholder.typicode.com/posts");
         Response response = target.request().get();
         System.out.println(response.getStatus());
 
-        WebTarget target2 = client.target("http://www.google.com");
-        Response response2 = target2.request().get();
+//        WebTarget target2 = client.target("http://www.google.com");
+        Response response2 = target.request().post(null);
         System.out.println(response2.getStatus());
 
         client.close();
