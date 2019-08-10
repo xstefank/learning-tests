@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 @Path("/hr")
 public class HRResource {
@@ -85,6 +86,19 @@ public class HRResource {
             System.out.printf("%-15s%03d%n", s1, x);
         }
         System.out.println("================================");
+    }
+    
+    @GET
+    @Path("loops1")
+    public void loops1() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("loops1.txt"));
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        
+        IntStream.rangeClosed(1, 10)
+            .forEach(i -> System.out.printf("%d x %d = %d%n", n, i, n * i));
+
+        scanner.close();
     }
     
 }
