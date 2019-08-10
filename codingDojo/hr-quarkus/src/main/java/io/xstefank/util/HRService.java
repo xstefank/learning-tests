@@ -16,10 +16,19 @@ public class HRService {
     ServletContext context;
 
 
-    public Path getFile(String fileName) throws MalformedURLException, URISyntaxException {
-        URL resource = context.getResource("/hr/input.txt");
+    public Path getFile(String fileName) {
+        URL resource = null;
+        try {
+            resource = context.getResource("/hr/" + fileName);
+        } catch (MalformedURLException e) {
+            return null;
+        }
 
-        return Paths.get(resource.toURI());
+        try {
+            return Paths.get(resource.toURI());
+        } catch (URISyntaxException e) {
+            return null;
+        }
     }
 
     public void outputDelimeter() {

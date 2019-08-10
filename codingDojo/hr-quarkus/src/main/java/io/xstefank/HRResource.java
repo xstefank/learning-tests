@@ -20,7 +20,7 @@ public class HRResource {
     @Path("/input")
     public void input() throws IOException, URISyntaxException {
 
-        Scanner scanner = new Scanner(hrService.getFile("/hr/input.txt"));
+        Scanner scanner = new Scanner(hrService.getFile("input.txt"));
 
         int a = scanner.nextInt();
         int b = scanner.nextInt();
@@ -30,6 +30,28 @@ public class HRResource {
         System.out.println(b);
         System.out.println(c);
 
+        scanner.close();
+        hrService.outputDelimeter();
+    }
+    
+    @GET
+    @Path("/ifElse")
+    public void ifElse() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("ifElse.txt"));
+
+        int n = scanner.nextInt();
+
+        if (n % 2 == 1) {
+            System.out.println("Weird");
+        } else if (n >= 2 && n <= 5) {
+            System.out.println("Not Weird");
+        } else if (n >= 6 && n <= 20) {
+            System.out.println("Weird");
+        } else {
+            System.out.println("Not Weird");
+        }
+        
+        scanner.close();
         hrService.outputDelimeter();
     }
 }
