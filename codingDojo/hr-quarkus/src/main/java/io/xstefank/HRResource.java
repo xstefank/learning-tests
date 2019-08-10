@@ -101,4 +101,30 @@ public class HRResource {
         scanner.close();
     }
     
+    @GET
+    @Path("loops2")
+    public void loops2() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("loops2.txt"));
+
+        int q = scanner.nextInt();
+        IntStream.range(0, q).forEach(i -> {
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            int n = scanner.nextInt();
+
+            printEquation(a, b, n);
+            System.out.println();
+        });
+    }
+
+    private void printEquation(int a, int b, int n) {
+        IntStream.rangeClosed(0, n - 1)
+            .forEach(i -> System.out.printf("%d ", a + getBSum(i, b)));
+    }
+
+    private int getBSum(int max, int b) {
+        return IntStream.rangeClosed(0, max)
+            .reduce(0, (acc, i) -> (int) (acc + (Math.pow(2, i) * b)));
+    }
+
 }
