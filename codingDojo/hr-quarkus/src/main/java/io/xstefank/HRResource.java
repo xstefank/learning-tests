@@ -147,5 +147,17 @@ public class HRResource {
 
         }
     }
+    
+    @GET
+    @Path("java-end-of-file")
+    public void javaEndOfFile() throws IOException {
+        int counter = 0;
+
+        Scanner scanner = new Scanner(hrService.getFile("java-end-of-file.txt"));
+
+        while (scanner.hasNext()) {
+            System.out.printf("%d %s%n", ++counter, scanner.nextLine());
+        }
+    }
 
 }
