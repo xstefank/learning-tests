@@ -12,11 +12,11 @@ import java.util.stream.IntStream;
 
 @Path("/hr")
 public class HRResource {
-    
+
     @Inject
     HRService hrService;
 
- 
+
     @GET
     @Path("/input")
     public void input() throws IOException, URISyntaxException {
@@ -34,7 +34,7 @@ public class HRResource {
         scanner.close();
         hrService.outputDelimeter();
     }
-    
+
     @GET
     @Path("/ifElse")
     public void ifElse() throws IOException {
@@ -51,11 +51,11 @@ public class HRResource {
         } else {
             System.out.println("Not Weird");
         }
-        
+
         scanner.close();
         hrService.outputDelimeter();
     }
-    
+
     @GET
     @Path("stdII")
     public void stdII() throws IOException {
@@ -69,38 +69,37 @@ public class HRResource {
         System.out.println("String: " + s);
         System.out.println("Double: " + d);
         System.out.println("Int: " + i);
-        
+
         scanner.close();
         hrService.outputDelimeter();
     }
-    
+
     @GET
     @Path("outputFormatting")
     public void outputFormatting() throws IOException {
-        Scanner sc=new Scanner(hrService.getFile("outputFormatting.txt"));
+        Scanner sc = new Scanner(hrService.getFile("outputFormatting.txt"));
         System.out.println("================================");
-        for(int i=0;i<3;i++)
-        {
-            String s1=sc.next();
-            int x=sc.nextInt();
+        for (int i = 0; i < 3; i++) {
+            String s1 = sc.next();
+            int x = sc.nextInt();
             System.out.printf("%-15s%03d%n", s1, x);
         }
         System.out.println("================================");
     }
-    
+
     @GET
     @Path("loops1")
     public void loops1() throws IOException {
         Scanner scanner = new Scanner(hrService.getFile("loops1.txt"));
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        
+
         IntStream.rangeClosed(1, 10)
             .forEach(i -> System.out.printf("%d x %d = %d%n", n, i, n * i));
 
         scanner.close();
     }
-    
+
     @GET
     @Path("loops2")
     public void loops2() throws IOException {
@@ -125,6 +124,28 @@ public class HRResource {
     private int getBSum(int max, int b) {
         return IntStream.rangeClosed(0, max)
             .reduce(0, (acc, i) -> (int) (acc + (Math.pow(2, i) * b)));
+    }
+
+    @GET
+    @Path("java-datatypes")
+    public void javaDatatypes() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("java-datatypes.txt"));
+        int t = scanner.nextInt();
+
+        for (int i = 0; i < t; i++) {
+
+            try {
+                long x = scanner.nextLong();
+                System.out.println(x + " can be fitted in:");
+                if (x >= -128 && x <= 127) System.out.println("* byte");
+                if (x >= -32768 && x <= 32767) System.out.println("* short");
+                if (x >= (-1 * Math.pow(2, 31)) && x <= (Math.pow(2, 31) - 1)) System.out.println("* int");
+                if (x >= (-1 * Math.pow(2, 63)) && x <= (Math.pow(2, 63) - 1)) System.out.println("* long");
+            } catch (Exception e) {
+                System.out.println(scanner.next() + " can't be fitted anywhere.");
+            }
+
+        }
     }
 
 }
