@@ -7,6 +7,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
+import java.time.format.TextStyle;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
@@ -158,6 +161,18 @@ public class HRResource {
         while (scanner.hasNext()) {
             System.out.printf("%d %s%n", ++counter, scanner.nextLine());
         }
+    }
+    
+    @GET
+    @Path("date-and-time")
+    public void javaDayAndTime() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("java-date-and-time.txt"));
+
+        int month = scanner.nextInt();
+        int day = scanner.nextInt();
+        int year = scanner.nextInt();
+
+        System.out.println(LocalDate.of(year, month, day).getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US));
     }
 
 }
