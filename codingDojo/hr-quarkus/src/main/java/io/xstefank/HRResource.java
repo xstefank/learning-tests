@@ -7,6 +7,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
@@ -174,5 +175,29 @@ public class HRResource {
 
         System.out.println(LocalDate.of(year, month, day).getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US));
     }
+    
+    @GET
+    @Path("java-currency-formatter")
+    public void javaCurrencyProvider() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("javaCurrencyFormatter.txt"));
+
+        double payment = scanner.nextDouble();
+        scanner.close();
+
+        String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
+        String india = NumberFormat.getCurrencyInstance(new Locale("en", "IN")).format(payment);
+        String china = NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
+        String france = NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment);
+
+        System.out.println("US: " + us);
+        System.out.println("India: " + india);
+        System.out.println("China: " + china);
+        System.out.println("France: " + france);
+    }
+    
+    
+
+      
+    
 
 }
