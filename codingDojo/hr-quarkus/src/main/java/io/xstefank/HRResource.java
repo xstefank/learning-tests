@@ -213,9 +213,44 @@ public class HRResource {
             System.out.println(e);
         }
     }
-    
 
-      
+
+    @GET
+    @Path("java-exception-handling2")
+    public void javaExceptionHandling2() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("javaExceptionHandling2.txt"));
+        MyCalculator myCalculator = new MyCalculator();
+
+        while (scanner.hasNextInt()) {
+            int n = scanner.nextInt();
+            int p = scanner.nextInt();
+
+            try {
+                long result = myCalculator.power(n, p);
+
+                System.out.println(Math.pow(n, p));
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        
+        scanner.close();
+    }
     
+    private static final class MyCalculator {
+        public long power(int n, int p) throws Exception {
+            if (n < 0 || p < 0) {
+                throw new Exception("n or p should not be negative.");
+            }
+
+            if (n == 0 && p == 0) {
+                throw new Exception("n and p should not be zero.");
+            }
+
+            return (long) Math.pow(n, p);
+        }
+    }
+
+
 
 }
