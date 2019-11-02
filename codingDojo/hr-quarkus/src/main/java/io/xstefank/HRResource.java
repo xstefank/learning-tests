@@ -10,6 +10,7 @@ import java.net.URISyntaxException;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.IntStream;
@@ -194,7 +195,24 @@ public class HRResource {
         System.out.println("China: " + china);
         System.out.println("France: " + france);
     }
-    
+
+    @GET
+    @Path("java-exception-handling")
+    public void javaExceptionHandling() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("javaExceptionHandling.txt"));
+
+        try {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            scanner.close();
+
+            System.out.println(x / y);
+        } catch (InputMismatchException e) {
+            System.out.println(e.getClass().getName());  
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
     
 
       
