@@ -78,4 +78,37 @@ public class Resource {
          
         return values.build().sum();
     }
+    
+    @GET
+    @Path("diagonal-difference")
+    public Object diagonalDifference() {
+        Scanner scanner = new Scanner(hrService.getStream("diagonal-difference.txt"));
+
+        int n = scanner.nextInt();
+        List<List<Integer>> arr = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            List<Integer> integers;
+            integers = new ArrayList<>();
+
+            for (int j = 0; j < n; j++) {
+                integers.add(scanner.nextInt());
+            }
+
+            arr.add(integers);
+        }
+        
+        int forwardDiagonal = 0;
+        
+        for (int i = 0; i < n; i++) {
+            forwardDiagonal += arr.get(i).get(i);
+        }
+        
+        int backwardDiagonal = 0;
+
+        for (int i = 0; i < n; i++) {
+            backwardDiagonal += arr.get(i).get(n - i - 1);
+        }
+
+        return Math.abs(forwardDiagonal - backwardDiagonal);
+    }
 }
