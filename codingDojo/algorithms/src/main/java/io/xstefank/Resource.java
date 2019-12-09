@@ -75,10 +75,10 @@ public class Resource {
         for (int i = 0; i < n; i++) {
             values.add(scanner.nextLong());
         }
-         
+
         return values.build().sum();
     }
-    
+
     @GET
     @Path("diagonal-difference")
     public Object diagonalDifference() {
@@ -96,13 +96,13 @@ public class Resource {
 
             arr.add(integers);
         }
-        
+
         int forwardDiagonal = 0;
-        
+
         for (int i = 0; i < n; i++) {
             forwardDiagonal += arr.get(i).get(i);
         }
-        
+
         int backwardDiagonal = 0;
 
         for (int i = 0; i < n; i++) {
@@ -110,5 +110,38 @@ public class Resource {
         }
 
         return Math.abs(forwardDiagonal - backwardDiagonal);
+    }
+
+    @GET
+    @Path("plus-minus")
+    public Object plusMinus() {
+        Scanner scanner = new Scanner(hrService.getStream("plus-minus.txt"));
+
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        int positiveCount = 0;
+        int negativeCount = 0;
+        int zeroCount = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > 0) {
+                positiveCount++;
+            } else if (arr[i] < 0) {
+                negativeCount++;
+            } else {
+                zeroCount++;
+            }
+        }
+
+        System.out.printf("%5f%n", (double) positiveCount / n);
+        System.out.printf("%5f%n", (double) negativeCount / n);
+        System.out.printf("%5f%n", (double) zeroCount / n);
+
+        return null;
     }
 }
