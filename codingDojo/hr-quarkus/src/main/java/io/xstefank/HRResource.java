@@ -21,7 +21,6 @@ public class HRResource {
     @Inject
     HRService hrService;
 
-
     @GET
     @Path("/input")
     public void input() throws IOException, URISyntaxException {
@@ -152,7 +151,7 @@ public class HRResource {
 
         }
     }
-    
+
     @GET
     @Path("java-end-of-file")
     public void javaEndOfFile() throws IOException {
@@ -164,7 +163,7 @@ public class HRResource {
             System.out.printf("%d %s%n", ++counter, scanner.nextLine());
         }
     }
-    
+
     @GET
     @Path("date-and-time")
     public void javaDayAndTime() throws IOException {
@@ -176,7 +175,7 @@ public class HRResource {
 
         System.out.println(LocalDate.of(year, month, day).getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US));
     }
-    
+
     @GET
     @Path("java-currency-formatter")
     public void javaCurrencyProvider() throws Exception {
@@ -208,7 +207,7 @@ public class HRResource {
 
             System.out.println(x / y);
         } catch (InputMismatchException e) {
-            System.out.println(e.getClass().getName());  
+            System.out.println(e.getClass().getName());
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -233,10 +232,10 @@ public class HRResource {
                 System.out.println(e);
             }
         }
-        
+
         scanner.close();
     }
-    
+
     private static final class MyCalculator {
         public long power(int n, int p) throws Exception {
             if (n < 0 || p < 0) {
@@ -251,6 +250,28 @@ public class HRResource {
         }
     }
 
+    @GET
+    @Path("staircase")
+    public void staircase() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("staircase.txt"));
 
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(String.format("%1$" + n + "s", getNHashes(i + 1)));
+        }
+
+        scanner.close();
+    }
+
+    private String getNHashes(int n) {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < n; i++) {
+            sb.append("#");
+        }
+
+        return sb.toString();
+    }
 
 }
