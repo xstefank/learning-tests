@@ -8,5 +8,6 @@ public interface PingDifferentInterface {
 
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
-    String hello();
+    @TestAnnotation("ping-different-interface")
+    String hello() throws NoSuchMethodException;
 }

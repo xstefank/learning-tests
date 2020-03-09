@@ -1,6 +1,7 @@
 package io.xstefank;
 
-public abstract class PingSuperSuperclass implements PingInterface {
+public abstract class PingSuperSuperclass {
 
-    public abstract String hello();
+    @TestAnnotation("ping-super-super-class")
+    public abstract String hello() throws NoSuchMethodException;
 }
