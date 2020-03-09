@@ -6,6 +6,7 @@ import javax.ws.rs.core.MediaType;
 
 public interface PingInterface {
 
-
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
     String hello();
 }
