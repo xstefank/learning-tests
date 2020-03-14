@@ -14,6 +14,7 @@ import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 @Path("/hr")
 public class HRResource {
@@ -272,6 +273,50 @@ public class HRResource {
         }
 
         return sb.toString();
+    }
+
+    @GET
+    @Path("min-max-sum")
+    public void minMaxSum() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("min-max-sum.txt"));
+
+        int[] arr = new int[5];
+        
+        String[] arrItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < 5; i++) {
+            int arrItem = Integer.parseInt(arrItems[i]);
+            arr[i] = arrItem;
+        }
+
+        miniMaxSum(arr);
+
+        scanner.close();
+    }
+
+    private void miniMaxSum(int[] arr) {
+        long[] sums = new long[arr.length];
+        
+        for (int i = 0; i < arr.length; i++) {
+            sums[i] = getSumWithoutNthElement(arr, i);
+        }
+
+        System.out.println(LongStream.of(sums).min().getAsLong() + " " + LongStream.of(sums).max().getAsLong());
+    }
+
+    private long getSumWithoutNthElement(int[] arr, int n) {
+        long sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i == n) {
+                continue;
+            }
+
+            sum += arr[i];
+        }
+
+        return sum;
     }
 
 }
