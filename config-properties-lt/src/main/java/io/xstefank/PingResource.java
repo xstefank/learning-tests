@@ -17,7 +17,7 @@ public class PingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        System.out.println(configuration.value);
+        System.out.println(configuration.value());
 
         return "hello";
     }
