@@ -8,8 +8,11 @@ import javax.ws.rs.Path;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -358,6 +361,27 @@ public class HRResource {
         }
 
         return count;
+    }
+
+    @GET
+    @Path("time-conversion")
+    public void timeConversionREST() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("time-conversion.txt"));
+
+        String s = scanner.nextLine();
+        String result = timeConversion(s);
+
+        System.out.println(result);
+
+        scanner.close();
+    }
+
+    private String timeConversion(String s) throws ParseException {
+        SimpleDateFormat inputFormat = new SimpleDateFormat("hh:mm:ssa");
+        SimpleDateFormat outputFormat = new SimpleDateFormat("HH:mm:ss");
+
+        Date date = inputFormat.parse(s);
+        return outputFormat.format(date);
     }
 
 }
