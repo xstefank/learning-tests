@@ -12,10 +12,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
@@ -382,6 +385,34 @@ public class HRResource {
 
         Date date = inputFormat.parse(s);
         return outputFormat.format(date);
+    }
+
+    @GET
+    @Path("grading-students")
+    public void gradingStudents() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("grading-students.txt"));
+
+        int n = scanner.nextInt();
+        List<Integer> grades = new ArrayList<>(n);
+        
+        IntStream.range(0, n).forEach(value -> grades.add(scanner.nextInt()));
+
+        List<Integer> correctedGrades = grades.stream().map(grade -> {
+            if (grade < 38) {
+                return grade;
+            }
+
+            int mod = grade % 5;
+            if (mod >= 3) {
+                return grade + (5 - mod);
+            } else {
+                return grade;
+            }
+        }).collect(Collectors.toList());
+
+        System.out.println(correctedGrades);
+
+        scanner.close();
     }
 
 }
