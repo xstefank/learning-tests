@@ -5,6 +5,7 @@ import io.xstefank.util.HRService;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.NumberFormat;
@@ -13,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -413,6 +415,57 @@ public class HRResource {
         System.out.println(correctedGrades);
 
         scanner.close();
+    }
+
+    @GET
+    @Path("apples-and-oranges")
+    public void applesAndOranges() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("apples-and-oranges.txt"));
+
+        int s = scanner.nextInt();
+        int t = scanner.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+
+        int[] apples = new int[n];
+        
+        IntStream.range(0, n).forEach(i -> {
+            apples[i] = scanner.nextInt();
+        });
+
+        int[] oranges = new int[m];
+
+        IntStream.range(0, m).forEach(i -> {
+            oranges[i] = scanner.nextInt();
+        });
+
+        countApplesAndOranges(s, t, a, b, apples, oranges);
+
+        scanner.close();
+    }
+
+    static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
+        int appleHitCount = 0;
+        hitCount(s, t, a, apples);
+
+        int orangeHitCount = 0;
+        hitCount(s, t, b, oranges);
+    }
+
+    private static void hitCount(int s, int t, int treePos, int[] fruit) {
+        int hitCount = 0;
+        
+        for (int d : fruit) {
+            int pos = treePos + d;
+            if (pos >= s && pos <= t) {
+                hitCount++;
+            }
+        }
+
+        System.out.println(hitCount);
     }
 
 }
