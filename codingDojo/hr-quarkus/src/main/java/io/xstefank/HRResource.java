@@ -24,6 +24,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
+import static java.lang.Math.floor;
+
 @Path("/hr")
 public class HRResource {
 
@@ -466,6 +468,36 @@ public class HRResource {
         }
 
         System.out.println(hitCount);
+    }
+    
+    @GET
+    @Path("kangaroo")
+    public void kangarooREST() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("kangaroo.txt"));
+
+        int x1 = scanner.nextInt();
+        int v1 = scanner.nextInt();
+        int x2 = scanner.nextInt();
+        int v2 = scanner.nextInt();
+
+        System.out.println(kangaroo(x1, v1, x2, v2));
+
+
+        scanner.close();
+    }
+
+    private static String kangaroo(int x1, int v1, int x2, int v2) {
+        if(v2 >= v1 && x1 != x2){
+            return "NO";
+        }
+        
+        float x = (float)(x2 - x1) / (v1 - v2);
+
+        if (floor(x) == x) {
+            return "YES";
+        } else {
+            return "NO";
+        }
     }
 
 }
