@@ -15,6 +15,7 @@ import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -498,6 +499,48 @@ public class HRResource {
         } else {
             return "NO";
         }
+    }
+
+    @GET
+    @Path("between-two-sets")
+    public void betweenTwoSetsREST() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("between-two-sets.txt"));
+
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+
+        List<Integer> firstList = new ArrayList<>(n);
+        List<Integer> secondList = new ArrayList<>(m);
+
+        IntStream.range(0, n).forEach(i -> firstList.add(scanner.nextInt()));
+        IntStream.range(0, m).forEach(i -> secondList.add(scanner.nextInt()));
+
+        System.out.println(getTotalX(firstList, secondList));
+
+        scanner.close();
+    }
+
+    public static int getTotalX(List<Integer> a, List<Integer> b) {
+        int count = 0;
+
+        int min = Collections.min(a);
+        int max = Collections.max(b);
+
+        for (int i = min; i <= max; i++) {
+            if (areAllFactor(i, a) && isFactorOfAll(i, b)) {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+
+    private static boolean areAllFactor(int i, List<Integer> integers) {
+        return integers.stream().allMatch(integer -> i % integer == 0);
+    }
+
+    private static boolean isFactorOfAll(int i, List<Integer> integers) {
+        return integers.stream().allMatch(integer -> integer % i == 0);
     }
 
 }
