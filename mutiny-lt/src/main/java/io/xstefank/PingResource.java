@@ -15,13 +15,17 @@ public class PingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         Uni<Integer> uni1 = Uni.createFrom().item(1);
-        Uni<Integer> uni2 = Uni.createFrom().item(2);
+        Uni<Integer> uni2 = Uni.createFrom().failure(() -> new Exception());
         Uni<Integer> uni3 = Uni.createFrom().item(3);
 
         List<Uni<Integer>> unis = List.of(uni1, uni2, uni3);
 
-        Uni<Integer> integerUni = Uni.combine().all().unis(unis).combinedWith((results ->
-            ((Integer) results.get(0)) + ((Integer) results.get(1)) + ((Integer) results.get(2))));
+        Uni<Integer> integerUni = Uni.combine().all().unis(unis)
+            .combinedWith(results ->
+            {
+                results.forEach(System.out::println);
+                return 0;
+            }).onFailure().recoverWithItem(-1);
 
         System.out.println(integerUni.await().indefinitely());
         return "hello";
