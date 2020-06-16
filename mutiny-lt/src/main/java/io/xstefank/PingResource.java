@@ -12,15 +12,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Path("/ping")
 public class PingResource {
 
+    AtomicInteger counter = new AtomicInteger(0);
+
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        AtomicInteger counter = new AtomicInteger(0);
         
         Uni<Integer> uni1 = Uni.createFrom().item(1);
-        Uni<Integer> uni3 = Uni.createFrom().item(() -> counter.getAndIncrement());
+//        Uni<Integer> uni3 = Uni.createFrom().item(counter.getAndIncrement());
+        Uni<Integer> deffered = Uni.createFrom().deferred(() -> call());
 
-        List<Uni<Integer>> unis = List.of(uni1, uni3);
+        List<Uni<Integer>> unis = List.of(uni1, deffered);
 
         Uni<Integer> integerUni = Uni.combine().all().unis(unis)
             .combinedWith(results ->
@@ -35,5 +38,9 @@ public class PingResource {
         System.out.println(integerUni.await().indefinitely());
         
         return "hello";
+    }
+
+    private Uni<Integer> call() {
+        return Uni.createFrom().item(counter.getAndIncrement());
     }
 }
