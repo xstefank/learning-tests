@@ -5,6 +5,8 @@ import io.xstefank.util.HRService;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -143,5 +145,47 @@ public class Resource {
         System.out.printf("%5f%n", (double) zeroCount / n);
 
         return null;
+    }
+
+    @GET
+    @Path("breaking-records")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Object breakingRecordsREST() {
+        Scanner scanner = new Scanner(hrService.getStream("breaking-records.txt"));
+
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        int[] result = breakingRecords(arr);
+        System.out.println(Arrays.toString(result));
+        return Arrays.toString(result);
+    }
+
+    private int[] breakingRecords(int[] scores) {
+        if (scores.length == 0) {
+            return new int[]{0, 0};
+        }
+        
+        int countMax = 0;
+        int countMin = 0;
+        int min = scores[0];
+        int max = scores[0];
+
+        for (int i = 1; i < scores.length; i++) {
+            int value = scores[i];
+            if (value < min) {
+                countMin++;
+                min = value;
+            } else if (value > max) {
+                countMax++;
+                max = value;
+            }
+        }
+
+        return new int[]{countMax, countMin};
     }
 }
