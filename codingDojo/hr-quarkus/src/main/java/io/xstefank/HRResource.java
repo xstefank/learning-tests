@@ -542,5 +542,35 @@ public class HRResource {
     private static boolean isFactorOfAll(int i, List<Integer> integers) {
         return integers.stream().allMatch(integer -> integer % i == 0);
     }
+    
+    @GET
+    @Path("birthday-chocolate")
+    public void birthdayChocolate() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("birthday-chocolate.txt"));
 
+        int n = scanner.nextInt();
+        List<Integer> s = new ArrayList<>(n);
+        IntStream.range(0, n).forEach(i -> s.add(scanner.nextInt()));
+        
+        int d = scanner.nextInt();
+        int m = scanner.nextInt();
+
+        System.out.println(birthday(s, d, m));
+
+        scanner.close();
+    }
+    
+    private static int birthday(List<Integer> s, int d, int m) {
+        int count = 0;
+        int[] sArr = s.stream().mapToInt(i -> i).toArray();
+
+        for (int i = 0; i < s.size() - m + 1; i++) {
+            if (Arrays.stream(sArr, i, i + m).sum() == d) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+    
 }
