@@ -1,5 +1,6 @@
 package io.xstefank;
 
+import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 
 import javax.ws.rs.GET;
@@ -7,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Path("/ping")
@@ -16,9 +18,24 @@ public class PingResource {
 
 
     @GET
+    public void get() {
+        String result = Multi.createFrom().completionStage(CompletableFuture.supplyAsync(() -> 23))
+            .stage(self -> {
+                // Transform each item into a string of the item +1
+                return self
+                    .onItem().transform(i -> i + 1)
+                    .onItem().transform(i -> Integer.toString(i));
+            })
+            .stage(self -> self
+                .onItem().invoke(item -> System.out.println("The item is " + item))
+                .collectItems().first())
+            .stage(self -> self.await().indefinitely());    }
+
+    @GET
+    @Path("/test")
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        
+
         Uni<Integer> uni1 = Uni.createFrom().item(1);
 //        Uni<Integer> uni3 = Uni.createFrom().item(counter.getAndIncrement());
         Uni<Integer> deffered = Uni.createFrom().deferred(() -> call()).onFailure().recoverWithItem(50);
@@ -39,7 +56,7 @@ public class PingResource {
         System.out.println(integerUni.await().indefinitely());
         System.out.println(integerUni.await().indefinitely());
         System.out.println(integerUni.await().indefinitely());
-        
+
         return "hello";
     }
 
