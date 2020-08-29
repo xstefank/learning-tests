@@ -1,6 +1,5 @@
 package io.xstefank;
 
-import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
 
 import javax.ws.rs.GET;
@@ -8,8 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static io.smallrye.mutiny.unchecked.Unchecked.function;
 
 @Path("/ping")
 public class PingResource {
@@ -19,17 +19,17 @@ public class PingResource {
 
     @GET
     public void get() {
-        String result = Multi.createFrom().completionStage(CompletableFuture.supplyAsync(() -> 23))
-            .stage(self -> {
-                // Transform each item into a string of the item +1
-                return self
-                    .onItem().transform(i -> i + 1)
-                    .onItem().transform(i -> Integer.toString(i));
-            })
-            .stage(self -> self
-                .onItem().invoke(item -> System.out.println("The item is " + item))
-                .collectItems().first())
-            .stage(self -> self.await().indefinitely());    }
+        String result1 = Uni.createFrom().item("testing")
+            .onItem().transform(function(in -> {
+                if (in.equals("test")) {
+                    throw new Exception("in is test");
+                }
+
+                return in;
+            }))
+            .await().indefinitely();
+        System.out.println(result1);
+    }
 
     @GET
     @Path("/test")
