@@ -4,3 +4,6 @@
 [submodule "microprofile/microprofile1.4-samples"]
 	path = microprofile/microprofile1.4-samples
 	url = git@github.com:javaee-samples/microprofile1.4-samples.git
+[submodule "quarkus-rest-client-extension"]
+	path = quarkus-rest-client-extension
+	url = https://github.com/xstefank/quarkus-rest-client-extension
