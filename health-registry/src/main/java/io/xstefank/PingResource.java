@@ -44,12 +44,12 @@ public class PingResource {
     @GET
     @Path("/registerReady")
     public void registerReady() {
-        readinessHealthRegistry.register(new TestLiveness());
+        readinessHealthRegistry.register("dynamic-readiness", new TestReadiness());
     }
 
     @GET
     @Path("/removeReady")
     public void removeReady() {
-        readinessHealthRegistry.remove(TestLiveness.class.getName());
+        readinessHealthRegistry.remove("dynamic-readiness");
     }
 }
