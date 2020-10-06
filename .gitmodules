@@ -7,3 +7,6 @@
 [submodule "quarkus-rest-client-extension"]
 	path = quarkus-rest-client-extension
 	url = https://github.com/xstefank/quarkus-rest-client-extension
+[submodule "resteasy-client-test"]
+	path = resteasy-client-test
+	url = https://github.com/xstefank/resteasy-client-test
