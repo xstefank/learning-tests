@@ -1,0 +1,2523 @@
+<?xml version="1.0" ?>
+
+<installation xmlns="urn:jboss:galleon:provisioned-state:3.0">
+    <feature-pack location="wildfly-core@maven(org.jboss.universe:community-universe):current#13.0.1.Final">
+        <packages>
+            <package name="bin"/>
+            <package name="bin.vaulttools"/>
+            <package name="tools"/>
+            <package name="bin.common"/>
+            <package name="docs.contrib"/>
+            <package name="docs"/>
+            <package name="docs.schema"/>
+            <package name="docs.licenses"/>
+            <package name="org.jboss.as.threads"/>
+            <package name="wildflyee.api"/>
+            <package name="org.eclipse.jgit"/>
+            <package name="org.glassfish.javax.json"/>
+            <package name="org.wildfly.event.logger"/>
+            <package name="com.googlecode.javaewah"/>
+            <package name="org.jboss.as.logging"/>
+            <package name="org.wildfly.extension.discovery"/>
+            <package name="org.jboss.as.domain-add-user"/>
+            <package name="org.wildfly.openssl"/>
+            <package name="org.wildfly.embedded"/>
+            <package name="org.aesh"/>
+            <package name="org.jboss.as.cli"/>
+            <package name="org.jboss.as.patching.cli"/>
+            <package name="org.jboss.as.host-controller"/>
+            <package name="org.wildfly.bootable-jar"/>
+            <package name="org.wildfly.discovery"/>
+            <package name="org.jboss.as.deployment-scanner"/>
+            <package name="org.jboss.remoting-jmx"/>
+            <package name="org.jboss.as.domain-http-error-context"/>
+            <package name="org.jboss.logging.jul-to-slf4j-stub"/>
+            <package name="org.fusesource.jansi"/>
+            <package name="org.wildfly.extension.core-management"/>
+            <package name="org.jboss.as.patching"/>
+            <package name="org.wildfly.extension.elytron"/>
+            <package name="org.wildfly.security.manager"/>
+            <package name="org.wildfly.extension.security.manager"/>
+            <package name="org.jboss.as.management-client-content"/>
+            <package name="org.jboss.as.standalone"/>
+            <package name="javax.sql.api"/>
+            <package name="modules.all"/>
+            <package name="ibm.jdk"/>
+            <package name="org.wildfly.security.elytron"/>
+            <package name="org.wildfly.extension.request-controller"/>
+            <package name="org.wildfly.extension.core-management-client"/>
+            <package name="org.jboss.as.version"/>
+            <package name="org.jboss.as.process-controller"/>
+            <package name="org.jboss.as.platform-mbean"/>
+            <package name="org.wildfly.extension.io"/>
+            <package name="org.jboss.as.network"/>
+            <package name="org.jboss.as.remoting"/>
+            <package name="org.jboss.as.jmx"/>
+            <package name="org.jboss.as.domain-management"/>
+            <package name="sun.scripting"/>
+            <package name="sun.jdk"/>
+            <package name="org.wildfly.security.elytron-web.undertow-server"/>
+            <package name="io.undertow.core"/>
+            <package name="org.jboss.as.domain-http-interface"/>
+            <package name="org.jboss.as.deployment-repository"/>
+            <package name="org.jboss.stdio"/>
+            <package name="org.jboss.jandex"/>
+            <package name="org.apache.xerces"/>
+            <package name="org.jboss.as.server"/>
+            <package name="org.jboss.invocation"/>
+            <package name="org.jboss.vfs"/>
+            <package name="javax.security.jacc.api"/>
+            <package name="org.projectodd.vdx"/>
+            <package name="org.jboss.msc"/>
+            <package name="org.jboss.as.core-security-api"/>
+            <package name="org.jboss.as.core-security"/>
+            <package name="org.jboss.dmr"/>
+            <package name="org.jboss.xnio.nio"/>
+            <package name="org.jboss.xnio"/>
+            <package name="org.jboss.marshalling.river"/>
+            <package name="org.jboss.marshalling"/>
+            <package name="org.jboss.remoting"/>
+            <package name="org.jboss.as.protocol"/>
+            <package name="org.wildfly.client.config"/>
+            <package name="org.bouncycastle.bcprov"/>
+            <package name="org.bouncycastle.bcpkix"/>
+            <package name="org.bouncycastle.bcpg"/>
+            <package name="org.apache.sshd"/>
+            <package name="org.jboss.threads"/>
+            <package name="org.wildfly.security.elytron-private"/>
+            <package name="org.jboss.as.controller-client"/>
+            <package name="org.codehaus.woodstox"/>
+            <package name="org.jboss.as.controller"/>
+            <package name="org.jboss.staxmapper"/>
+            <package name="org.jboss.classfilewriter"/>
+            <package name="org.jboss.log4j.logmanager"/>
+            <package name="org.apache.log4j"/>
+            <package name="org.apache.httpcomponents.core"/>
+            <package name="org.jboss.logging.commons.logging"/>
+            <package name="org.apache.commons.logging"/>
+            <package name="javax.xml.stream.api"/>
+            <package name="javax.security.auth.message.api"/>
+            <package name="org.jboss.logging"/>
+            <package name="org.wildfly.common"/>
+            <package name="org.jboss.logmanager"/>
+            <package name="org.slf4j.impl"/>
+            <package name="org.slf4j"/>
+            <package name="org.glassfish.jakarta.json"/>
+            <package name="javax.json.api"/>
+            <package name="javax.interceptor.api"/>
+            <package name="javax.api"/>
+            <package name="standalone"/>
+            <package name="bin.standalone"/>
+            <package name="copyright.txt"/>
+            <package name="README.txt"/>
+            <package name="LICENSE.txt"/>
+            <package name="core.misc.common"/>
+            <package name="misc.common"/>
+            <package name="core.misc.standalone"/>
+            <package name="misc.standalone"/>
+            <package name="cleanup.standalone.config.history.dir"/>
+            <package name="cleanup.standalone.log.dir"/>
+            <package name="cleanup.standalone.data.dir"/>
+            <package name="cleanup.standalone.tmp.vfs"/>
+        </packages>
+    </feature-pack>
+    <feature-pack location="wildfly-servlet@maven(org.jboss.universe:community-universe):current#21.0.0.Final">
+        <packages>
+            <package name="docs"/>
+            <package name="docs.schema"/>
+            <package name="docs.licenses"/>
+            <package name="org.jboss.as.security"/>
+            <package name="org.wildfly.naming"/>
+            <package name="org.jboss.remote-naming"/>
+            <package name="org.glassfish.javax.el"/>
+            <package name="org.jboss.as.security-plugins"/>
+            <package name="org.eclipse.yasson"/>
+            <package name="javax.json.bind.api"/>
+            <package name="org.jboss.as.security-integration"/>
+            <package name="modules.all"/>
+            <package name="org.picketbox"/>
+            <package name="org.jboss.security.negotiation"/>
+            <package name="org.jboss.common-beans"/>
+            <package name="org.wildfly.security.elytron-web.undertow-server-servlet"/>
+            <package name="org.wildfly.clustering.web.container"/>
+            <package name="org.wildfly.clustering.service"/>
+            <package name="org.jboss.as.clustering.common"/>
+            <package name="javax.websocket.api"/>
+            <package name="io.undertow.websocket"/>
+            <package name="org.eclipse.jdt.ecj"/>
+            <package name="io.undertow.jsp"/>
+            <package name="org.apache.xalan"/>
+            <package name="javax.servlet.jstl.api"/>
+            <package name="io.undertow.servlet"/>
+            <package name="org.wildfly.extension.undertow"/>
+            <package name="org.wildfly.naming-client"/>
+            <package name="org.wildfly.http-client.common"/>
+            <package name="org.wildfly.http-client.naming"/>
+            <package name="org.jboss.as.naming"/>
+            <package name="org.jboss.metadata.ear"/>
+            <package name="org.glassfish.javax.enterprise.concurrent"/>
+            <package name="org.jboss.as.ee"/>
+            <package name="javax.servlet.jsp.api"/>
+            <package name="org.jboss.as.web-common"/>
+            <package name="org.jboss.metadata.common"/>
+            <package name="org.jboss.metadata.web"/>
+            <package name="javax.enterprise.concurrent.api"/>
+            <package name="javax.transaction.api"/>
+            <package name="javax.validation.api"/>
+            <package name="javax.activation.api"/>
+            <package name="javax.annotation.api"/>
+            <package name="javax.servlet.api"/>
+            <package name="javax.inject.api"/>
+            <package name="javax.el.api"/>
+            <package name="org.glassfish.jakarta.el"/>
+            <package name="javax.enterprise.api"/>
+            <package name="welcome-content"/>
+            <package name="copyright.txt"/>
+            <package name="README.txt"/>
+            <package name="LICENSE.txt"/>
+            <package name="servlet.misc.common"/>
+            <package name="servlet.misc.standalone"/>
+            <package name="misc.standalone"/>
+        </packages>
+    </feature-pack>
+    <feature-pack location="wildfly-ee@maven(org.jboss.universe:community-universe):current#21.0.0.Final">
+        <packages>
+            <package name="appclient"/>
+            <package name="bin.jdrtools"/>
+            <package name="bin.wstools"/>
+            <package name="bin.common"/>
+            <package name="bin.appclient"/>
+            <package name="tools"/>
+            <package name="bin"/>
+            <package name="docs.schema"/>
+            <package name="docs.licenses"/>
+            <package name="docs.examples"/>
+            <package name="docs"/>
+            <package name="product.conf"/>
+            <package name="org.jboss.as.jsr77"/>
+            <package name="org.jboss.as.weld.jpa"/>
+            <package name="org.jboss.as.security-api"/>
+            <package name="org.jboss.as.messaging"/>
+            <package name="org.wildfly.clustering.web.undertow"/>
+            <package name="org.apache.openjpa"/>
+            <package name="org.jboss.resteasy.resteasy-rxjava2"/>
+            <package name="org.jboss.metadata.appclient"/>
+            <package name="org.jboss.as.appclient"/>
+            <package name="org.jboss.remoting3.remoting-jmx"/>
+            <package name="org.jboss.as.mail"/>
+            <package name="org.jboss.as.web"/>
+            <package name="org.jboss.ws.tools.wsconsume"/>
+            <package name="com.h2database.h2"/>
+            <package name="org.hibernate.search.serialization-avro"/>
+            <package name="org.jboss.remoting3"/>
+            <package name="org.jboss.as.cmp"/>
+            <package name="org.hibernate.search.backend-jms"/>
+            <package name="org.jboss.as.pojo"/>
+            <package name="org.wildfly.extension.microprofile.opentracing-smallrye"/>
+            <package name="org.jboss.ws.tools.wsprovide"/>
+            <package name="org.hibernate.search.orm"/>
+            <package name="org.jboss.resteasy.resteasy-json-binding-provider"/>
+            <package name="org.jboss.xnio.netty.netty-xnio-transport"/>
+            <package name="javax.management.j2ee.api"/>
+            <package name="org.jboss.resteasy.resteasy-client-microprofile"/>
+            <package name="org.picketlink"/>
+            <package name="org.jboss.resteasy.resteasy-crypto"/>
+            <package name="org.jboss.resteasy.resteasy-cdi"/>
+            <package name="org.jboss.resteasy.resteasy-validator-provider"/>
+            <package name="org.jboss.resteasy.resteasy-validator-provider-11"/>
+            <package name="org.jboss.deployers.jboss-service-deployer"/>
+            <package name="org.picketlink.core"/>
+            <package name="org.infinispan.cachestore.remote"/>
+            <package name="org.jboss.as.clustering.web.infinispan"/>
+            <package name="org.codehaus.jackson.jackson-jaxrs"/>
+            <package name="org.jboss.resteasy.resteasy-jackson-provider"/>
+            <package name="org.jboss.resteasy.resteasy-spring"/>
+            <package name="org.wildfly.extension.microprofile.metrics-smallrye"/>
+            <package name="javaee.api"/>
+            <package name="org.jboss.as.weld.beanvalidation"/>
+            <package name="org.apache.avro"/>
+            <package name="org.apache.commons.lang"/>
+            <package name="org.hibernate.envers"/>
+            <package name="org.codehaus.jackson.jackson-core-asl"/>
+            <package name="org.codehaus.jackson.jackson-mapper-asl"/>
+            <package name="org.codehaus.jackson.jackson-xc"/>
+            <package name="org.jboss.as.weld.webservices"/>
+            <package name="org.apache.lucene.internal"/>
+            <package name="org.apache.lucene"/>
+            <package name="org.hibernate.search.engine"/>
+            <package name="com.github.spullara.mustache"/>
+            <package name="io.undertow.js"/>
+            <package name="org.jboss.as.modcluster"/>
+            <package name="org.jboss.as.sar"/>
+            <package name="org.hibernate.5.3"/>
+            <package name="org.hibernate.5.0"/>
+            <package name="org.glassfish.soteria"/>
+            <package name="org.wildfly.extension.ee-security"/>
+            <package name="org.wildfly.extension.bean-validation"/>
+            <package name="org.jboss.as.weld"/>
+            <package name="org.jboss.as.configadmin"/>
+            <package name="org.jboss.ws.cxf.sts"/>
+            <package name="org.jboss.resteasy.resteasy-atom-provider"/>
+            <package name="org.jboss.as.jsf-injection"/>
+            <package name="org.jboss.resteasy.resteasy-json-p-provider"/>
+            <package name="org.wildfly.extension.clustering.singleton"/>
+            <package name="org.apache.activemq.artemis.protocol.hornetq"/>
+            <package name="org.jboss.integration.ext-content"/>
+            <package name="org.jboss.resteasy.resteasy-jsapi"/>
+            <package name="org.jboss.as.jpa.openjpa"/>
+            <package name="org.apache.activemq.artemis.protocol.stomp"/>
+            <package name="org.jboss.ejb.remote.protocol"/>
+            <package name="org.hibernate.4.1"/>
+            <package name="org.jboss.genericjms"/>
+            <package name="org.hibernate.infinispan"/>
+            <package name="org.hibernate.jipijapa-hibernate5"/>
+            <package name="gnu.getopt"/>
+            <package name="org.jboss.ws.tools.common"/>
+            <package name="org.jboss.as.jacorb"/>
+            <package name="org.apache.qpid.proton"/>
+            <package name="org.apache.activemq.artemis.protocol.amqp"/>
+            <package name="com.sun.jsf-impl"/>
+            <package name="javax.faces.api"/>
+            <package name="org.jboss.as.jsf"/>
+            <package name="org.picketlink.federation.bindings"/>
+            <package name="org.jboss.security.xacml"/>
+            <package name="org.picketlink.federation"/>
+            <package name="org.picketlink.idm.schema"/>
+            <package name="org.picketlink.idm"/>
+            <package name="org.hibernate.bytecodetransformer"/>
+            <package name="org.jboss.as.jpa"/>
+            <package name="org.wildfly.extension.picketlink"/>
+            <package name="org.jboss.as.jdr"/>
+            <package name="org.eclipse.persistence"/>
+            <package name="org.jboss.as.console"/>
+            <package name="io.agroal"/>
+            <package name="org.wildfly.extension.datasources-agroal"/>
+            <package name="org.jboss.as.jaxr"/>
+            <package name="org.wildfly.clustering.web.infinispan"/>
+            <package name="org.wildfly.clustering.ee.hotrod"/>
+            <package name="org.wildfly.clustering.web.hotrod"/>
+            <package name="org.wildfly.clustering.web.api"/>
+            <package name="org.wildfly.clustering.web.spi"/>
+            <package name="org.wildfly.clustering.web.cache"/>
+            <package name="org.wildfly.extension.clustering.web"/>
+            <package name="org.jboss.resteasy.resteasy-multipart-provider"/>
+            <package name="org.jboss.as.weld.ejb"/>
+            <package name="io.reactivex.rxjava2.rxjava"/>
+            <package name="org.picketlink.core.api"/>
+            <package name="org.jberet.jberet-core"/>
+            <package name="javax.batch.api"/>
+            <package name="org.wildfly.extension.batch.jberet"/>
+            <package name="org.wildfly.extension.mod_cluster"/>
+            <package name="org.jboss.mod_cluster.load.spi"/>
+            <package name="org.jboss.mod_cluster.core"/>
+            <package name="org.jboss.mod_cluster.container.spi"/>
+            <package name="org.wildfly.mod_cluster.undertow"/>
+            <package name="org.picketlink.config"/>
+            <package name="org.jboss.weld.probe"/>
+            <package name="org.wildfly.clustering.infinispan.client"/>
+            <package name="org.jboss.as.clustering.jgroups"/>
+            <package name="org.infinispan.client.hotrod"/>
+            <package name="org.infinispan.persistence.remote"/>
+            <package name="org.infinispan.persistence.jdbc"/>
+            <package name="org.jboss.as.clustering.infinispan"/>
+            <package name="org.jboss.resteasy.resteasy-yaml-provider"/>
+            <package name="org.wildfly.extension.microprofile.config-smallrye"/>
+            <package name="org.eclipse.microprofile.health.api"/>
+            <package name="io.smallrye.health"/>
+            <package name="org.wildfly.extension.microprofile.health-smallrye"/>
+            <package name="org.jboss.ws.saaj-impl"/>
+            <package name="org.wildfly.clustering.jgroups.api"/>
+            <package name="org.wildfly.clustering.jgroups.spi"/>
+            <package name="org.wildfly.clustering.server"/>
+            <package name="org.wildfly.clustering.ee.infinispan"/>
+            <package name="org.wildfly.clustering.ejb.infinispan"/>
+            <package name="org.jboss.as.clustering.ejb3.infinispan"/>
+            <package name="org.eclipse.microprofile.restclient"/>
+            <package name="org.wildfly.microprofile.opentracing-smallrye"/>
+            <package name="io.opentracing.contrib.opentracing-tracerresolver"/>
+            <package name="io.opentracing.contrib.opentracing-interceptors"/>
+            <package name="org.eclipse.microprofile.opentracing"/>
+            <package name="io.opentracing.contrib.opentracing-concurrent"/>
+            <package name="io.opentracing.contrib.opentracing-jaxrs2"/>
+            <package name="io.smallrye.opentracing"/>
+            <package name="org.codehaus.jettison"/>
+            <package name="org.jboss.resteasy.resteasy-jettison-provider"/>
+            <package name="org.jboss.narayana.rts"/>
+            <package name="org.wildfly.extension.rts"/>
+            <package name="org.hibernate.4.3"/>
+            <package name="org.hibernate.jipijapa-hibernate4-3"/>
+            <package name="org.jboss.as.weld.transactions"/>
+            <package name="org.jboss.as.system-jmx"/>
+            <package name="org.jboss.narayana.txframework"/>
+            <package name="org.jboss.narayana.compensations"/>
+            <package name="org.jboss.ws.cxf.jbossws-cxf-client"/>
+            <package name="org.jboss.xts"/>
+            <package name="org.jboss.ws.cxf.jbossws-cxf-server"/>
+            <package name="org.jboss.ws.cxf.jbossws-cxf-transports-udp"/>
+            <package name="org.jboss.ws.jaxws-undertow-httpspi"/>
+            <package name="org.jboss.ws.cxf.jbossws-cxf-transports-undertow"/>
+            <package name="org.apache.cxf.services-sts"/>
+            <package name="org.apache.cxf.ws-security"/>
+            <package name="com.sun.xml.fastinfoset"/>
+            <package name="org.apache.cxf"/>
+            <package name="org.opensaml"/>
+            <package name="org.apache.santuario.xmlsec"/>
+            <package name="com.sun.xml.messaging.saaj"/>
+            <package name="org.apache.ws.security"/>
+            <package name="org.apache.ws.xmlschema"/>
+            <package name="org.apache.xml-resolver"/>
+            <package name="org.apache.velocity"/>
+            <package name="org.apache.neethi"/>
+            <package name="org.apache.commons.lang3"/>
+            <package name="javax.mail.api"/>
+            <package name="org.apache.cxf.impl"/>
+            <package name="org.jboss.ws.cxf.jbossws-cxf-factories"/>
+            <package name="org.jboss.jaxbintros"/>
+            <package name="org.jboss.ws.common"/>
+            <package name="org.jboss.ejb3"/>
+            <package name="org.wildfly.clustering.ejb.spi"/>
+            <package name="net.jcip"/>
+            <package name="org.wildfly.clustering.ee.spi"/>
+            <package name="org.wildfly.clustering.ee.cache"/>
+            <package name="org.jboss.ejb-client"/>
+            <package name="org.wildfly.http-client.ejb"/>
+            <package name="org.jboss.as.ejb3"/>
+            <package name="org.jboss.as.webservices"/>
+            <package name="org.jboss.ws.spi"/>
+            <package name="org.jboss.ws.jaxws-client"/>
+            <package name="org.jboss.ws.api"/>
+            <package name="javax.wsdl4j.api"/>
+            <package name="javax.jws.api"/>
+            <package name="asm.asm"/>
+            <package name="org.jboss.as.webservices.server.integration"/>
+            <package name="org.jboss.as.xts"/>
+            <package name="net.bytebuddy"/>
+            <package name="org.wildfly.clustering.marshalling.protostream"/>
+            <package name="org.wildfly.clustering.infinispan.marshalling"/>
+            <package name="org.wildfly.clustering.infinispan.spi"/>
+            <package name="org.infinispan.hibernate-cache"/>
+            <package name="org.infinispan.component.annotations"/>
+            <package name="org.infinispan.commons"/>
+            <package name="io.reactivex.rxjava3.rxjava"/>
+            <package name="com.github.ben-manes.caffeine"/>
+            <package name="org.infinispan"/>
+            <package name="org.hibernate.jipijapa-hibernate5-3"/>
+            <package name="org.hibernate.commons-annotations"/>
+            <package name="org.jboss.as.jpa.spi"/>
+            <package name="org.javassist"/>
+            <package name="org.antlr"/>
+            <package name="org.hibernate"/>
+            <package name="org.jboss.as.jpa.hibernate.4"/>
+            <package name="org.bouncycastle"/>
+            <package name="javax.xml.ws.api"/>
+            <package name="org.picketlink.common"/>
+            <package name="org.picketlink.idm.api"/>
+            <package name="org.hibernate.validator.cdi"/>
+            <package name="org.dom4j"/>
+            <package name="nu.xom"/>
+            <package name="org.jaxen"/>
+            <package name="org.bouncycastle.bcmail"/>
+            <package name="com.github.fge.btf"/>
+            <package name="com.github.fge.msg-simple"/>
+            <package name="com.github.fge.jackson-coreutils"/>
+            <package name="com.github.fge.json-patch"/>
+            <package name="com.fasterxml.jackson.datatype.jackson-datatype-jsr310"/>
+            <package name="com.fasterxml.jackson.datatype.jackson-datatype-jdk8"/>
+            <package name="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider"/>
+            <package name="org.jboss.resteasy.resteasy-jackson2-provider"/>
+            <package name="org.jboss.resteasy.jose-jwt"/>
+            <package name="org.infinispan.protostream"/>
+            <package name="org.apache.thrift"/>
+            <package name="com.squareup.okhttp3"/>
+            <package name="com.google.code.gson"/>
+            <package name="io.jaegertracing.jaeger"/>
+            <package name="io.opentracing.opentracing-noop"/>
+            <package name="io.opentracing.opentracing-util"/>
+            <package name="io.opentracing.opentracing-api"/>
+            <package name="io.opentracing.contrib.opentracing-web-servlet-filter"/>
+            <package name="org.jboss.resteasy.resteasy-jaxb-provider"/>
+            <package name="org.apache.commons.cli"/>
+            <package name="org.jboss.as.vault-tool"/>
+            <package name="org.hornetq.client"/>
+            <package name="org.wildfly.clustering.singleton"/>
+            <package name="org.wildfly.clustering.spi"/>
+            <package name="org.wildfly.clustering.marshalling.spi"/>
+            <package name="org.wildfly.clustering.marshalling.api"/>
+            <package name="org.wildfly.clustering.marshalling.jboss"/>
+            <package name="org.wildfly.clustering.api"/>
+            <package name="org.jboss.ironjacamar.jdbcadapters"/>
+            <package name="org.jboss.as.connector"/>
+            <package name="org.jboss.ironjacamar.api"/>
+            <package name="org.jsoup"/>
+            <package name="org.joda.time"/>
+            <package name="com.fasterxml.classmate"/>
+            <package name="org.hibernate.validator"/>
+            <package name="org.jboss.ironjacamar.impl"/>
+            <package name="org.jgroups.kubernetes"/>
+            <package name="com.microsoft.azure.storage"/>
+            <package name="org.jgroups.azure"/>
+            <package name="org.jgroups"/>
+            <package name="org.apache.activemq.artemis.ra"/>
+            <package name="org.wildfly.extension.messaging-activemq"/>
+            <package name="org.jctools"/>
+            <package name="javax.rmi.api"/>
+            <package name="org.jboss.iiop-client"/>
+            <package name="org.wildfly.http-client.transaction"/>
+            <package name="org.wildfly.transaction.client"/>
+            <package name="org.jboss.metadata.ejb"/>
+            <package name="org.wildfly.iiop-openjdk"/>
+            <package name="org.jboss.as.transactions"/>
+            <package name="javax.resource.api"/>
+            <package name="org.jboss.jboss-transaction-spi"/>
+            <package name="org.jboss.jts.integration"/>
+            <package name="javax.orb.api"/>
+            <package name="org.omg.api"/>
+            <package name="org.jboss.jts"/>
+            <package name="io.netty"/>
+            <package name="org.apache.activemq.artemis.journal"/>
+            <package name="org.apache.commons.collections"/>
+            <package name="org.apache.commons.beanutils"/>
+            <package name="javax.jms.api"/>
+            <package name="com.google.guava"/>
+            <package name="org.apache.activemq.artemis"/>
+            <package name="modules.all"/>
+            <package name="org.jboss.as.weld.spi"/>
+            <package name="org.jboss.as.weld.common"/>
+            <package name="org.jboss.as.jaxrs"/>
+            <package name="org.yaml.snakeyaml"/>
+            <package name="com.fasterxml.jackson.core.jackson-core"/>
+            <package name="com.fasterxml.jackson.core.jackson-annotations"/>
+            <package name="com.fasterxml.jackson.core.jackson-databind"/>
+            <package name="org.eclipse.microprofile.metrics.api"/>
+            <package name="io.smallrye.metrics"/>
+            <package name="io.smallrye.config"/>
+            <package name="org.jboss.weld.spi"/>
+            <package name="javax.xml.soap.api"/>
+            <package name="javax.xml.rpc.api"/>
+            <package name="javax.ejb.api"/>
+            <package name="org.jboss.weld.core"/>
+            <package name="javax.persistence.api"/>
+            <package name="org.jboss.weld.api"/>
+            <package name="org.eclipse.microprofile.config.api"/>
+            <package name="org.reactivestreams"/>
+            <package name="org.apache.james.mime4j"/>
+            <package name="org.apache.httpcomponents"/>
+            <package name="org.apache.commons.codec"/>
+            <package name="org.apache.commons.io"/>
+            <package name="com.sun.xml.bind"/>
+            <package name="javax.xml.bind.api"/>
+            <package name="org.jboss.resteasy.resteasy-jaxrs"/>
+            <package name="javax.ws.rs.api"/>
+            <package name="javax.security.enterprise.api"/>
+            <package name="misc.common"/>
+            <package name="misc.standalone"/>
+        </packages>
+    </feature-pack>
+    <feature-pack location="wildfly@maven(org.jboss.universe:community-universe):current#21.0.0.Final">
+        <packages>
+            <package name="docs.schema"/>
+            <package name="docs.licenses"/>
+            <package name="docs"/>
+            <package name="docs.examples"/>
+            <package name="docs.licenses.merge"/>
+            <package name="org.wildfly.extension.microprofile.fault-tolerance-smallrye"/>
+            <package name="org.eclipse.microprofile.openapi.api"/>
+            <package name="io.smallrye.openapi"/>
+            <package name="org.wildfly.extension.microprofile.openapi-smallrye"/>
+            <package name="org.wildfly.extension.microprofile.jwt-smallrye"/>
+            <package name="com.fasterxml.jackson.dataformat.jackson-dataformat-yaml"/>
+            <package name="org.eclipse.microprofile.fault-tolerance.api"/>
+            <package name="io.smallrye.fault-tolerance"/>
+            <package name="org.wildfly.microprofile.fault-tolerance-smallrye.executor"/>
+            <package name="org.wildfly.security.elytron-jwt"/>
+            <package name="org.bitbucket.jose4j"/>
+            <package name="io.smallrye.jwt"/>
+            <package name="org.eclipse.microprofile.jwt.auth.api"/>
+            <package name="modules.all"/>
+        </packages>
+    </feature-pack>
+    <config name="standalone.xml" model="standalone">
+        <props>
+            <prop name="--internal-empty-config" value=""/>
+            <prop name="--admin-only" value=""/>
+            <prop name="config.branch-is-batch" value="true"/>
+            <prop name="config.merge-independent-branches" value="true"/>
+            <prop name="--internal-remove-config" value=""/>
+        </props>
+        <feature-pack location="wildfly-core@maven(org.jboss.universe:community-universe):current#13.0.1.Final">
+            <spec name="server-root">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}server-root:server-root=/">
+                    <param name="server-root" value="/"/>
+                </feature>
+            </spec>
+            <spec name="interface">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}interface:interface=management">
+                    <param name="interface" value="management"/>
+                    <param name="inet-address" value="${jboss.bind.address.management:127.0.0.1}"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}interface:interface=public">
+                    <param name="interface" value="public"/>
+                    <param name="inet-address" value="${jboss.bind.address:127.0.0.1}"/>
+                </feature>
+            </spec>
+            <spec name="extension">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.jmx">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.jmx"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.logging">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.logging"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.core-management">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.core-management"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.elytron">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.elytron"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.request-controller">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.request-controller"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.security.manager">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.security.manager"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.deployment-scanner">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.deployment-scanner"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.io">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.io"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.naming">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.naming"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.ee">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.ee"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.undertow">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.undertow"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.security">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.security"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.remoting">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.remoting"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.discovery">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.discovery"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.clustering.infinispan">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.clustering.infinispan"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.clustering.web">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.clustering.web"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.transactions">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.transactions"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.batch.jberet">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.batch.jberet"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.bean-validation">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.bean-validation"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.connector">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.connector"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.weld">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.weld"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.ee-security">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.ee-security"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.ejb3">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.ejb3"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.jpa">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.jpa"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.jsf">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.jsf"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.jaxrs">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.jaxrs"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.jdr">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.jdr"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.microprofile.config-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.config-smallrye"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.microprofile.opentracing-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.opentracing-smallrye"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.pojo">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.pojo"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.sar">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.sar"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.mail">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.mail"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.jboss.as.webservices">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.jboss.as.webservices"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.microprofile.health-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.health-smallrye"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.microprofile.metrics-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.metrics-smallrye"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}extension:extension=org.wildfly.extension.microprofile.jwt-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.jwt-smallrye"/>
+                </feature>
+            </spec>
+            <spec name="socket-binding-group">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group:socket-binding-group=standard-sockets">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="port-offset" value="${jboss.socket.binding.port-offset:0}"/>
+                    <param name="default-interface" value="public"/>
+                </feature>
+            </spec>
+            <spec name="socket-binding-group.socket-binding">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=management-http">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="socket-binding" value="management-http"/>
+                    <param name="interface" value="management"/>
+                    <param name="port" value="${jboss.management.http.port:9990}"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=management-https">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="socket-binding" value="management-https"/>
+                    <param name="interface" value="management"/>
+                    <param name="port" value="${jboss.management.https.port:9993}"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=ajp">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="port" value="${jboss.ajp.port:8009}"/>
+                    <param name="socket-binding" value="ajp"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=http">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="port" value="${jboss.http.port:8080}"/>
+                    <param name="socket-binding" value="http"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=https">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="port" value="${jboss.https.port:8443}"/>
+                    <param name="socket-binding" value="https"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=txn-recovery-environment">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="port" value="4712"/>
+                    <param name="socket-binding" value="txn-recovery-environment"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.socket-binding:socket-binding-group=standard-sockets,socket-binding=txn-status-manager">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="port" value="4713"/>
+                    <param name="socket-binding" value="txn-status-manager"/>
+                </feature>
+            </spec>
+            <spec name="socket-binding-group.remote-destination-outbound-socket-binding">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}socket-binding-group.remote-destination-outbound-socket-binding:socket-binding-group=standard-sockets,remote-destination-outbound-socket-binding=mail-smtp">
+                    <param name="socket-binding-group" value="standard-sockets"/>
+                    <param name="host" value="${jboss.mail.server.host:localhost}"/>
+                    <param name="remote-destination-outbound-socket-binding" value="mail-smtp"/>
+                    <param name="port" value="${jboss.mail.server.port:25}"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management:core-service=management">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm:security-realm=ManagementRealm,core-service=management">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ManagementRealm"/>
+                    <param name="map-groups-to-roles" value="false"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.authentication.local">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.authentication.local:security-realm=ManagementRealm,core-service=management,authentication=local">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ManagementRealm"/>
+                    <param name="default-user" value="$local"/>
+                    <param name="skip-group-loading" value="true"/>
+                    <param name="core-service" value="management"/>
+                    <param name="authentication" value="local"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.authentication.properties">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.authentication.properties:security-realm=ManagementRealm,core-service=management,authentication=properties">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ManagementRealm"/>
+                    <param name="path" value="mgmt-users.properties"/>
+                    <param name="relative-to" value="jboss.server.config.dir"/>
+                    <param name="core-service" value="management"/>
+                    <param name="authentication" value="properties"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.authorization.properties">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.authorization.properties:authorization=properties,security-realm=ManagementRealm,core-service=management">
+                    <param name="authorization" value="properties"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ManagementRealm"/>
+                    <param name="path" value="mgmt-groups.properties"/>
+                    <param name="relative-to" value="jboss.server.config.dir"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm:security-realm=ApplicationRealm,core-service=management">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.authentication.local">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.authentication.local:security-realm=ApplicationRealm,core-service=management,authentication=local">
+                    <param name="allowed-users" value="*"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="default-user" value="$local"/>
+                    <param name="skip-group-loading" value="true"/>
+                    <param name="core-service" value="management"/>
+                    <param name="authentication" value="local"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.authentication.properties">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.authentication.properties:security-realm=ApplicationRealm,core-service=management,authentication=properties">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="path" value="application-users.properties"/>
+                    <param name="relative-to" value="jboss.server.config.dir"/>
+                    <param name="core-service" value="management"/>
+                    <param name="authentication" value="properties"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.authorization.properties">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.authorization.properties:authorization=properties,security-realm=ApplicationRealm,core-service=management">
+                    <param name="authorization" value="properties"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="path" value="application-roles.properties"/>
+                    <param name="relative-to" value="jboss.server.config.dir"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.security-realm.server-identity.ssl">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.security-realm.server-identity.ssl:security-realm=ApplicationRealm,core-service=management,server-identity=ssl">
+                    <param name="generate-self-signed-certificate-host" value="localhost"/>
+                    <param name="server-identity" value="ssl"/>
+                    <param name="keystore-path" value="application.keystore"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="alias" value="server"/>
+                    <param name="keystore-relative-to" value="jboss.server.config.dir"/>
+                    <param name="key-password" value="password"/>
+                    <param name="keystore-password" value="password"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.audit">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.audit:core-service=management,access=audit">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="core-service" value="management"/>
+                    <param name="access" value="audit"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.audit.json-formatter">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.audit.json-formatter:json-formatter=json-formatter,core-service=management,access=audit">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="access" value="audit"/>
+                    <param name="json-formatter" value="json-formatter"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.audit.file-handler">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.audit.file-handler:file-handler=file,core-service=management,access=audit">
+                    <param name="formatter" value="json-formatter"/>
+                    <param name="path" value="audit-log.log"/>
+                    <param name="access" value="audit"/>
+                    <param name="relative-to" value="jboss.server.data.dir"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="file-handler" value="file"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.audit.logger.audit-log">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.audit.logger.audit-log:core-service=management,access=audit,logger=audit-log">
+                    <param name="access" value="audit"/>
+                    <param name="log-read-only" value="false"/>
+                    <param name="log-boot" value="true"/>
+                    <param name="logger" value="audit-log"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="core-service" value="management"/>
+                    <param name="enabled" value="false"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.audit.logger.audit-log.handler">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.audit.logger.audit-log.handler:handler=file,access=audit,core-service=management,logger=audit-log">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="handler" value="file"/>
+                    <param name="access" value="audit"/>
+                    <param name="core-service" value="management"/>
+                    <param name="logger" value="audit-log"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.management-interface.http-interface">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.management-interface.http-interface:core-service=management,management-interface=http-interface">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="security-realm" value="ManagementRealm"/>
+                    <param name="socket-binding" value="management-http"/>
+                    <param name="core-service" value="management"/>
+                    <param name="management-interface" value="http-interface"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.management-interface.http-interface.http-upgrade">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.management-interface.http-interface.http-upgrade:core-service=management,management-interface=http-interface">
+                    <param name="core-service" value="management"/>
+                    <param name="management-interface" value="http-interface"/>
+                    <param name="enabled" value="true"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.authorization">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.authorization:core-service=management,access=authorization">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="access" value="authorization"/>
+                    <param name="provider" value="simple"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.authorization.role-mapping">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.authorization.role-mapping:core-service=management,role-mapping=SuperUser,access=authorization">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="access" value="authorization"/>
+                    <param name="core-service" value="management"/>
+                    <param name="role-mapping" value="SuperUser"/>
+                </feature>
+            </spec>
+            <spec name="core-service.management.access.authorization.role-mapping.include">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}core-service.management.access.authorization.role-mapping.include:include=user-$local,access=authorization,role-mapping=SuperUser,core-service=management">
+                    <param name="include" value="user-$local"/>
+                    <param name="access" value="authorization"/>
+                    <param name="role-mapping" value="SuperUser"/>
+                    <param name="name" value="$local"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="type" value="USER"/>
+                    <param name="core-service" value="management"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jmx">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.jmx:subsystem=jmx">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jmx"/>
+                    <param name="extension" value="org.jboss.as.jmx"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jmx.expose-model.expression">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.jmx.expose-model.expression:subsystem=jmx,expose-model=expression">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jmx"/>
+                    <param name="expose-model" value="expression"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jmx.expose-model.resolved">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.jmx.expose-model.resolved:subsystem=jmx,expose-model=resolved">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jmx"/>
+                    <param name="expose-model" value="resolved"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jmx.remoting-connector.jmx">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.jmx.remoting-connector.jmx:subsystem=jmx,remoting-connector=jmx">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jmx"/>
+                    <param name="remoting-connector" value="jmx"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.logging">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging:subsystem=logging">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="logging"/>
+                    <param name="extension" value="org.jboss.as.logging"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.logging.pattern-formatter">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.pattern-formatter:subsystem=logging,pattern-formatter=PATTERN">
+                    <param name="pattern" value="&quot;%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c] (%t) %s%e%n&quot;"/>
+                    <param name="subsystem" value="logging"/>
+                    <param name="pattern-formatter" value="PATTERN"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.pattern-formatter:subsystem=logging,pattern-formatter=COLOR-PATTERN">
+                    <param name="pattern" value="&quot;%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%e%n&quot;"/>
+                    <param name="subsystem" value="logging"/>
+                    <param name="pattern-formatter" value="COLOR-PATTERN"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.logging.console-handler">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.console-handler:subsystem=logging,console-handler=CONSOLE">
+                    <param name="subsystem" value="logging"/>
+                    <param name="named-formatter" value="COLOR-PATTERN"/>
+                    <param name="level" value="INFO"/>
+                    <param name="console-handler" value="CONSOLE"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.logging.periodic-rotating-file-handler">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.periodic-rotating-file-handler:subsystem=logging,periodic-rotating-file-handler=FILE">
+                    <param name="autoflush" value="true"/>
+                    <param name="periodic-rotating-file-handler" value="FILE"/>
+                    <param name="file" value="{relative-to=jboss.server.log.dir,path=server.log}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="logging"/>
+                    <param name="named-formatter" value="PATTERN"/>
+                    <param name="suffix" value=".yyyy-MM-dd"/>
+                    <param name="append" value="true"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.logging.logger">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.logger:subsystem=logging,logger=com.arjuna">
+                    <param name="subsystem" value="logging"/>
+                    <param name="level" value="WARN"/>
+                    <param name="logger" value="com.arjuna"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.logger:subsystem=logging,logger=io.jaegertracing.Configuration">
+                    <param name="subsystem" value="logging"/>
+                    <param name="level" value="WARN"/>
+                    <param name="logger" value="io.jaegertracing.Configuration"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.logger:subsystem=logging,logger=org.jboss.as.config">
+                    <param name="subsystem" value="logging"/>
+                    <param name="level" value="DEBUG"/>
+                    <param name="logger" value="org.jboss.as.config"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.logger:subsystem=logging,logger=sun.rmi">
+                    <param name="subsystem" value="logging"/>
+                    <param name="level" value="WARN"/>
+                    <param name="logger" value="sun.rmi"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.logging.root-logger.ROOT">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.logging.root-logger.ROOT:subsystem=logging,root-logger=ROOT">
+                    <param name="subsystem" value="logging"/>
+                    <param name="level" value="INFO"/>
+                    <param name="handlers" value="[CONSOLE, FILE]"/>
+                    <param name="root-logger" value="ROOT"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.core-management">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.core-management:subsystem=core-management">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="core-management"/>
+                    <param name="extension" value="org.wildfly.extension.core-management"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron:subsystem=elytron">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="disallowed-providers" value="[OracleUcrypto]"/>
+                    <param name="final-providers" value="combined-providers"/>
+                    <param name="extension" value="org.wildfly.extension.elytron"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.provider-loader">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.provider-loader:subsystem=elytron,provider-loader=elytron">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="provider-loader" value="elytron"/>
+                    <param name="module" value="org.wildfly.security.elytron"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.provider-loader:subsystem=elytron,provider-loader=openssl">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="provider-loader" value="openssl"/>
+                    <param name="module" value="org.wildfly.openssl"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.aggregate-providers">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.aggregate-providers:subsystem=elytron,aggregate-providers=combined-providers">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="aggregate-providers" value="combined-providers"/>
+                    <param name="providers" value="[elytron, openssl]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.identity-realm">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.identity-realm:identity-realm=local,subsystem=elytron">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="identity-realm" value="local"/>
+                    <param name="identity" value="$local"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.file-audit-log">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.file-audit-log:file-audit-log=local-audit,subsystem=elytron">
+                    <param name="path" value="audit.log"/>
+                    <param name="relative-to" value="jboss.server.log.dir"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="format" value="JSON"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="file-audit-log" value="local-audit"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.constant-realm-mapper">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.constant-realm-mapper:subsystem=elytron,constant-realm-mapper=local">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="constant-realm-mapper" value="local"/>
+                    <param name="realm-name" value="local"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.provider-http-server-mechanism-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.provider-http-server-mechanism-factory:subsystem=elytron,provider-http-server-mechanism-factory=global">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="provider-http-server-mechanism-factory" value="global"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.simple-permission-mapper">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.simple-permission-mapper:simple-permission-mapper=default-permission-mapper,subsystem=elytron">
+                    <param name="simple-permission-mapper" value="default-permission-mapper"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="permission-mappings" value="[{principals=[anonymous],permission-sets=[permission-set=default-permissions]},{match-all=true,permission-sets=[permission-set=login-permission,permission-set=default-permissions]}]"/>
+                    <param name="mapping-mode" value="first"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.simple-role-decoder">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.simple-role-decoder:subsystem=elytron,simple-role-decoder=groups-to-roles">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="simple-role-decoder" value="groups-to-roles"/>
+                    <param name="attribute" value="groups"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.provider-sasl-server-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.provider-sasl-server-factory:subsystem=elytron,provider-sasl-server-factory=global">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="provider-sasl-server-factory" value="global"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.mechanism-provider-filtering-sasl-server-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.mechanism-provider-filtering-sasl-server-factory:subsystem=elytron,mechanism-provider-filtering-sasl-server-factory=elytron">
+                    <param name="sasl-server-factory" value="global"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="mechanism-provider-filtering-sasl-server-factory" value="elytron"/>
+                    <param name="filters" value="[{provider-name=WildFlyElytron}]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.configurable-sasl-server-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.configurable-sasl-server-factory:configurable-sasl-server-factory=configured,subsystem=elytron">
+                    <param name="sasl-server-factory" value="elytron"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="configurable-sasl-server-factory" value="configured"/>
+                    <param name="properties" value="{wildfly.sasl.local-user.default-user=&quot;\$local&quot;}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.constant-role-mapper">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.constant-role-mapper:subsystem=elytron,constant-role-mapper=super-user-mapper">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="constant-role-mapper" value="super-user-mapper"/>
+                    <param name="roles" value="[SuperUser]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.permission-set">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.permission-set:subsystem=elytron,permission-set=login-permission">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="permission-set" value="login-permission"/>
+                    <param name="permissions" value="[class-name=org.wildfly.security.auth.permission.LoginPermission]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.permission-set:subsystem=elytron,permission-set=default-permissions">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="permission-set" value="default-permissions"/>
+                    <param name="permissions" value="[]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.properties-realm">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.properties-realm:properties-realm=ApplicationRealm,subsystem=elytron">
+                    <param name="properties-realm" value="ApplicationRealm"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="users-properties" value="{path=application-users.properties,relative-to=jboss.server.config.dir,digest-realm-name=ApplicationRealm}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.properties-realm.groups-properties">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.properties-realm.groups-properties:properties-realm=ApplicationRealm,subsystem=elytron">
+                    <param name="properties-realm" value="ApplicationRealm"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="path" value="application-roles.properties"/>
+                    <param name="relative-to" value="jboss.server.config.dir"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.security-domain">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.security-domain:security-domain=ApplicationDomain,subsystem=elytron">
+                    <param name="security-domain" value="ApplicationDomain"/>
+                    <param name="realms" value="[{realm=ApplicationRealm,role-decoder=groups-to-roles},{realm=local}]"/>
+                    <param name="default-realm" value="ApplicationRealm"/>
+                    <param name="permission-mapper" value="default-permission-mapper"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.sasl-authentication-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.sasl-authentication-factory:sasl-authentication-factory=application-sasl-authentication,subsystem=elytron">
+                    <param name="sasl-server-factory" value="configured"/>
+                    <param name="security-domain" value="ApplicationDomain"/>
+                    <param name="sasl-authentication-factory" value="application-sasl-authentication"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="mechanism-configurations" value="[{mechanism-name=JBOSS-LOCAL-USER,realm-mapper=local},{mechanism-name=DIGEST-MD5,mechanism-realm-configurations=[{realm-name=ApplicationRealm}]}]"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.properties-realm">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.properties-realm:properties-realm=ManagementRealm,subsystem=elytron">
+                    <param name="properties-realm" value="ManagementRealm"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="users-properties" value="{path=mgmt-users.properties,relative-to=jboss.server.config.dir,digest-realm-name=ManagementRealm}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.properties-realm.groups-properties">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.properties-realm.groups-properties:properties-realm=ManagementRealm,subsystem=elytron">
+                    <param name="properties-realm" value="ManagementRealm"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="path" value="mgmt-groups.properties"/>
+                    <param name="relative-to" value="jboss.server.config.dir"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.security-domain">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.security-domain:security-domain=ManagementDomain,subsystem=elytron">
+                    <param name="security-domain" value="ManagementDomain"/>
+                    <param name="realms" value="[{realm=ManagementRealm,role-decoder=groups-to-roles},{realm=local,role-mapper=super-user-mapper}]"/>
+                    <param name="default-realm" value="ManagementRealm"/>
+                    <param name="permission-mapper" value="default-permission-mapper"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.sasl-authentication-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.sasl-authentication-factory:sasl-authentication-factory=management-sasl-authentication,subsystem=elytron">
+                    <param name="sasl-server-factory" value="configured"/>
+                    <param name="security-domain" value="ManagementDomain"/>
+                    <param name="sasl-authentication-factory" value="management-sasl-authentication"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="mechanism-configurations" value="[{mechanism-name=JBOSS-LOCAL-USER,realm-mapper=local},{mechanism-name=DIGEST-MD5,mechanism-realm-configurations=[{realm-name=ManagementRealm}]}]"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.http-authentication-factory">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.elytron.http-authentication-factory:http-authentication-factory=management-http-authentication,subsystem=elytron">
+                    <param name="security-domain" value="ManagementDomain"/>
+                    <param name="http-authentication-factory" value="management-http-authentication"/>
+                    <param name="http-server-mechanism-factory" value="global"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="mechanism-configurations" value="[{mechanism-name=DIGEST,mechanism-realm-configurations=[{realm-name=ManagementRealm}]}]"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.elytron.permission-set.permissions">
+                <feature>
+                    <param name="permission-set" value="default-permissions"/>
+                    <param name="module" value="org.wildfly.extension.batch.jberet"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="target-name" value="*"/>
+                    <param name="class-name" value="org.wildfly.extension.batch.jberet.deployment.BatchPermission"/>
+                </feature>
+                <feature>
+                    <param name="permission-set" value="default-permissions"/>
+                    <param name="module" value="org.wildfly.transaction.client"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="class-name" value="org.wildfly.transaction.client.RemoteTransactionPermission"/>
+                </feature>
+                <feature>
+                    <param name="permission-set" value="default-permissions"/>
+                    <param name="module" value="org.jboss.ejb-client"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="elytron"/>
+                    <param name="class-name" value="org.jboss.ejb.client.RemoteEJBPermission"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.request-controller">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.request-controller:subsystem=request-controller">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="request-controller"/>
+                    <param name="extension" value="org.wildfly.extension.request-controller"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security-manager">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.security-manager:subsystem=security-manager">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="security-manager"/>
+                    <param name="extension" value="org.wildfly.extension.security.manager"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security-manager.deployment-permissions.default">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.security-manager.deployment-permissions.default:deployment-permissions=default,subsystem=security-manager">
+                    <param name="deployment-permissions" value="default"/>
+                    <param name="subsystem" value="security-manager"/>
+                    <param name="maximum-permissions" value="[{class=java.security.AllPermission}]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.deployment-scanner">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.deployment-scanner:subsystem=deployment-scanner">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="deployment-scanner"/>
+                    <param name="extension" value="org.jboss.as.deployment-scanner"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.deployment-scanner.scanner">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.deployment-scanner.scanner:scanner=default,subsystem=deployment-scanner">
+                    <param name="scanner" value="default"/>
+                    <param name="subsystem" value="deployment-scanner"/>
+                    <param name="path" value="deployments"/>
+                    <param name="scan-interval" value="5000"/>
+                    <param name="relative-to" value="jboss.server.base.dir"/>
+                    <param name="runtime-failure-causes-rollback" value="${jboss.deployment.scanner.rollback.on.failure:false}"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.io">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.io:subsystem=io">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="io"/>
+                    <param name="extension" value="org.wildfly.extension.io"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.io.buffer-pool">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.io.buffer-pool:buffer-pool=default,subsystem=io">
+                    <param name="buffer-pool" value="default"/>
+                    <param name="subsystem" value="io"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.io.worker">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.io.worker:worker=default,subsystem=io">
+                    <param name="worker" value="default"/>
+                    <param name="subsystem" value="io"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.remoting">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.remoting:subsystem=remoting">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="remoting"/>
+                    <param name="extension" value="org.jboss.as.remoting"/>
+                    <param name="worker" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.remoting.configuration.endpoint">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.remoting.configuration.endpoint:configuration=endpoint,subsystem=remoting">
+                    <param name="configuration" value="endpoint"/>
+                    <param name="subsystem" value="remoting"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.remoting.http-connector">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.remoting.http-connector:http-connector=http-remoting-connector,subsystem=remoting">
+                    <param name="http-connector" value="http-remoting-connector"/>
+                    <param name="connector-ref" value="default"/>
+                    <param name="subsystem" value="remoting"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+        </feature-pack>
+        <feature-pack location="wildfly-servlet@maven(org.jboss.universe:community-universe):current#21.0.0.Final">
+            <spec name="subsystem.naming">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.naming:subsystem=naming">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="naming"/>
+                    <param name="extension" value="org.jboss.as.naming"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.naming.service.remote-naming">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.naming.service.remote-naming:subsystem=naming,service=remote-naming">
+                    <param name="subsystem" value="naming"/>
+                    <param name="service" value="remote-naming"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.ee:subsystem=ee">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="ee"/>
+                    <param name="spec-descriptor-property-replacement" value="false"/>
+                    <param name="extension" value="org.jboss.as.ee"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee.context-service">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.ee.context-service:subsystem=ee,context-service=default">
+                    <param name="subsystem" value="ee"/>
+                    <param name="context-service" value="default"/>
+                    <param name="use-transaction-setup-provider" value="true"/>
+                    <param name="jndi-name" value="java:jboss/ee/concurrency/context/default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee.managed-executor-service">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.ee.managed-executor-service:subsystem=ee,managed-executor-service=default">
+                    <param name="keepalive-time" value="5000"/>
+                    <param name="managed-executor-service" value="default"/>
+                    <param name="context-service" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="ee"/>
+                    <param name="hung-task-threshold" value="60000"/>
+                    <param name="jndi-name" value="java:jboss/ee/concurrency/executor/default"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee.managed-scheduled-executor-service">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.ee.managed-scheduled-executor-service:managed-scheduled-executor-service=default,subsystem=ee">
+                    <param name="keepalive-time" value="3000"/>
+                    <param name="context-service" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="ee"/>
+                    <param name="managed-scheduled-executor-service" value="default"/>
+                    <param name="hung-task-threshold" value="60000"/>
+                    <param name="jndi-name" value="java:jboss/ee/concurrency/scheduler/default"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee.managed-thread-factory">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.ee.managed-thread-factory:managed-thread-factory=default,subsystem=ee">
+                    <param name="subsystem" value="ee"/>
+                    <param name="managed-thread-factory" value="default"/>
+                    <param name="context-service" value="default"/>
+                    <param name="jndi-name" value="java:jboss/ee/concurrency/factory/default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee.service.default-bindings">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.ee.service.default-bindings:subsystem=ee,service=default-bindings">
+                    <param name="managed-thread-factory" value="java:jboss/ee/concurrency/factory/default"/>
+                    <param name="context-service" value="java:jboss/ee/concurrency/context/default"/>
+                    <param name="managed-executor-service" value="java:jboss/ee/concurrency/executor/default"/>
+                    <param name="service" value="default-bindings"/>
+                    <param name="datasource" value="java:jboss/datasources/ExampleDS"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="ee"/>
+                    <param name="managed-scheduled-executor-service" value="java:jboss/ee/concurrency/scheduler/default"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow:subsystem=undertow">
+                    <param name="extension" value="org.wildfly.extension.undertow"/>
+                    <param name="default-virtual-host" value="default-host"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="default-servlet-container" value="default"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="undertow"/>
+                    <param name="default-server" value="default-server"/>
+                    <param name="default-security-domain" value="other"/>
+                    <param name="statistics-enabled" value="${wildfly.undertow.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.server">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.server:subsystem=undertow,server=default-server">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="server" value="default-server"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.server.host">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.server.host:host=default-host,server=default-server,subsystem=undertow">
+                    <param name="host" value="default-host"/>
+                    <param name="server" value="default-server"/>
+                    <param name="subsystem" value="undertow"/>
+                    <param name="alias" value="[localhost]"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.servlet-container">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.servlet-container:subsystem=undertow,servlet-container=default">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="servlet-container" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.buffer-cache">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.buffer-cache:subsystem=undertow,buffer-cache=default">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="buffer-cache" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.configuration.filter">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.configuration.filter:subsystem=undertow,configuration=filter">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="configuration" value="filter"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.configuration.handler">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.configuration.handler:subsystem=undertow,configuration=handler">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="configuration" value="handler"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.server.http-listener">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.server.http-listener:server=default-server,subsystem=undertow,http-listener=default">
+                    <param name="server" value="default-server"/>
+                    <param name="socket-binding" value="http"/>
+                    <param name="redirect-socket" value="https"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="undertow"/>
+                    <param name="http-listener" value="default"/>
+                    <param name="enable-http2" value="true"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.configuration.handler.file">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.configuration.handler.file:subsystem=undertow,configuration=handler,file=welcome-content">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="path" value="${jboss.home.dir}/welcome-content"/>
+                    <param name="file" value="welcome-content"/>
+                    <param name="configuration" value="handler"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.server.host.location">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.server.host.location:host=default-host,subsystem=undertow,server=default-server,location=/">
+                    <param name="host" value="default-host"/>
+                    <param name="subsystem" value="undertow"/>
+                    <param name="server" value="default-server"/>
+                    <param name="handler" value="welcome-content"/>
+                    <param name="location" value="/"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.server.host.setting.http-invoker">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.server.host.setting.http-invoker:host=default-host,server=default-server,subsystem=undertow,setting=http-invoker">
+                    <param name="host" value="default-host"/>
+                    <param name="server" value="default-server"/>
+                    <param name="subsystem" value="undertow"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="setting" value="http-invoker"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.servlet-container.setting.jsp">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.servlet-container.setting.jsp:subsystem=undertow,servlet-container=default,setting=jsp">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="servlet-container" value="default"/>
+                    <param name="setting" value="jsp"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.servlet-container.setting.websockets">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.servlet-container.setting.websockets:subsystem=undertow,servlet-container=default,setting=websockets">
+                    <param name="subsystem" value="undertow"/>
+                    <param name="servlet-container" value="default"/>
+                    <param name="setting" value="websockets"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.undertow.server.https-listener">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.undertow.server.https-listener:subsystem=undertow,server=default-server,https-listener=https">
+                    <param name="server" value="default-server"/>
+                    <param name="socket-binding" value="https"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="undertow"/>
+                    <param name="security-realm" value="ApplicationRealm"/>
+                    <param name="https-listener" value="https"/>
+                    <param name="enable-http2" value="true"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security:subsystem=security">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="extension" value="org.jboss.as.security"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain:security-domain=other,subsystem=security">
+                    <param name="security-domain" value="other"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="cache-type" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authentication.classic">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.classic:security-domain=other,subsystem=security,authentication=classic">
+                    <param name="security-domain" value="other"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="authentication" value="classic"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authentication.classic.login-module">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.classic.login-module:security-domain=other,subsystem=security,login-module=Remoting,authentication=classic">
+                    <param name="security-domain" value="other"/>
+                    <param name="module-options" value="{password-stacking=useFirstPass}"/>
+                    <param name="code" value="Remoting"/>
+                    <param name="flag" value="optional"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="login-module" value="Remoting"/>
+                    <param name="authentication" value="classic"/>
+                </feature>
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.classic.login-module:security-domain=other,subsystem=security,login-module=RealmDirect,authentication=classic">
+                    <param name="security-domain" value="other"/>
+                    <param name="module-options" value="{password-stacking=useFirstPass}"/>
+                    <param name="code" value="RealmDirect"/>
+                    <param name="flag" value="required"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="login-module" value="RealmDirect"/>
+                    <param name="authentication" value="classic"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain:security-domain=jboss-web-policy,subsystem=security">
+                    <param name="security-domain" value="jboss-web-policy"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="cache-type" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authorization.classic">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authorization.classic:security-domain=jboss-web-policy,authorization=classic,subsystem=security">
+                    <param name="security-domain" value="jboss-web-policy"/>
+                    <param name="authorization" value="classic"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authorization.classic.policy-module">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authorization.classic.policy-module:security-domain=jboss-web-policy,authorization=classic,subsystem=security,policy-module=Delegating">
+                    <param name="security-domain" value="jboss-web-policy"/>
+                    <param name="authorization" value="classic"/>
+                    <param name="code" value="Delegating"/>
+                    <param name="flag" value="required"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="policy-module" value="Delegating"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain:security-domain=jaspitest,subsystem=security">
+                    <param name="security-domain" value="jaspitest"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="cache-type" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authentication.jaspi">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.jaspi:security-domain=jaspitest,subsystem=security,authentication=jaspi">
+                    <param name="security-domain" value="jaspitest"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="authentication" value="jaspi"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authentication.jaspi.auth-module">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.jaspi.auth-module:security-domain=jaspitest,auth-module=Dummy,subsystem=security,authentication=jaspi">
+                    <param name="security-domain" value="jaspitest"/>
+                    <param name="auth-module" value="Dummy"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="code" value="Dummy"/>
+                    <param name="authentication" value="jaspi"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authentication.jaspi.login-module-stack">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.jaspi.login-module-stack:security-domain=jaspitest,login-module-stack=dummy,subsystem=security,authentication=jaspi">
+                    <param name="security-domain" value="jaspitest"/>
+                    <param name="login-module-stack" value="dummy"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="authentication" value="jaspi"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authentication.jaspi.login-module-stack.login-module">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authentication.jaspi.login-module-stack.login-module:security-domain=jaspitest,login-module-stack=dummy,subsystem=security,login-module=Dummy,authentication=jaspi">
+                    <param name="security-domain" value="jaspitest"/>
+                    <param name="code" value="Dummy"/>
+                    <param name="flag" value="optional"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="login-module-stack" value="dummy"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="login-module" value="Dummy"/>
+                    <param name="authentication" value="jaspi"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain:security-domain=jboss-ejb-policy,subsystem=security">
+                    <param name="security-domain" value="jboss-ejb-policy"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="cache-type" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authorization.classic">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authorization.classic:security-domain=jboss-ejb-policy,authorization=classic,subsystem=security">
+                    <param name="security-domain" value="jboss-ejb-policy"/>
+                    <param name="authorization" value="classic"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.security.security-domain.authorization.classic.policy-module">
+                <feature id="{wildfly-servlet@maven(org.jboss.universe:community-universe)}subsystem.security.security-domain.authorization.classic.policy-module:security-domain=jboss-ejb-policy,authorization=classic,subsystem=security,policy-module=Delegating">
+                    <param name="security-domain" value="jboss-ejb-policy"/>
+                    <param name="authorization" value="classic"/>
+                    <param name="code" value="Delegating"/>
+                    <param name="flag" value="required"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="security"/>
+                    <param name="policy-module" value="Delegating"/>
+                </feature>
+            </spec>
+        </feature-pack>
+        <feature-pack location="wildfly-core@maven(org.jboss.universe:community-universe):current#13.0.1.Final">
+            <spec name="subsystem.discovery">
+                <feature id="{wildfly-core@maven(org.jboss.universe:community-universe)}subsystem.discovery:subsystem=discovery">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="discovery"/>
+                    <param name="extension" value="org.wildfly.extension.discovery"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+        </feature-pack>
+        <feature-pack location="wildfly-ee@maven(org.jboss.universe:community-universe):current#21.0.0.Final">
+            <spec name="subsystem.infinispan">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan:subsystem=infinispan">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="extension" value="org.jboss.as.clustering.infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container:cache-container=web,subsystem=infinispan">
+                    <param name="cache-container" value="web"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="default-cache" value="passivation"/>
+                    <param name="module" value="org.wildfly.clustering.web.infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=web,local-cache=passivation,subsystem=infinispan">
+                    <param name="cache-container" value="web"/>
+                    <param name="local-cache" value="passivation"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=web,local-cache=sso,subsystem=infinispan">
+                    <param name="cache-container" value="web"/>
+                    <param name="local-cache" value="sso"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=web,local-cache=routing,subsystem=infinispan">
+                    <param name="cache-container" value="web"/>
+                    <param name="local-cache" value="routing"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container:cache-container=ejb,subsystem=infinispan">
+                    <param name="cache-container" value="ejb"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="aliases" value="[sfsb]"/>
+                    <param name="default-cache" value="passivation"/>
+                    <param name="module" value="org.wildfly.clustering.ejb.infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=ejb,local-cache=passivation,subsystem=infinispan">
+                    <param name="cache-container" value="ejb"/>
+                    <param name="local-cache" value="passivation"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container:cache-container=server,subsystem=infinispan">
+                    <param name="cache-container" value="server"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="default-cache" value="default"/>
+                    <param name="module" value="org.wildfly.clustering.server"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=server,local-cache=default,subsystem=infinispan">
+                    <param name="cache-container" value="server"/>
+                    <param name="local-cache" value="default"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache.store.file">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.store.file:cache-container=web,local-cache=passivation,subsystem=infinispan,store=file">
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="cache-container" value="web"/>
+                    <param name="local-cache" value="passivation"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="passivation" value="true"/>
+                    <param name="purge" value="false"/>
+                    <param name="store" value="file"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.store.file:cache-container=ejb,local-cache=passivation,subsystem=infinispan,store=file">
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="cache-container" value="ejb"/>
+                    <param name="local-cache" value="passivation"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="passivation" value="true"/>
+                    <param name="purge" value="false"/>
+                    <param name="store" value="file"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container:cache-container=hibernate,subsystem=infinispan">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="module" value="org.infinispan.hibernate-cache"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=hibernate,local-cache=entity,subsystem=infinispan">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="entity"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache.component.expiration">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.component.expiration:cache-container=hibernate,local-cache=entity,subsystem=infinispan,component=expiration">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="entity"/>
+                    <param name="max-idle" value="100000"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="component" value="expiration"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache.memory.heap">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.memory.heap:cache-container=hibernate,local-cache=entity,subsystem=infinispan,memory=heap">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="entity"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="memory" value="heap"/>
+                    <param name="size" value="10000"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=hibernate,local-cache=local-query,subsystem=infinispan">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="local-query"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache.component.expiration">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.component.expiration:cache-container=hibernate,local-cache=local-query,subsystem=infinispan,component=expiration">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="local-query"/>
+                    <param name="max-idle" value="100000"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="component" value="expiration"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache.memory.heap">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.memory.heap:cache-container=hibernate,local-cache=local-query,subsystem=infinispan,memory=heap">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="local-query"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="memory" value="heap"/>
+                    <param name="size" value="10000"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=hibernate,local-cache=timestamps,subsystem=infinispan">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="timestamps"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache:cache-container=hibernate,local-cache=pending-puts,subsystem=infinispan">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="pending-puts"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.infinispan.cache-container.local-cache.component.expiration">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.infinispan.cache-container.local-cache.component.expiration:cache-container=hibernate,local-cache=pending-puts,subsystem=infinispan,component=expiration">
+                    <param name="cache-container" value="hibernate"/>
+                    <param name="local-cache" value="pending-puts"/>
+                    <param name="max-idle" value="60000"/>
+                    <param name="subsystem" value="infinispan"/>
+                    <param name="component" value="expiration"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.distributable-web">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.distributable-web:subsystem=distributable-web">
+                    <param name="default-session-management" value="default"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="distributable-web"/>
+                    <param name="extension" value="org.wildfly.extension.clustering.web"/>
+                    <param name="default-single-sign-on-management" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.distributable-web.routing.infinispan">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.distributable-web.routing.infinispan:subsystem=distributable-web,routing=infinispan">
+                    <param name="cache-container" value="web"/>
+                    <param name="subsystem" value="distributable-web"/>
+                    <param name="routing" value="infinispan"/>
+                    <param name="cache" value="routing"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.distributable-web.infinispan-session-management">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.distributable-web.infinispan-session-management:subsystem=distributable-web,infinispan-session-management=default">
+                    <param name="cache-container" value="web"/>
+                    <param name="subsystem" value="distributable-web"/>
+                    <param name="infinispan-session-management" value="default"/>
+                    <param name="granularity" value="SESSION"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.distributable-web.infinispan-single-sign-on-management">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.distributable-web.infinispan-single-sign-on-management:subsystem=distributable-web,infinispan-single-sign-on-management=default">
+                    <param name="cache-container" value="web"/>
+                    <param name="subsystem" value="distributable-web"/>
+                    <param name="infinispan-single-sign-on-management" value="default"/>
+                    <param name="cache" value="sso"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.distributable-web.infinispan-session-management.affinity.primary-owner">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.distributable-web.infinispan-session-management.affinity.primary-owner:subsystem=distributable-web,infinispan-session-management=default,affinity=primary-owner">
+                    <param name="subsystem" value="distributable-web"/>
+                    <param name="infinispan-session-management" value="default"/>
+                    <param name="affinity" value="primary-owner"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.transactions">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.transactions:subsystem=transactions">
+                    <param name="extension" value="org.jboss.as.transactions"/>
+                    <param name="socket-binding" value="txn-recovery-environment"/>
+                    <param name="node-identifier" value="${jboss.tx.node.id:1}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="object-store-path" value="tx-object-store"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="transactions"/>
+                    <param name="process-id-uuid" value="true"/>
+                    <param name="object-store-relative-to" value="jboss.server.data.dir"/>
+                    <param name="statistics-enabled" value="${wildfly.transactions.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
+                    <param name="status-socket-binding" value="txn-status-manager"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.transactions.log-store.log-store">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.transactions.log-store.log-store:log-store=log-store,subsystem=transactions">
+                    <param name="log-store" value="log-store"/>
+                    <param name="subsystem" value="transactions"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.batch-jberet">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.batch-jberet:subsystem=batch-jberet">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="batch-jberet"/>
+                    <param name="extension" value="org.wildfly.extension.batch.jberet"/>
+                    <param name="default-thread-pool" value="batch"/>
+                    <param name="default-job-repository" value="in-memory"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.batch-jberet.in-memory-job-repository">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.batch-jberet.in-memory-job-repository:subsystem=batch-jberet,in-memory-job-repository=in-memory">
+                    <param name="subsystem" value="batch-jberet"/>
+                    <param name="in-memory-job-repository" value="in-memory"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.batch-jberet.thread-pool">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.batch-jberet.thread-pool:subsystem=batch-jberet,thread-pool=batch">
+                    <param name="subsystem" value="batch-jberet"/>
+                    <param name="thread-pool" value="batch"/>
+                    <param name="max-threads" value="10"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.batch-jberet.thread-pool.keepalive-time">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.batch-jberet.thread-pool.keepalive-time:subsystem=batch-jberet,thread-pool=batch">
+                    <param name="subsystem" value="batch-jberet"/>
+                    <param name="thread-pool" value="batch"/>
+                    <param name="unit" value="SECONDS"/>
+                    <param name="time" value="30"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.bean-validation">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.bean-validation:subsystem=bean-validation">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="bean-validation"/>
+                    <param name="extension" value="org.wildfly.extension.bean-validation"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca:subsystem=jca">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jca"/>
+                    <param name="extension" value="org.jboss.as.connector"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.archive-validation.archive-validation">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.archive-validation.archive-validation:subsystem=jca,archive-validation=archive-validation">
+                    <param name="fail-on-warn" value="false"/>
+                    <param name="subsystem" value="jca"/>
+                    <param name="archive-validation" value="archive-validation"/>
+                    <param name="fail-on-error" value="true"/>
+                    <param name="enabled" value="true"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.bean-validation.bean-validation">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.bean-validation.bean-validation:subsystem=jca,bean-validation=bean-validation">
+                    <param name="subsystem" value="jca"/>
+                    <param name="bean-validation" value="bean-validation"/>
+                    <param name="enabled" value="true"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.cached-connection-manager.cached-connection-manager">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.cached-connection-manager.cached-connection-manager:subsystem=jca,cached-connection-manager=cached-connection-manager">
+                    <param name="subsystem" value="jca"/>
+                    <param name="install" value="true"/>
+                    <param name="cached-connection-manager" value="cached-connection-manager"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.workmanager">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.workmanager:subsystem=jca,workmanager=default">
+                    <param name="name" value="default"/>
+                    <param name="subsystem" value="jca"/>
+                    <param name="workmanager" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.workmanager.short-running-threads">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.workmanager.short-running-threads:subsystem=jca,short-running-threads=default,workmanager=default">
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jca"/>
+                    <param name="workmanager" value="default"/>
+                    <param name="short-running-threads" value="default"/>
+                    <param name="max-threads" value="50"/>
+                    <param name="core-threads" value="50"/>
+                    <param name="queue-length" value="50"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.workmanager.short-running-threads.keepalive-time">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.workmanager.short-running-threads.keepalive-time:subsystem=jca,short-running-threads=default,workmanager=default">
+                    <param name="subsystem" value="jca"/>
+                    <param name="unit" value="SECONDS"/>
+                    <param name="workmanager" value="default"/>
+                    <param name="time" value="10"/>
+                    <param name="short-running-threads" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.workmanager.long-running-threads">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.workmanager.long-running-threads:subsystem=jca,long-running-threads=default,workmanager=default">
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jca"/>
+                    <param name="long-running-threads" value="default"/>
+                    <param name="workmanager" value="default"/>
+                    <param name="max-threads" value="50"/>
+                    <param name="core-threads" value="50"/>
+                    <param name="queue-length" value="50"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.workmanager.long-running-threads.keepalive-time">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.workmanager.long-running-threads.keepalive-time:subsystem=jca,long-running-threads=default,workmanager=default">
+                    <param name="subsystem" value="jca"/>
+                    <param name="long-running-threads" value="default"/>
+                    <param name="unit" value="SECONDS"/>
+                    <param name="workmanager" value="default"/>
+                    <param name="time" value="10"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jca.bootstrap-context">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jca.bootstrap-context:subsystem=jca,bootstrap-context=default">
+                    <param name="name" value="default"/>
+                    <param name="subsystem" value="jca"/>
+                    <param name="bootstrap-context" value="default"/>
+                    <param name="workmanager" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.datasources">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.datasources:subsystem=datasources">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="datasources"/>
+                    <param name="extension" value="org.jboss.as.connector"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.datasources.jdbc-driver">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.datasources.jdbc-driver:jdbc-driver=h2,subsystem=datasources">
+                    <param name="subsystem" value="datasources"/>
+                    <param name="driver-name" value="h2"/>
+                    <param name="driver-xa-datasource-class-name" value="org.h2.jdbcx.JdbcDataSource"/>
+                    <param name="jdbc-driver" value="h2"/>
+                    <param name="driver-module-name" value="com.h2database.h2"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.datasources.data-source">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.datasources.data-source:data-source=ExampleDS,subsystem=datasources">
+                    <param name="driver-name" value="h2"/>
+                    <param name="password" value="sa"/>
+                    <param name="use-java-context" value="true"/>
+                    <param name="connection-url" value="&quot;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE&quot;"/>
+                    <param name="user-name" value="sa"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="data-source" value="ExampleDS"/>
+                    <param name="subsystem" value="datasources"/>
+                    <param name="statistics-enabled" value="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
+                    <param name="enabled" value="true"/>
+                    <param name="jndi-name" value="java:jboss/datasources/ExampleDS"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.weld">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.weld:subsystem=weld">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="weld"/>
+                    <param name="extension" value="org.jboss.as.weld"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ee-security">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ee-security:subsystem=ee-security">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="ee-security"/>
+                    <param name="extension" value="org.wildfly.extension.ee-security"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3:subsystem=ejb3">
+                    <param name="default-stateful-bean-access-timeout" value="5000"/>
+                    <param name="extension" value="org.jboss.as.ejb3"/>
+                    <param name="default-missing-method-permissions-deny-access" value="true"/>
+                    <param name="default-sfsb-passivation-disabled-cache" value="simple"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="default-security-domain" value="other"/>
+                    <param name="default-sfsb-cache" value="simple"/>
+                    <param name="statistics-enabled" value="${wildfly.ejb3.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
+                    <param name="default-slsb-instance-pool" value="slsb-strict-max-pool"/>
+                    <param name="log-system-exceptions" value="true"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="default-singleton-bean-access-timeout" value="5000"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.cache">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.cache:subsystem=ejb3,cache=simple">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="cache" value="simple"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.cache:subsystem=ejb3,cache=distributable">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="cache" value="distributable"/>
+                    <param name="aliases" value="[passivating, clustered]"/>
+                    <param name="passivation-store" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.strict-max-bean-instance-pool">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.strict-max-bean-instance-pool:strict-max-bean-instance-pool=mdb-strict-max-pool,subsystem=ejb3">
+                    <param name="strict-max-bean-instance-pool" value="mdb-strict-max-pool"/>
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="derive-size" value="from-cpu-count"/>
+                    <param name="timeout" value="5"/>
+                    <param name="timeout-unit" value="MINUTES"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.strict-max-bean-instance-pool:strict-max-bean-instance-pool=slsb-strict-max-pool,subsystem=ejb3">
+                    <param name="strict-max-bean-instance-pool" value="slsb-strict-max-pool"/>
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="derive-size" value="from-worker-pools"/>
+                    <param name="timeout" value="5"/>
+                    <param name="timeout-unit" value="MINUTES"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.passivation-store">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.passivation-store:subsystem=ejb3,passivation-store=infinispan">
+                    <param name="cache-container" value="ejb"/>
+                    <param name="max-size" value="10000"/>
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="passivation-store" value="infinispan"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.thread-pool">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.thread-pool:subsystem=ejb3,thread-pool=default">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="thread-pool" value="default"/>
+                    <param name="max-threads" value="10"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.service.async">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.service.async:subsystem=ejb3,service=async">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="service" value="async"/>
+                    <param name="thread-pool-name" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.service.remote">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.service.remote:subsystem=ejb3,service=remote">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="cluster" value="ejb"/>
+                    <param name="connectors" value="[http-remoting-connector]"/>
+                    <param name="service" value="remote"/>
+                    <param name="thread-pool-name" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.service.remote.channel-creation-options">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.service.remote.channel-creation-options:subsystem=ejb3,channel-creation-options=MAX_OUTBOUND_MESSAGES,service=remote">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="channel-creation-options" value="MAX_OUTBOUND_MESSAGES"/>
+                    <param name="type" value="remoting"/>
+                    <param name="value" value="1234"/>
+                    <param name="service" value="remote"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.service.timer-service">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.service.timer-service:subsystem=ejb3,service=timer-service">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="default-data-store" value="default-file-store"/>
+                    <param name="service" value="timer-service"/>
+                    <param name="thread-pool-name" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.service.timer-service.file-data-store">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.service.timer-service.file-data-store:subsystem=ejb3,service=timer-service,file-data-store=default-file-store">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="path" value="timer-service-data"/>
+                    <param name="file-data-store" value="default-file-store"/>
+                    <param name="relative-to" value="jboss.server.data.dir"/>
+                    <param name="service" value="timer-service"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.ejb3.thread-pool.keepalive-time">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.ejb3.thread-pool.keepalive-time:subsystem=ejb3,thread-pool=default">
+                    <param name="subsystem" value="ejb3"/>
+                    <param name="thread-pool" value="default"/>
+                    <param name="unit" value="SECONDS"/>
+                    <param name="time" value="60"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.resource-adapters">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.resource-adapters:subsystem=resource-adapters">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="resource-adapters"/>
+                    <param name="extension" value="org.jboss.as.connector"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jpa">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jpa:subsystem=jpa">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jpa"/>
+                    <param name="default-extended-persistence-inheritance" value="DEEP"/>
+                    <param name="extension" value="org.jboss.as.jpa"/>
+                    <param name="default-datasource" value=""/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jsf">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jsf:subsystem=jsf">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jsf"/>
+                    <param name="extension" value="org.jboss.as.jsf"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jaxrs">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jaxrs:subsystem=jaxrs">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jaxrs"/>
+                    <param name="extension" value="org.jboss.as.jaxrs"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.jdr">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.jdr:subsystem=jdr">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="jdr"/>
+                    <param name="extension" value="org.jboss.as.jdr"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.microprofile-config-smallrye">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.microprofile-config-smallrye:subsystem=microprofile-config-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="microprofile-config-smallrye"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.config-smallrye"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.microprofile-opentracing-smallrye">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.microprofile-opentracing-smallrye:subsystem=microprofile-opentracing-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="microprofile-opentracing-smallrye"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.opentracing-smallrye"/>
+                    <param name="default-tracer" value="jaeger"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.microprofile-opentracing-smallrye.jaeger-tracer">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.microprofile-opentracing-smallrye.jaeger-tracer:subsystem=microprofile-opentracing-smallrye,jaeger-tracer=jaeger">
+                    <param name="subsystem" value="microprofile-opentracing-smallrye"/>
+                    <param name="sampler-param" value="1"/>
+                    <param name="jaeger-tracer" value="jaeger"/>
+                    <param name="sampler-type" value="const"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.pojo">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.pojo:subsystem=pojo">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="pojo"/>
+                    <param name="extension" value="org.jboss.as.pojo"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.sar">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.sar:subsystem=sar">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="sar"/>
+                    <param name="extension" value="org.jboss.as.sar"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.mail">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.mail:subsystem=mail">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="mail"/>
+                    <param name="extension" value="org.jboss.as.mail"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.mail.mail-session">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.mail.mail-session:subsystem=mail,mail-session=default">
+                    <param name="subsystem" value="mail"/>
+                    <param name="mail-session" value="default"/>
+                    <param name="jndi-name" value="java:jboss/mail/Default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.mail.mail-session.server.smtp">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.mail.mail-session.server.smtp:server=smtp,subsystem=mail,mail-session=default">
+                    <param name="outbound-socket-binding-ref" value="mail-smtp"/>
+                    <param name="server" value="smtp"/>
+                    <param name="subsystem" value="mail"/>
+                    <param name="mail-session" value="default"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.webservices">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.webservices:subsystem=webservices">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="webservices"/>
+                    <param name="extension" value="org.jboss.as.webservices"/>
+                    <param name="statistics-enabled" value="${wildfly.webservices.statistics-enabled:${wildfly.statistics-enabled:false}}"/>
+                    <param name="wsdl-host" value="${jboss.bind.address:127.0.0.1}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.webservices.client-config">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.webservices.client-config:client-config=Standard-Client-Config,subsystem=webservices">
+                    <param name="client-config" value="Standard-Client-Config"/>
+                    <param name="subsystem" value="webservices"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.webservices.endpoint-config">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.webservices.endpoint-config:subsystem=webservices,endpoint-config=Standard-Endpoint-Config">
+                    <param name="subsystem" value="webservices"/>
+                    <param name="endpoint-config" value="Standard-Endpoint-Config"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.webservices.endpoint-config:subsystem=webservices,endpoint-config=Recording-Endpoint-Config">
+                    <param name="subsystem" value="webservices"/>
+                    <param name="endpoint-config" value="Recording-Endpoint-Config"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.webservices.endpoint-config.pre-handler-chain">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.webservices.endpoint-config.pre-handler-chain:pre-handler-chain=recording-handlers,subsystem=webservices,endpoint-config=Recording-Endpoint-Config">
+                    <param name="pre-handler-chain" value="recording-handlers"/>
+                    <param name="subsystem" value="webservices"/>
+                    <param name="protocol-bindings" value="##SOAP11_HTTP ##SOAP11_HTTP_MTOM ##SOAP12_HTTP ##SOAP12_HTTP_MTOM"/>
+                    <param name="endpoint-config" value="Recording-Endpoint-Config"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.webservices.endpoint-config.pre-handler-chain.handler">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.webservices.endpoint-config.pre-handler-chain.handler:pre-handler-chain=recording-handlers,subsystem=webservices,handler=RecordingHandler,endpoint-config=Recording-Endpoint-Config">
+                    <param name="pre-handler-chain" value="recording-handlers"/>
+                    <param name="subsystem" value="webservices"/>
+                    <param name="handler" value="RecordingHandler"/>
+                    <param name="class" value="org.jboss.ws.common.invocation.RecordingServerHandler"/>
+                    <param name="endpoint-config" value="Recording-Endpoint-Config"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.microprofile-health-smallrye">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.microprofile-health-smallrye:subsystem=microprofile-health-smallrye">
+                    <param name="extension" value="org.wildfly.extension.microprofile.health-smallrye"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="microprofile-health-smallrye"/>
+                    <param name="empty-liveness-checks-status" value="${env.MP_HEALTH_EMPTY_LIVENESS_CHECKS_STATUS:UP}"/>
+                    <param name="empty-readiness-checks-status" value="${env.MP_HEALTH_EMPTY_READINESS_CHECKS_STATUS:UP}"/>
+                    <param name="security-enabled" value="false"/>
+                </feature>
+            </spec>
+            <spec name="subsystem.microprofile-metrics-smallrye">
+                <feature id="{wildfly-ee@maven(org.jboss.universe:community-universe)}subsystem.microprofile-metrics-smallrye:subsystem=microprofile-metrics-smallrye">
+                    <param name="extension" value="org.wildfly.extension.microprofile.metrics-smallrye"/>
+                    <param name="exposed-subsystems" value="[*]"/>
+                    <param name="prefix" value="${wildfly.metrics.prefix:wildfly}"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="microprofile-metrics-smallrye"/>
+                    <param name="security-enabled" value="false"/>
+                </feature>
+            </spec>
+        </feature-pack>
+        <feature-pack location="wildfly@maven(org.jboss.universe:community-universe):current#21.0.0.Final">
+            <spec name="subsystem.microprofile-jwt-smallrye">
+                <feature id="{wildfly@maven(org.jboss.universe:community-universe)}subsystem.microprofile-jwt-smallrye:subsystem=microprofile-jwt-smallrye">
+                    <param name="host" value="GLN_UNDEFINED"/>
+                    <param name="subsystem" value="microprofile-jwt-smallrye"/>
+                    <param name="extension" value="org.wildfly.extension.microprofile.jwt-smallrye"/>
+                    <param name="profile" value="GLN_UNDEFINED"/>
+                </feature>
+            </spec>
+        </feature-pack>
+    </config>
+</installation>

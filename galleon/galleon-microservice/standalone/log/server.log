@@ -1,0 +1,204 @@
+2020-10-22 10:16:57,855 INFO  [org.jboss.modules] (main) JBoss Modules version 1.10.2.Final
+2020-10-22 10:16:58,055 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.12.Final
+2020-10-22 10:16:58,061 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2020-10-22 10:16:58,123 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) starting
+2020-10-22 10:16:58,124 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /opt/java/hotspot/jdk8u265-b01/jre/lib/endorsed
+	java.ext.dirs = /opt/java/hotspot/jdk8u265-b01/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /opt/java/hotspot/jdk8u265-b01/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_265-b01
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = AdoptOpenJDK
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_265
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = AdoptOpenJDK
+	java.vm.version = 25.265-b01
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.8.9-200.fc32.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /opt/java/hotspot/jdk8u265-b01/jre/lib/resources.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/rt.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/sunrsasign.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/jsse.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/jce.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/charsets.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/jfr.jar:/opt/java/hotspot/jdk8u265-b01/jre/classes
+	sun.boot.library.path = /opt/java/hotspot/jdk8u265-b01/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2020-10-22 10:16:58,124 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/configuration/logging.properties 
+2020-10-22 10:16:58,533 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 16) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
+2020-10-22 10:16:58,534 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 17) WFLYNAM0001: Activating Naming Subsystem
+2020-10-22 10:16:58,540 INFO  [org.xnio] (ServerService Thread Pool -- 14) XNIO version 3.8.2.Final
+2020-10-22 10:16:58,544 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 15) WFLYRS0016: RESTEasy version 3.13.2.Final
+2020-10-22 10:16:58,548 INFO  [org.jboss.as.naming] (MSC service thread 1-5) WFLYNAM0003: Starting Naming Service
+2020-10-22 10:16:58,548 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0003: Undertow 2.2.2.Final starting
+2020-10-22 10:16:58,555 INFO  [org.xnio.nio] (ServerService Thread Pool -- 14) XNIO NIO Implementation Version 3.8.2.Final
+2020-10-22 10:16:58,562 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 14) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2020-10-22 10:16:58,592 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-6) WFLYDS0013: Started FileSystemDeploymentService for directory /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/deployments
+2020-10-22 10:16:58,592 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0012: Started server default-server.
+2020-10-22 10:16:58,593 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0018: Host default-host starting
+2020-10-22 10:16:58,617 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2020-10-22 10:16:58,630 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2020-10-22 10:16:58,631 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) started in 989ms - Started 69 of 76 services (19 services are lazy, passive or on-demand)
+2020-10-22 10:17:02,372 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0272: Suspending server
+2020-10-22 10:17:02,376 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2020-10-22 10:17:02,380 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0019: Host default-host stopping
+2020-10-22 10:17:02,380 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTP listener default suspending
+2020-10-22 10:17:02,381 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2020-10-22 10:17:02,382 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0004: Undertow 2.2.2.Final stopping
+2020-10-22 10:17:02,388 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0050: WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) stopped in 10ms
+2020-10-22 10:17:04,249 INFO  [org.jboss.modules] (main) JBoss Modules version 1.10.2.Final
+2020-10-22 10:17:04,448 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.12.Final
+2020-10-22 10:17:04,453 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2020-10-22 10:17:04,516 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) starting
+2020-10-22 10:17:04,517 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /opt/java/hotspot/jdk8u265-b01/jre/lib/endorsed
+	java.ext.dirs = /opt/java/hotspot/jdk8u265-b01/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /opt/java/hotspot/jdk8u265-b01/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_265-b01
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = AdoptOpenJDK
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_265
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = AdoptOpenJDK
+	java.vm.version = 25.265-b01
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice
+	jboss.host.name = set-fi
+	jboss.modules.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = set-fi
+	jboss.qualified.host.name = set-fi
+	jboss.server.base.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone
+	jboss.server.config.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/configuration
+	jboss.server.data.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/data
+	jboss.server.deploy.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/data/content
+	jboss.server.log.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/log
+	jboss.server.name = set-fi
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/configuration/logging.properties
+	module.path = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/modules
+	org.jboss.boot.log.file = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.8.9-200.fc32.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /opt/java/hotspot/jdk8u265-b01/jre/lib/resources.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/rt.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/sunrsasign.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/jsse.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/jce.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/charsets.jar:/opt/java/hotspot/jdk8u265-b01/jre/lib/jfr.jar:/opt/java/hotspot/jdk8u265-b01/jre/classes
+	sun.boot.library.path = /opt/java/hotspot/jdk8u265-b01/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/jboss-modules.jar -mp /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/modules org.jboss.as.standalone -Djboss.home.dir=/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice -Djboss.server.base.dir=/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice
+	user.home = /home/mstefank
+	user.language = en
+	user.name = mstefank
+	user.timezone = Europe/Prague
+2020-10-22 10:17:04,517 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/log/server.log -Dlogging.configuration=file:/home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/configuration/logging.properties 
+2020-10-22 10:17:04,897 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 16) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
+2020-10-22 10:17:04,898 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 17) WFLYNAM0001: Activating Naming Subsystem
+2020-10-22 10:17:04,904 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 15) WFLYRS0016: RESTEasy version 3.13.2.Final
+2020-10-22 10:17:04,905 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 2.2.2.Final starting
+2020-10-22 10:17:04,905 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+2020-10-22 10:17:04,905 INFO  [org.xnio] (ServerService Thread Pool -- 14) XNIO version 3.8.2.Final
+2020-10-22 10:17:04,916 INFO  [org.xnio.nio] (ServerService Thread Pool -- 14) XNIO NIO Implementation Version 3.8.2.Final
+2020-10-22 10:17:04,922 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 14) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2020-10-22 10:17:04,946 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0012: Started server default-server.
+2020-10-22 10:17:04,947 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0018: Host default-host starting
+2020-10-22 10:17:04,948 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory /home/mstefank/GIT/xstefank/learning-tests/galleon/galleon-microservice/standalone/deployments
+2020-10-22 10:17:04,971 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2020-10-22 10:17:04,983 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2020-10-22 10:17:04,984 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) started in 946ms - Started 69 of 76 services (19 services are lazy, passive or on-demand)
+2020-10-22 10:17:19,539 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0272: Suspending server
+2020-10-22 10:17:19,545 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2020-10-22 10:17:19,550 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0019: Host default-host stopping
+2020-10-22 10:17:19,550 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0008: Undertow HTTP listener default suspending
+2020-10-22 10:17:19,553 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2020-10-22 10:17:19,553 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 2.2.2.Final stopping
+2020-10-22 10:17:19,557 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0050: WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) stopped in 10ms

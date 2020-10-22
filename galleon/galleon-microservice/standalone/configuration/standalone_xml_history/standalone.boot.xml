@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<server xmlns="urn:jboss:domain:14.0">
+    <extensions>
+        <extension module="org.jboss.as.deployment-scanner"/>
+        <extension module="org.jboss.as.ee"/>
+        <extension module="org.jboss.as.jaxrs"/>
+        <extension module="org.jboss.as.naming"/>
+        <extension module="org.jboss.as.weld"/>
+        <extension module="org.wildfly.extension.bean-validation"/>
+        <extension module="org.wildfly.extension.io"/>
+        <extension module="org.wildfly.extension.microprofile.config-smallrye"/>
+        <extension module="org.wildfly.extension.undertow"/>
+    </extensions>
+    <profile>
+        <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
+            <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" runtime-failure-causes-rollback="${jboss.deployment.scanner.rollback.on.failure:false}"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:ee:5.0">
+            <spec-descriptor-property-replacement>false</spec-descriptor-property-replacement>
+            <concurrent>
+                <context-services>
+                    <context-service name="default" jndi-name="java:jboss/ee/concurrency/context/default" use-transaction-setup-provider="false"/>
+                </context-services>
+                <managed-thread-factories>
+                    <managed-thread-factory name="default" jndi-name="java:jboss/ee/concurrency/factory/default" context-service="default"/>
+                </managed-thread-factories>
+                <managed-executor-services>
+                    <managed-executor-service name="default" jndi-name="java:jboss/ee/concurrency/executor/default" context-service="default" hung-task-threshold="60000" keepalive-time="5000"/>
+                </managed-executor-services>
+                <managed-scheduled-executor-services>
+                    <managed-scheduled-executor-service name="default" jndi-name="java:jboss/ee/concurrency/scheduler/default" context-service="default" hung-task-threshold="60000" keepalive-time="3000"/>
+                </managed-scheduled-executor-services>
+            </concurrent>
+            <default-bindings context-service="java:jboss/ee/concurrency/context/default" managed-executor-service="java:jboss/ee/concurrency/executor/default" managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default" managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:io:3.0">
+            <worker name="default"/>
+            <buffer-pool name="default"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jaxrs:2.0"/>
+        <subsystem xmlns="urn:wildfly:microprofile-config-smallrye:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:naming:2.0"/>
+        <subsystem xmlns="urn:jboss:domain:undertow:11.0" default-server="default-server" default-virtual-host="default-host" default-servlet-container="default" statistics-enabled="${wildfly.undertow.statistics-enabled:${wildfly.statistics-enabled:false}}">
+            <buffer-cache name="default"/>
+            <server name="default-server">
+                <http-listener name="default" socket-binding="http" redirect-socket="https" enable-http2="true"/>
+                <host name="default-host" alias="localhost">
+                    <http-invoker/>
+                </host>
+            </server>
+            <servlet-container name="default">
+                <jsp-config/>
+                <websockets/>
+            </servlet-container>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:weld:4.0"/>
+    </profile>
+    <interfaces>
+        <interface name="public">
+            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
+        </interface>
+    </interfaces>
+    <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
+        <socket-binding name="ajp" port="${jboss.ajp.port:8009}"/>
+        <socket-binding name="http" port="${jboss.http.port:8080}"/>
+        <socket-binding name="https" port="${jboss.https.port:8443}"/>
+    </socket-binding-group>
+</server>
