@@ -1,9 +1,6 @@
 package io.xstefank.util;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.servlet.ServletContext;
-import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Path;
@@ -12,17 +9,9 @@ import java.nio.file.Paths;
 @ApplicationScoped
 public class HRService {
 
-    @Inject
-    ServletContext context;
-
 
     public Path getFile(String fileName) {
-        URL resource = null;
-        try {
-            resource = context.getResource("/hr/" + fileName);
-        } catch (MalformedURLException e) {
-            return null;
-        }
+        URL resource = this.getClass().getClassLoader().getResource("META-INF/resources/hr/" + fileName);
 
         try {
             return Paths.get(resource.toURI());
