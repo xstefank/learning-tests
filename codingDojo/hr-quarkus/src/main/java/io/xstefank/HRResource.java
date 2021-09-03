@@ -34,6 +34,37 @@ public class HRResource {
     HRService hrService;
 
     @GET
+    @Path("/divisibleSumPairs")
+    public void divisibleSumPairsREST() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("divisibleSumPairs.txt"));
+
+        int n = scanner.nextInt();
+        int k = scanner.nextInt();
+
+        List<Integer> ar = new ArrayList<>(n);
+
+        for (int i = 0; i < n; i++) {
+            ar.add(scanner.nextInt());
+        }
+
+        System.out.println(divisibleSumPairs(n, k, ar));
+    }
+
+    public static int divisibleSumPairs(int n, int k, List<Integer> ar) {
+        int divisibleSumPairsCount = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if ((ar.get(i) + ar.get(j)) % k == 0) {
+                    divisibleSumPairsCount++;
+                }
+            }
+        }
+
+        return divisibleSumPairsCount;
+    }
+
+    @GET
     @Path("/input")
     public void input() throws IOException, URISyntaxException {
 
