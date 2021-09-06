@@ -16,9 +16,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -31,6 +33,45 @@ public class HRResource {
 
     @Inject
     HRService hrService;
+
+    @GET
+    @Path("/migratoryBirds")
+    public void migratoryBirdsREST() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("migratoryBirds.txt"));
+
+        int n = scanner.nextInt();
+        List<Integer> list = new ArrayList<>(n);
+
+        for (int i = 0; i < n; i++) {
+            list.add(scanner.nextInt());
+        }
+
+        System.out.println(migratoryBirds(list));
+    }
+
+    public static int migratoryBirds(List<Integer> arr) {
+        Map<Integer, Integer> sightings = new HashMap<>();
+
+        arr.forEach(id -> {
+            if (sightings.containsKey(id)) {
+                sightings.compute(id, (key, oldValue) -> Integer.sum(oldValue, 1));
+            } else {
+                sightings.put(id, 1);
+            }
+        });
+
+        int maxSightingId = 0;
+        int maxSightingValue = 0;
+
+        for (Map.Entry<Integer, Integer> entry : sightings.entrySet()) {
+            if (entry.getValue() > maxSightingValue) {
+                maxSightingValue = entry.getValue();
+                maxSightingId = entry.getKey();
+            }
+        }
+
+        return maxSightingId;
+    }
 
     @GET
     @Path("/divisibleSumPairs")
