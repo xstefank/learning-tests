@@ -15,7 +15,7 @@ public class ServerFilter implements ContainerRequestFilter, ContainerResponseFi
     MyRequestScopedBean myRequestScopedBean;
 
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        System.out.println("ContainerRequest " + myRequestScopedBean.getUuid());
+        System.out.println("Container request " + myRequestScopedBean.getUuid());
     }
 
     public void filter(ContainerRequestContext containerRequestContext, ContainerResponseContext containerResponseContext) throws IOException {

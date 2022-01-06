@@ -1,5 +1,6 @@
 package io.xstefank;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;
@@ -9,6 +10,7 @@ import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
 @Provider
+@RequestScoped
 public class ClientFilter implements ClientRequestFilter, ClientResponseFilter {
 
     @Inject
