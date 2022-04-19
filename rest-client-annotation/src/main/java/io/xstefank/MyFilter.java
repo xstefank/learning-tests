@@ -9,15 +9,14 @@ import java.lang.reflect.Method;
 public class MyFilter implements ClientRequestFilter {
     @Override
     public void filter(ClientRequestContext requestContext) {
-        System.out.println(requestContext);
-
         // spec way
-        Method method = (Method) requestContext.getConfiguration()
-            .getProperty("org.eclipse.microprofile.rest.client.invokedMethod");
+        Method method = (Method) requestContext
+                .getProperty("org.eclipse.microprofile.rest.client.invokedMethod");
 
-        System.out.println(method.getDeclaringClass());
+        Class<?> declaringClass = method.getDeclaringClass();
+        System.out.println(declaringClass);
 
-//        MyAnnotation myAnnotation = declaringClass.getAnnotation(MyAnnotation.class);
-//        System.out.println(myAnnotation.value());
+        MyAnnotation myAnnotation = declaringClass.getAnnotation(MyAnnotation.class);
+        System.out.println(myAnnotation.value());
     }
 }
