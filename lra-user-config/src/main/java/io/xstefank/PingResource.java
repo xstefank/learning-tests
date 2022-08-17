@@ -1,5 +1,6 @@
 package io.xstefank;
 
+import javax.ws.rs.HeaderParam;
 import org.eclipse.microprofile.lra.annotation.ws.rs.LRA;
 
 import javax.ws.rs.GET;
@@ -11,7 +12,8 @@ public class PingResource {
     
     @GET
     @LRA
-    public Response ping() {
+    public Response ping(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
+        System.out.println("lraId = " + lraId);
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
