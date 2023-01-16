@@ -6,9 +6,8 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.PriorityBlockingQueue;
 
 @Path("/hr")
 public class HRResource {
@@ -39,5 +38,33 @@ public class HRResource {
         System.out.println(maxCalories);
 
     }
+
+    @GET
+    @Path("/advent2022_0102")
+    public void advent2022_0102() throws IOException {
+        // same output as 0101
+        Scanner scanner = new Scanner(hrService.getFile("advent2022_0101.txt"));
+
+        PriorityBlockingQueue<Long> maxCalories = new PriorityBlockingQueue<Long>();
+        Long currentCalories = 0L;
+
+        while (scanner.hasNextLine()) {
+            String s = scanner.nextLine();
+            if (!s.isEmpty()) {
+                currentCalories += Long.parseLong(s);
+            } else {
+                maxCalories.put(currentCalories);
+                if (maxCalories.size() > 3) {
+                    maxCalories.poll();
+                }
+                currentCalories = 0L;
+            }
+        }
+
+        System.out.println(maxCalories.poll() + maxCalories.poll() + maxCalories.poll());
+
+    }
+
+
 
 }
