@@ -29,16 +29,16 @@ public class PingResource {
         return Response.ok("Application deployed successfully").build();
     }
 
-    @PUT
-    @Path("/compensate")
+//    @PUT
+//    @Path("/compensate")
     @Compensate
     public Response compensate(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) String lraId) {
         System.out.println("COMPENSATE lraId = " + lraId);
         return Response.ok().build();
     }
 
-    @PUT
-    @Path("/complete")
+//    @PUT
+//    @Path("/complete")
     @Complete
     public void complete(@HeaderParam(LRA.LRA_HTTP_CONTEXT_HEADER) URI lraId) {
         System.out.println("COMPLETE lraId = " + lraId.toASCIIString());
