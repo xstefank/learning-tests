@@ -13,7 +13,7 @@ public class HRResourceTest {
         given()
           .when().get("/hr/day-of-the-programmer")
           .then()
-             .statusCode(200);
+             .statusCode(204);
     }
 
 }
