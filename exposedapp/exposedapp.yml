@@ -1,0 +1,7 @@
+apiVersion: "halkyon.io/v1alpha1"
+kind: ExposedApp
+metadata:
+  name: test-exposed-app
+
+spec:
+  imageRef: quay.io/xstefank/pa165-seminar-service
