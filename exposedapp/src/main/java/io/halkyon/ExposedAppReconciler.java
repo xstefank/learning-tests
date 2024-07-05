@@ -72,25 +72,26 @@ public class ExposedAppReconciler implements Reconciler<ExposedApp> {
             "kubernetes.io/ingress.class", "nginx"
         ));
 
-        client.network().v1().ingresses().createOrReplace(new IngressBuilder()
-            .withMetadata(metadata)
-            .withNewSpec()
-                .addNewRule()
-                    .withNewHttp()
-                        .addNewPath()
-                            .withPath("/")
-                            .withPathType("Prefix")
-                            .withNewBackend()
-                                .withNewService()
-                                    .withName(metadata.getName())
-                                    .withNewPort().withNumber(8080).endPort()
-                                .endService()
-                            .endBackend()
-                        .endPath()
-                    .endHttp()
-                .endRule()
-            .endSpec()
-            .build());
+//        client.network().v1().ingresses().createOrReplace(new IngressBuilder()
+//            .withMetadata(metadata)
+//            .withNewSpec()
+//                .addNewRule()
+//                .withHost("hello-quarkus.com")
+//                    .withNewHttp()
+//                        .addNewPath()
+//                            .withPath("/")
+//                            .withPathType("Prefix")
+//                            .withNewBackend()
+//                                .withNewService()
+//                                    .withName(metadata.getName())
+//                                    .withNewPort().withNumber(80).endPort()
+//                                .endService()
+//                            .endBackend()
+//                        .endPath()
+//                    .endHttp()
+//                .endRule()
+//            .endSpec()
+//            .build());
 
         return UpdateControl.noUpdate();
     }

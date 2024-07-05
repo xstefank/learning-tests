@@ -4,4 +4,4 @@ metadata:
   name: test-exposed-app
 
 spec:
-  imageRef: quay.io/xstefank/pa165-seminar-service
+  imageRef: quay.io/xstefank/hello-quarkus
