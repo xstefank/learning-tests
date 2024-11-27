@@ -1,0 +1,568 @@
+---
+openapi: 3.0.3
+info:
+  title: Quarkus bootstrap API
+  description: API that helps bootstrap a Quarkus application
+  contact:
+    name: Quarkus Developers
+    url: https://code.quarkus.io/
+    email: quarkus-dev@googlegroups.com
+  license:
+    name: Apache 2.0
+    url: https://github.com/quarkusio/code.quarkus.io/blob/main/LICENSE.txt
+  version: 1.0.0
+tags:
+- name: Download
+  description: Download endpoints
+- name: Extensions
+  description: Extension related endpoints
+- name: Platform
+  description: Platform related endpoints
+- name: Presets
+  description: Preset related endpoints
+- name: Project
+  description: Project creation endpoints
+paths:
+  /api/download:
+    get:
+      tags:
+      - Download
+      summary: Download a custom Quarkus application with the provided settings
+      description: Get Download
+      operationId: downloadForStream
+      parameters:
+      - name: S
+        in: query
+        description: The platform stream to use to create this project ('platformKey:streamId'
+          or 'streamId')
+        required: false
+        schema:
+          description: The platform stream to use to create this project ('platformKey:streamId'
+            or 'streamId')
+          enum:
+          - io.quarkus.platform:3.8
+          - io.quarkus.platform:3.15
+          - io.quarkus.platform:3.16
+          - io.quarkus.platform:3.17
+          - io.quarkus.platform:3.2
+          type: string
+      - name: a
+        in: query
+        description: "GAV: artifactId"
+        required: false
+        schema:
+          description: "GAV: artifactId"
+          default: code-with-quarkus
+          minLength: 1
+          pattern: "^[a-z][a-z0-9-._]*$"
+          type: string
+      - name: b
+        in: query
+        description: "The build tool to use (MAVEN, GRADLE or GRADLE_KOTLIN_DSL)"
+        required: false
+        schema:
+          default: MAVEN
+          enum:
+          - MAVEN
+          - GRADLE
+          - GRADLE_KOTLIN_DSL
+      - name: c
+        in: query
+        description: The class name to use in the generated application
+        required: false
+        schema:
+          description: The class name to use in the generated application
+          pattern: "^([a-zA-Z_$][a-zA-Z\\d_$]*\\.)*[a-zA-Z_$][a-zA-Z\\d_$]*$"
+          type: string
+      - name: e
+        in: query
+        description: The set of extension ids that will be included in the generated
+          application
+        required: false
+        schema:
+          description: The set of extension ids that will be included in the generated
+            application
+          type: object
+      - name: g
+        in: query
+        description: "GAV: groupId"
+        required: false
+        schema:
+          description: "GAV: groupId"
+          default: org.acme
+          minLength: 1
+          pattern: "^([a-zA-Z_$][a-zA-Z\\d_$]*\\.)*[a-zA-Z_$][a-zA-Z\\d_$]*$"
+          type: string
+      - name: j
+        in: query
+        description: The Java version for the generation application
+        required: false
+        schema:
+          format: int32
+          description: The Java version for the generation application
+          type: integer
+      - name: nc
+        in: query
+        description: No code
+        required: false
+        schema:
+          description: No code
+          default: false
+          type: boolean
+      - name: ne
+        in: query
+        description: "No code examples (Deprecated: use noCode (nc) instead)"
+        required: false
+        schema:
+          default: false
+          deprecated: true
+        deprecated: true
+      - name: p
+        in: query
+        description: The path of the REST endpoint created in the generated application
+        required: false
+        schema:
+          description: The path of the REST endpoint created in the generated application
+          pattern: "^\\/([a-z0-9\\-._~%!$&'()*+,;=:@]+\\/?)*$"
+          type: string
+      - name: v
+        in: query
+        description: "GAV: version"
+        required: false
+        schema:
+          description: "GAV: version"
+          default: 1.0.0-SNAPSHOT
+          minLength: 1
+          type: string
+      responses:
+        "200":
+          description: OK
+    post:
+      tags:
+      - Download
+      summary: Download a custom Quarkus application with the provided settings
+      description: Download
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProjectDefinition"
+      responses:
+        "200":
+          description: OK
+  /api/extensions:
+    get:
+      tags:
+      - Extensions
+      summary: Get the Quarkus Launcher list of Quarkus extensions
+      description: Extensions
+      operationId: extensions
+      parameters:
+      - name: id
+        in: query
+        schema:
+          type: string
+      - name: platformOnly
+        in: query
+        schema:
+          default: true
+          type: boolean
+      responses:
+        "200":
+          description: List of Quarkus extensions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CodeQuarkusExtension"
+  /api/extensions/stream/{streamKey}:
+    get:
+      tags:
+      - Extensions
+      summary: Get the Quarkus Launcher list of Quarkus extensions
+      description: Extensions For Stream
+      operationId: extensionsForStream
+      parameters:
+      - name: streamKey
+        in: path
+        required: true
+        schema:
+          enum:
+          - io.quarkus.platform:3.8
+          - io.quarkus.platform:3.15
+          - io.quarkus.platform:3.16
+          - io.quarkus.platform:3.17
+          - io.quarkus.platform:3.2
+          type: string
+      - name: id
+        in: query
+        schema:
+          type: string
+      - name: platformOnly
+        in: query
+        schema:
+          default: true
+          type: boolean
+      responses:
+        "200":
+          description: List of Quarkus extensions for a certain stream
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CodeQuarkusExtension"
+  /api/github/project:
+    post:
+      tags:
+      - Project
+      summary: Create project and push generated code to GitHub
+      description: Create Project
+      parameters:
+      - name: GitHub-Code
+        in: header
+        required: true
+        schema:
+          minLength: 1
+          type: string
+      - name: GitHub-State
+        in: header
+        required: true
+        schema:
+          minLength: 1
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProjectDefinition"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GitHubCreatedRepository"
+  /api/platforms:
+    get:
+      tags:
+      - Platform
+      summary: Get all available platforms
+      description: Platforms
+      responses:
+        "200":
+          description: All available platforms
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformCatalog"
+  /api/presets:
+    get:
+      tags:
+      - Presets
+      summary: Get the Quarkus Launcher list of Presets
+      description: Presets
+      operationId: presets
+      responses:
+        "200":
+          description: List of Presets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Preset"
+  /api/presets/stream/{streamKey}:
+    get:
+      tags:
+      - Presets
+      summary: Get the Quarkus Launcher list of Presets
+      description: Presets For Stream
+      operationId: presetsForStream
+      parameters:
+      - name: streamKey
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: List of Presets for a certain stream
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Preset"
+  /api/project:
+    post:
+      tags:
+      - Project
+      summary: Prepare a Quarkus application project to be downloaded
+      description: Project
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProjectDefinition"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreatedProject"
+  /api/streams:
+    get:
+      tags:
+      - Platform
+      summary: Get all available streams
+      description: Streams
+      responses:
+        "200":
+          description: All available streams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stream"
+components:
+  schemas:
+    ArtifactCoords:
+      type: object
+      properties:
+        groupId:
+          type: string
+        artifactId:
+          type: string
+        classifier:
+          type: string
+        type:
+          type: string
+        version:
+          type: string
+        key:
+          $ref: "#/components/schemas/ArtifactKey"
+        jar:
+          type: boolean
+        snapshot:
+          type: boolean
+    ArtifactKey:
+      type: object
+      properties:
+        groupId:
+          type: string
+        artifactId:
+          type: string
+        classifier:
+          type: string
+        type:
+          type: string
+    CodeQuarkusExtension:
+      type: object
+      properties:
+        id:
+          type: string
+        shortId:
+          type: string
+          deprecated: true
+        version:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        shortName:
+          type: string
+        category:
+          type: string
+        transitiveExtensions:
+          type: array
+          items:
+            type: string
+        tags:
+          type: array
+          items:
+            type: string
+        keywords:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+        providesExampleCode:
+          type: boolean
+          deprecated: true
+        providesCode:
+          type: boolean
+        guide:
+          type: string
+        order:
+          format: int32
+          type: integer
+        platform:
+          type: boolean
+        bom:
+          type: string
+    CreatedProject:
+      type: object
+      properties:
+        path:
+          type: string
+    GitHubCreatedRepository:
+      type: object
+      properties:
+        ownerName:
+          type: string
+        url:
+          type: string
+        defaultBranch:
+          type: string
+    JavaCompatibility:
+      type: object
+      properties:
+        versions:
+          uniqueItems: true
+          type: array
+          items:
+            format: int32
+            type: integer
+        recommended:
+          format: int32
+          type: integer
+    Platform:
+      type: object
+      properties:
+        platformKey:
+          type: string
+        name:
+          type: string
+        streams:
+          type: array
+          items:
+            $ref: "#/components/schemas/PlatformStream"
+        metadata:
+          type: object
+          additionalProperties: {}
+    PlatformCatalog:
+      type: object
+      properties:
+        platforms:
+          type: array
+          items:
+            $ref: "#/components/schemas/Platform"
+        metadata:
+          type: object
+          additionalProperties: {}
+    PlatformRelease:
+      type: object
+      properties:
+        version:
+          $ref: "#/components/schemas/PlatformReleaseVersion"
+        memberBoms:
+          type: array
+          items:
+            $ref: "#/components/schemas/ArtifactCoords"
+        quarkusCoreVersion:
+          type: string
+        upstreamQuarkusCoreVersion:
+          type: string
+        metadata:
+          type: object
+          additionalProperties: {}
+    PlatformReleaseVersion:
+      type: object
+    PlatformStream:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        releases:
+          type: array
+          items:
+            $ref: "#/components/schemas/PlatformRelease"
+        metadata:
+          type: object
+          additionalProperties: {}
+    Preset:
+      type: object
+      properties:
+        key:
+          type: string
+        title:
+          type: string
+        icon:
+          type: string
+        extensions:
+          type: array
+          items:
+            type: string
+    ProjectDefinition:
+      required:
+      - groupId
+      - artifactId
+      - version
+      - buildTool
+      type: object
+      properties:
+        streamKey:
+          enum:
+          - io.quarkus.platform:3.8
+          - io.quarkus.platform:3.15
+          - io.quarkus.platform:3.16
+          - io.quarkus.platform:3.17
+          - io.quarkus.platform:3.2
+          type: string
+        groupId:
+          minLength: 1
+          pattern: "^([a-zA-Z_$][a-zA-Z\\d_$]*\\.)*[a-zA-Z_$][a-zA-Z\\d_$]*$"
+          type: string
+        artifactId:
+          minLength: 1
+          pattern: "^[a-z][a-z0-9-._]*$"
+          type: string
+        version:
+          minLength: 1
+          type: string
+        className:
+          pattern: "^([a-zA-Z_$][a-zA-Z\\d_$]*\\.)*[a-zA-Z_$][a-zA-Z\\d_$]*$"
+          type: string
+        path:
+          pattern: "^\\/([a-z0-9\\-._~%!$&'()*+,;=:@]+\\/?)*$"
+          type: string
+        buildTool:
+          minLength: 1
+          pattern: ^(MAVEN)|(GRADLE)|(GRADLE_KOTLIN_DSL)$
+          type: string
+        javaVersion:
+          format: int32
+          type: integer
+        noCode:
+          type: boolean
+        noExamples:
+          type: boolean
+        extensions:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+    Stream:
+      type: object
+      properties:
+        key:
+          type: string
+        quarkusCoreVersion:
+          type: string
+        javaCompatibility:
+          $ref: "#/components/schemas/JavaCompatibility"
+        platformVersion:
+          type: string
+        recommended:
+          type: boolean
+        status:
+          type: string
+        lts:
+          type: boolean
