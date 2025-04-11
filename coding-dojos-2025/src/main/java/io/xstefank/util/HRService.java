@@ -32,6 +32,15 @@ public class HRService {
         return list;
     }
 
+    public static List<List<Integer>> readMatrix(Scanner scanner, int n) {
+        List<List<Integer>> matrix = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            List<Integer> row = readList(scanner, n);
+            matrix.add(row);
+        }
+        return matrix;
+    }
+
     public static void printDelimeter() {
         System.out.println("\n--------------------------------------\n");
     }
