@@ -6,15 +6,52 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
+
+import static io.xstefank.util.HRService.readList;
 
 @Path("/")
 public class HRResource {
 
     @Inject
     HRService hrService;
+
+
+    @GET
+    @Path("/sales-by-match")
+    public void salesByMatch () throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("sales-by-match.txt"));
+
+        int n = scanner.nextInt();
+        List<Integer> ar = readList(scanner, n);
+
+        scanner.close();
+
+        System.out.println(sockMerchant(n, ar));
+    }
+
+    public static int sockMerchant(int n, List<Integer> ar) {
+        int pairsCount = 0;
+
+        Set<Integer> pairs = new HashSet<>(n);
+
+        for (int i = 0; i < n; i++) {
+            Integer sock = ar.get(i);
+            if (pairs.contains(sock)) {
+                pairsCount++;
+                pairs.remove(sock);
+            } else {
+                pairs.add(sock);
+            }
+        }
+
+        return pairsCount;
+    }
 
     @GET
     @Path("/bill-division")
@@ -44,29 +81,5 @@ public class HRResource {
         } else {
             System.out.println(b - total / 2);
         }
-    }
-
-    private List<Integer> readList(Scanner scanner, int n) {
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            list.add(scanner.nextInt());
-        }
-        return list;
-    }
-
-    private static final int DAYS_NON_LEAP = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31;
-
-    public static String dayOfProgrammer(int year) {
-        int day = 0;
-        if (year == 1918) {
-            // Feb 14th is the 32nd day of the year
-            day = 256 - DAYS_NON_LEAP + 13;
-        } else if (year < 1918) {
-            day = year % 4 == 0 ? 256 - (DAYS_NON_LEAP + 1) : 256 - DAYS_NON_LEAP;
-        } else {
-            day = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0) ? 256 - (DAYS_NON_LEAP + 1) : 256 - DAYS_NON_LEAP;
-        }
-
-        return day + ".09." + year;
     }
 }
