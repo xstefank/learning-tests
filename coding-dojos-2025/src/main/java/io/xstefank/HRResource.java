@@ -19,6 +19,45 @@ public class HRResource {
     @Inject
     HRService hrService;
 
+    @GET
+    @Path("/countingValleys")
+    public void countingValleys() throws Exception {
+        Scanner scanner = new Scanner(hrService.getFile("counting-valleys.txt"));
+
+        int steps = scanner.nextInt();
+        String path = scanner.next();
+
+        scanner.close();
+
+        System.out.println(countingValleys(steps, path));
+    }
+
+    public static int countingValleys(int steps, String path) {
+        int position = 0;
+        int valleys = 0;
+        boolean inValley = false;
+
+        for (int i = 0; i < steps; i++) {
+            if (path.charAt(i) == 'D') {
+                position--;
+            } else if (path.charAt(i) == 'U') {
+                position++;
+            }
+
+            if (!inValley) {
+                if (position < 0) {
+                    inValley = true;
+                }
+            } else {
+                if (position == 0) {
+                    valleys++;
+                    inValley = false;
+                }
+            }
+        }
+
+        return valleys;
+    }
 
     @GET
     @Path("/sales-by-match")
@@ -31,7 +70,7 @@ public class HRResource {
         scanner.close();
 
         System.out.println(sockMerchant(n, ar));
-l    }
+    }
 
     public static int sockMerchant(int n, List<Integer> ar) {
         int pairsCount = 0;
