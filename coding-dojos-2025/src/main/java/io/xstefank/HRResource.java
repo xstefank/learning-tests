@@ -31,8 +31,7 @@ public class HRResource {
         scanner.close();
 
         System.out.println(sockMerchant(n, ar));
-        System.out.println(1 / 2);
-    }
+l    }
 
     public static int sockMerchant(int n, List<Integer> ar) {
         int pairsCount = 0;
