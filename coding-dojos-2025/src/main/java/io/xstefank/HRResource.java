@@ -6,10 +6,8 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -33,7 +31,6 @@ public class HRResource {
         scanner.close();
 
         System.out.println(sockMerchant(n, ar));
-        System.out.println(3 / 2);
     }
 
     public static int sockMerchant(int n, List<Integer> ar) {
