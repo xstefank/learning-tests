@@ -6,6 +6,9 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -31,23 +34,27 @@ public class HRResource {
     }
 
     public static int formingMagicSquare(List<List<Integer>> s) {
-        int magicSquares[][] = {
-            {2, 9, 4, 7, 5, 3, 6, 1, 8},
-            {4, 9, 2, 3, 5, 7, 8, 1, 6},
-            {4, 3, 8, 9, 5, 1, 2, 7, 6},
-            {8, 3, 4, 1, 5, 9, 6, 7, 2},
-            {6, 7, 2, 1, 5, 9, 8, 3, 4},
-            {2, 7, 6, 9, 5, 1, 4, 3, 8},
-            {6, 1, 8, 7, 5, 3, 2, 9, 4},
-            {8, 1, 6, 3, 5, 7, 4, 9, 2}
-        };
+//        List<int[]> magicSquares = List.of(
+//            new int[]{2, 9, 4, 7, 5, 3, 6, 1, 8},
+//            new int[]{4, 9, 2, 3, 5, 7, 8, 1, 6},
+//            new int[]{4, 3, 8, 9, 5, 1, 2, 7, 6},
+//            new int[]{8, 3, 4, 1, 5, 9, 6, 7, 2},
+//            new int[]{6, 7, 2, 1, 5, 9, 8, 3, 4},
+//            new int[]{2, 7, 6, 9, 5, 1, 4, 3, 8},
+//            new int[]{6, 1, 8, 7, 5, 3, 2, 9, 4},
+//            new int[]{8, 1, 6, 3, 5, 7, 4, 9, 2}
+//        );
+
+        for (int[] magicSquare : magicSquares) {
+            System.out.println(Arrays.toString(magicSquare));
+        }
 
         int minCost = 30;
-        for (int k = 0; k < 8; k++) {
+        for (int k = 0; k < magicSquares.size(); k++) {
             int cost = 0;
-            cost += Math.abs(magicSquares[k][0] - s.get(0).get(0))+Math.abs(magicSquares[k][1] - s.get(0).get(1))+Math.abs(magicSquares[k][2] - s.get(0).get(2));
-            cost += Math.abs(magicSquares[k][3] - s.get(1).get(0))+Math.abs(magicSquares[k][4] - s.get(1).get(1))+Math.abs(magicSquares[k][5] - s.get(1).get(2));
-            cost += Math.abs(magicSquares[k][6] - s.get(2).get(0))+Math.abs(magicSquares[k][7] - s.get(2).get(1))+Math.abs(magicSquares[k][8] - s.get(2).get(2));
+            cost += Math.abs(magicSquares.get(k)[0] - s.get(0).get(0)) + Math.abs(magicSquares.get(k)[1] - s.get(0).get(1)) + Math.abs(magicSquares.get(k)[2] - s.get(0).get(2));
+            cost += Math.abs(magicSquares.get(k)[3] - s.get(1).get(0)) + Math.abs(magicSquares.get(k)[4] - s.get(1).get(1)) + Math.abs(magicSquares.get(k)[5] - s.get(1).get(2));
+            cost += Math.abs(magicSquares.get(k)[6] - s.get(2).get(0)) + Math.abs(magicSquares.get(k)[7] - s.get(2).get(1)) + Math.abs(magicSquares.get(k)[8] - s.get(2).get(2));
 
             if (cost < minCost) {
                 minCost = cost;
@@ -58,8 +65,75 @@ public class HRResource {
         return minCost;
     }
 
+    static List<int[]> magicSquares = computeMagicSquares();
+
+    public static List<int[]> computeMagicSquares() {
+        List<int[]> magicSquares = new ArrayList<>();
+
+        permute(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9), 0, magicSquares);
+
+        return magicSquares;
+
+    }
+
+    @GET
+    @Path("/computeMagicSquares")
+    public List<int[]> computeMagicSquaresRest() {
+        List<int[]> magicSquares = new ArrayList<>();
+
+        permute(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9), 0, magicSquares);
+
+        return magicSquares;
+    }
+
+    static void permute(java.util.List<Integer> arr, int k, List<int[]> result) {
+        for (int i = k; i < arr.size(); i++) {
+            java.util.Collections.swap(arr, i, k);
+            permute(arr, k + 1, result);
+            java.util.Collections.swap(arr, k, i);
+        }
+        if (k == arr.size() - 1) {
+            int[] array = arr.stream().mapToInt(i -> i).toArray();
+            if (isValidMagicSquare(array)) {
+                result.add(array);
+            }
+        }
+    }
+
+    private static boolean isValidMagicSquare(int[] s) {
+        int magicNumber = s[0] + s[3] + s[6];
+        int sum;
+
+        // check rows
+        for (int i = 0; i < 3; i++) {
+            sum = 0;
+            for (int j = 0; j < 3; j++) {
+                sum += s[i + (j * 3)];
+            }
+            if (sum != magicNumber) {
+                return false;
+            }
+        }
+
+        // check columns
+        for (int j = 0; j < 3; j++) {
+            sum = 0;
+            for (int i = 0; i < 3; i++) {
+                sum += s[i + (j * 3)];
+            }
+            if (sum != magicNumber) {
+                return false;
+            }
+        }
+
+        // check diagonals
+        sum = s[0] + s[4] + s[8];
+        int sumReverseDiagonal = s[2] + s[4] + s[6];
+        return sum == magicNumber && sumReverseDiagonal == magicNumber;
+    }
+
     private static boolean isValidMagicSquare(List<List<Integer>> s) {
-        int magicNumber = s.get(0).stream().mapToInt(Integer::intValue).sum();
+        int magicNumber = s.get(0).get(0) + s.get(0).get(1) + s.get(0).get(2);
         int sum;
 
         // check rows
