@@ -70,7 +70,7 @@ public class HRResource {
     public static List<int[]> computeMagicSquares() {
         List<int[]> magicSquares = new ArrayList<>();
 
-        permute(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9), 0, magicSquares);
+        permute(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 0, magicSquares);
 
         return magicSquares;
 
@@ -81,23 +81,28 @@ public class HRResource {
     public List<int[]> computeMagicSquaresRest() {
         List<int[]> magicSquares = new ArrayList<>();
 
-        permute(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9), 0, magicSquares);
+        permute(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9}, 0, magicSquares);
 
         return magicSquares;
     }
 
-    static void permute(java.util.List<Integer> arr, int k, List<int[]> result) {
-        for (int i = k; i < arr.size(); i++) {
-            java.util.Collections.swap(arr, i, k);
+    static void permute(int[] arr, int k, List<int[]> result) {
+        for (int i = k; i < arr.length; i++) {
+            swap(arr, i, k);
             permute(arr, k + 1, result);
-            java.util.Collections.swap(arr, k, i);
+            swap(arr, k, i);
         }
-        if (k == arr.size() - 1) {
-            int[] array = arr.stream().mapToInt(i -> i).toArray();
-            if (isValidMagicSquare(array)) {
-                result.add(array);
+        if (k == arr.length - 1) {
+            if (isValidMagicSquare(arr)) {
+                result.add(Arrays.copyOf(arr, arr.length));
             }
         }
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     private static boolean isValidMagicSquare(int[] s) {
