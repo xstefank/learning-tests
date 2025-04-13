@@ -8,9 +8,11 @@ import jakarta.ws.rs.Path;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -25,6 +27,54 @@ public class HRResource {
 
     @Inject
     HRService hrService;
+
+    @GET
+    @Path("/climbingLeaderboard")
+    public void climbingLeaderboardRest() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("climbing-leaderboard-3.txt"));
+        int n = scanner.nextInt();
+        List<Integer> ranked = readList(scanner, n);
+        int m = scanner.nextInt();
+        List<Integer> player = readList(scanner, m);
+        scanner.close();
+
+        System.out.println(climbingLeaderboard(ranked, player));
+    }
+
+    public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
+        LinkedList<Integer> playerRanks = new LinkedList<>();
+
+        int rankedIndex = 0;
+        int rank = 1;
+        int currentRankScore = ranked.get(0);
+
+        for (int i = player.size() - 1; i >= 0; i--) {
+            int playerScore = player.get(i);
+
+            while (rankedIndex < ranked.size() && playerScore < currentRankScore) {
+                if (ranked.get(rankedIndex) < currentRankScore) {
+                    currentRankScore = ranked.get(rankedIndex);
+                    rank++;
+                }
+                rankedIndex++;
+            }
+
+            if (rankedIndex == ranked.size()) {
+                if (playerScore < currentRankScore) {
+                    rank++;
+                    for (int j = i; j >= 0; j--) {
+                        playerRanks.addFirst(rank);
+                    }
+                    break;
+                }
+            }
+
+            playerRanks.addFirst(rank);
+
+        }
+
+        return playerRanks;
+    }
 
     @GET
     @Path("/quickSort")
@@ -77,7 +127,6 @@ public class HRResource {
     }
 
 
-
     @GET
     @Path("/pickingNumbers")
     public void pickingNumbers() throws IOException {
@@ -100,7 +149,7 @@ public class HRResource {
         int max = 0;
         for (Integer i : a) {
             int curr = Math.max(distanceCounts.getOrDefault(
-                i - 1, 0) + distanceCounts.getOrDefault(i, 0),
+                    i - 1, 0) + distanceCounts.getOrDefault(i, 0),
                 distanceCounts.getOrDefault(i + 1, 0) + distanceCounts.getOrDefault(i, 0));
             max = Math.max(max, curr);
         }
