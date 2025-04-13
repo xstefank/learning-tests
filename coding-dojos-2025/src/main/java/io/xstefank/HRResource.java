@@ -8,6 +8,7 @@ import jakarta.ws.rs.Path;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import static io.xstefank.util.HRService.readArray;
 import static io.xstefank.util.HRService.readList;
 import static io.xstefank.util.HRService.readMatrix;
 
@@ -23,6 +25,58 @@ public class HRResource {
 
     @Inject
     HRService hrService;
+
+    @GET
+    @Path("/quickSort")
+    public void quickSortRest() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("quick-sort.txt"));
+
+        int n = scanner.nextInt();
+        int[] arr = readArray(scanner, n);
+        scanner.close();
+
+        System.out.println("Arrays.sort(arr)");
+        timed(() -> Arrays.sort(arr));
+
+        System.out.println("quickSort(arr)");
+        timed(() -> quickSort(arr, 0, arr.length - 1));
+    }
+
+    private void quickSort(int[] arr, int low, int high) {
+        if (low >= high) return;
+        int pivot = arr[high];
+        int j = low - 1;
+
+        for (int i = low; i < high; i++) {
+            if (arr[i] < pivot) {
+                j++;
+                if (arr[i] < arr[j]) {
+                    swap(arr, i, j);
+                }
+            }
+        }
+
+        swap(arr, ++j, high);
+
+        quickSort(arr, low, j - 1);
+        quickSort(arr, j + 1, high);
+    }
+
+    private void timed(Runnable runnable) {
+        long total = 0;
+        for (int i = 0; i < 5; i++) {
+            long time = System.nanoTime();
+            try {
+                runnable.run();
+            } finally {
+                total += System.nanoTime() - time;
+            }
+        }
+        System.out.printf("time = %dns%n", total / 5);
+
+    }
+
+
 
     @GET
     @Path("/pickingNumbers")
