@@ -24,6 +24,14 @@ public class HRService {
         }
     }
 
+    public static int[] readArray(Scanner scanner, int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+        return array;
+    }
+
     public static List<Integer> readList(Scanner scanner, int n) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {

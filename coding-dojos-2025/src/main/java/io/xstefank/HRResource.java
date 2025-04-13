@@ -8,9 +8,10 @@ import jakarta.ws.rs.Path;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -22,6 +23,36 @@ public class HRResource {
 
     @Inject
     HRService hrService;
+
+    @GET
+    @Path("/pickingNumbers")
+    public void pickingNumbers() throws IOException {
+        Scanner scanner = new Scanner(hrService.getFile("picking-numbers.txt"));
+
+        int n = scanner.nextInt();
+        List<Integer> arr = readList(scanner, n);
+        scanner.close();
+
+        System.out.println(pickingNumbers(arr));
+    }
+
+    public static int pickingNumbers(List<Integer> a) {
+        Map<Integer, Integer> distanceCounts = new HashMap<>();
+
+        for (Integer i : a) {
+            distanceCounts.compute(i, (k, v) -> v == null ? 1 : v + 1);
+        }
+
+        int max = 0;
+        for (Integer i : a) {
+            int curr = Math.max(distanceCounts.getOrDefault(
+                i - 1, 0) + distanceCounts.getOrDefault(i, 0),
+                distanceCounts.getOrDefault(i + 1, 0) + distanceCounts.getOrDefault(i, 0));
+            max = Math.max(max, curr);
+        }
+
+        return max;
+    }
 
     @GET
     @Path("/formingMagicSquare")
@@ -81,7 +112,7 @@ public class HRResource {
     public List<int[]> computeMagicSquaresRest() {
         List<int[]> magicSquares = new ArrayList<>();
 
-        permute(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9}, 0, magicSquares);
+        permute(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 0, magicSquares);
 
         return magicSquares;
     }
